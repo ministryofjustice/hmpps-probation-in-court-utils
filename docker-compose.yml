@@ -1,0 +1,25 @@
+version: "3"
+services:
+  localstack:
+    image: localstack/localstack:latest
+    networks:
+      - hmpps
+    container_name: court-case-localstack
+    ports:
+      - "4566-4597:4566-4597"
+      - 8999:8080
+      - 9080:9080
+    environment:
+      - SERVICES=sqs,sns
+      - PORT_WEB_UI=9080
+      - DEBUG=${DEBUG- }
+      - DATA_DIR=/tmp/localstack/data
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - DEFAULT_REGION=eu-west-2
+    volumes:
+      - "${TMPDIR:-/tmp/localstack}:/tmp/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - $PWD/localstack:/docker-entrypoint-initaws.d
+
+networks:
+  hmpps:

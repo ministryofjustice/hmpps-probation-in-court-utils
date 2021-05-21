@@ -1,0 +1,33 @@
+{
+  "caseId": 1217464,
+  "name": {
+    "title": "Mr.",
+    "forename1": "David",
+    "surname": "DLONE"
+  },
+  "defendantName": "Mr. David DLONE",
+  "defendantType": "P",
+  "defendantSex": "N",
+  "defendantDob": "02/02/2002",
+  "defendantAge": "20",
+  "defendantAddress": {
+    "line1": "39 The Street",
+    "line2": "Newtown",
+    "pcode": "NT4 6YH"
+  },
+  "cro": "11111/79J",
+  "pnc": "PNC-ID1",
+  "listNo": "1st",
+  "nationality1": "Angolan",
+  "nationality2": "Austrian",
+  "offences": [{
+    "seq": 1,
+    "summary": "On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.",
+    "title": "Theft from a shop",
+    "act": "Contrary to section 1(1) and 7 of the Theft Act 1968."
+  }],
+  "sessionStartTime": "2020-02-20T09:01:00",
+  "courtCode": "B01CX",
+  "courtRoom": "00",
+  "seq": 1
+}
