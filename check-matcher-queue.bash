@@ -1,6 +1,6 @@
 #!/bin/bash
 namespace=court-probation-dev
-topic_secret=court-case-events-topic
+queue_secret=court-case-matcher-queue-credentials
 local=false
 
 # Read any named params
@@ -38,33 +38,12 @@ then
 else
   # Get credentials and queue details from namespace secret
   echo "🔑 Getting credentials for $namespace..."
-  secret_json=$(cloud-platform decode-secret -s $topic_secret -n $namespace)
+  secret_json=$(cloud-platform decode-secret -s $queue_secret -n $namespace)
   export AWS_ACCESS_KEY_ID=$(echo "$secret_json" | jq -r .data.access_key_id)
   export AWS_SECRET_ACCESS_KEY=$(echo "$secret_json" | jq -r .data.secret_access_key)
-  export TOPIC_ARN=$(echo "$secret_json" | jq -r .data.topic_arn)
+  export QUEUE_URL=$(echo "$secret_json" | jq -r .data.sqs_id)
 fi
 
-# Check the topic is accessible
-echo "📡 Checking connection to SNS..."
-aws sns get-topic-attributes --topic-arn "$TOPIC_ARN" $OPTIONS > /dev/null
-#exit_on_error $? !!
-
-# And start publishing the payloads
-CASES_PATH="./cases/$namespace"
-echo "📂 Checking for cases in $CASES_PATH"
-FILES=$(ls $CASES_PATH)
-HEARING_DATE=$(date +"%Y\/%m\/%d")
-NEW_CASE_NO_PREFIX=$(date +"%y%m%d%M%s")
-
-i=0
-for f in $FILES
-do
- ((i++))
- echo "💻 $i. Processing $f..."
- PAYLOAD=$(cat "$CASES_PATH/$f")
- PAYLOAD=$(echo $PAYLOAD | sed s/%hearing_date%/$HEARING_DATE/g)
- PAYLOAD=$(echo $PAYLOAD | sed s/%new_case_number%/$NEW_CASE_NO_PREFIX$i/g)
- echo $PAYLOAD
- aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD" $OPTIONS > /dev/null
- #exit_on_error $? !!
-done
+# Check how many messages are on the queue
+echo "📡 Checking queue status..."
+aws sqs get-queue-attributes --queue-url=$QUEUE_URL --attribute-names=ApproximateNumberOfMessages
