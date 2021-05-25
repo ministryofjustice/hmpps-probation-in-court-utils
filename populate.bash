@@ -2,6 +2,7 @@
 namespace=court-probation-dev
 topic_secret=court-case-events-topic
 local=false
+files=
 
 # Read any named params
 while [ $# -gt 0 ]; do
@@ -60,11 +61,14 @@ i=0
 for f in $FILES
 do
  ((i++))
- echo "💻 $i. Processing $f..."
- PAYLOAD=$(cat "$CASES_PATH/$f")
- PAYLOAD=$(echo $PAYLOAD | sed s/%hearing_date%/$HEARING_DATE/g)
- PAYLOAD=$(echo $PAYLOAD | sed s/%new_case_number%/$NEW_CASE_NO_PREFIX$i/g)
- echo $PAYLOAD
- aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD" $OPTIONS > /dev/null
- #exit_on_error $? !!
+  # If there are specified files then only send those, otherwise send everything
+  if [[ "$files" == *"$f"* || $files == "" ]]; then
+   echo "💻 $i. Processing $f..."
+   PAYLOAD=$(cat "$CASES_PATH/$f")
+   PAYLOAD=$(echo $PAYLOAD | sed s/%hearing_date%/$HEARING_DATE/g)
+   PAYLOAD=$(echo $PAYLOAD | sed s/%new_case_number%/$NEW_CASE_NO_PREFIX$i/g)
+   echo $PAYLOAD
+   aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD"
+   #exit_on_error $? !!
+  fi
 done

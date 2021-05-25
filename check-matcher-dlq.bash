@@ -1,6 +1,6 @@
 #!/bin/bash
 namespace=court-probation-dev
-queue_secret=court-case-matcher-queue-credentials
+queue_secret=court-case-matcher-queue-dead-letter-queue-credentials
 local=false
 
 # Read any named params
@@ -45,5 +45,5 @@ else
 fi
 
 # Check how many messages are on the queue
-echo "📡 Checking queue status..."
+echo "📡 Checking queue status for '$QUEUE_URL'..."
 aws sqs get-queue-attributes --queue-url=$QUEUE_URL --attribute-names=ApproximateNumberOfMessages
