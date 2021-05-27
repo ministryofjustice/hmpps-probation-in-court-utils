@@ -1,8 +1,7 @@
 #!/bin/bash
 namespace=court-probation-dev
-topic_secret=court-case-events-topic
+queue_secret=court-case-matcher-queue-dead-letter-queue-credentials
 local=false
-email=
 
 # Read any named params
 while [ $# -gt 0 ]; do
@@ -17,13 +16,17 @@ done
 
 set -o history -o histexpand
 set -e
-
-
-if [[ $email == "" ]]
-then
-  echo "⚠️ Parameter '--email' is required for subscription"
-  exit 1
-fi
+exit_on_error() {
+    exit_code=$1
+    last_command=${@:2}
+    if [ $exit_code -ne 0 ]; then
+        >&2 echo "💥 Last command:"
+        >&2 echo "    \"${last_command}\""
+        >&2 echo "❌ Failed with exit code ${exit_code}."
+        >&2 echo "🟥 Aborting"
+        exit $exit_code
+    fi
+}
 
 if [ $local = "true" ]
 then
@@ -35,14 +38,12 @@ then
 else
   # Get credentials and queue details from namespace secret
   echo "🔑 Getting credentials for $namespace..."
-  secret_json=$(cloud-platform decode-secret -s $topic_secret -n $namespace --skip-version-check)
+  secret_json=$(cloud-platform decode-secret -s $queue_secret -n $namespace --skip-version-check)
   export AWS_ACCESS_KEY_ID=$(echo "$secret_json" | jq -r .data.access_key_id)
   export AWS_SECRET_ACCESS_KEY=$(echo "$secret_json" | jq -r .data.secret_access_key)
-  export TOPIC_ARN=$(echo "$secret_json" | jq -r .data.topic_arn)
+  export QUEUE_URL=$(echo "$secret_json" | jq -r .data.sqs_id)
 fi
 
-# Check the topic is accessible
-echo "📡 Checking connection to SNS..."
-aws sns get-topic-attributes --topic-arn "$TOPIC_ARN" $OPTIONS > /dev/null
-
-aws sns subscribe --topic-arn "$TOPIC_ARN" --protocol email-json --notification-endpoint "$email"
+# Check how many messages are on the queue
+echo "✉️ Getting message from queue '$QUEUE_URL'..."
+aws sqs purge-queue --queue-url=$QUEUE_URL

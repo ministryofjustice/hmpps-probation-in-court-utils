@@ -19,7 +19,7 @@ set -e
 
 # Get credentials and queue details from namespace secret
 echo "🔑 Getting credentials for $namespace..."
-secret_json=$(cloud-platform decode-secret -s $s3_secret -n $namespace)
+secret_json=$(cloud-platform decode-secret -s $s3_secret -n $namespace  --skip-version-check)
 export AWS_ACCESS_KEY_ID=$(echo "$secret_json" | jq -r .data.access_key_id)
 export AWS_SECRET_ACCESS_KEY=$(echo "$secret_json" | jq -r .data.secret_access_key)
 export BUCKET_NAME=$(echo "$secret_json" | jq -r .data.bucket_name)

@@ -39,7 +39,7 @@ then
 else
   # Get credentials and queue details from namespace secret
   echo "🔑 Getting credentials for $namespace..."
-  secret_json=$(cloud-platform decode-secret -s $topic_secret -n $namespace)
+  secret_json=$(cloud-platform decode-secret -s $topic_secret -n $namespace --skip-version-check)
   export AWS_ACCESS_KEY_ID=$(echo "$secret_json" | jq -r .data.access_key_id)
   export AWS_SECRET_ACCESS_KEY=$(echo "$secret_json" | jq -r .data.secret_access_key)
   export TOPIC_ARN=$(echo "$secret_json" | jq -r .data.topic_arn)
@@ -64,7 +64,8 @@ do
   # If there are specified files then only send those, otherwise send everything
   if [[ "$files" == *"$f"* || $files == "" ]]; then
    echo "💻 $i. Processing $f..."
-   PAYLOAD=$(cat "$CASES_PATH/$f")
+   FILE_PATH="$CASES_PATH/$f"
+   PAYLOAD=$(cat "$FILE_PATH")
    PAYLOAD=$(echo $PAYLOAD | sed s/%hearing_date%/$HEARING_DATE/g)
    PAYLOAD=$(echo $PAYLOAD | sed s/%new_case_number%/$NEW_CASE_NO_PREFIX$i/g)
    echo $PAYLOAD
