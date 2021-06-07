@@ -54,7 +54,7 @@ aws sns get-topic-attributes --topic-arn "$TOPIC_ARN" $OPTIONS > /dev/null
 CASES_PATH="./cases/$namespace"
 echo "📂 Checking for cases in $CASES_PATH"
 FILES=$(ls $CASES_PATH)
-HEARING_DATE=$(date +"%Y\/%m\/%d")
+HEARING_DATE=$(date +"%Y\-%m\-%d")
 NEW_CASE_NO_PREFIX=$(date +"%y%m%d%M%s")
 
 i=0
