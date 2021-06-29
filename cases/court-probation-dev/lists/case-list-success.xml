@@ -1,0 +1,81 @@
+<ns35:ExternalDocumentRequest xmlns:ns35="http://www.justice.gov.uk/magistrates/external/ExternalDocumentRequest">
+  <documents>
+    <document>
+      <info>
+        <source_file_name>5_10052021_2992_B14LO00_ADULT_COURT_LIST_DAILY</source_file_name>
+      </info>
+      <data>
+        <job>
+          <printdate>10/05/2021</printdate>
+          <username>gl.userone</username>
+          <late>N</late>
+          <adbox>N</adbox>
+          <means>N</means>
+          <sessions>
+            <session>
+              <s_id>556805</s_id>
+              <doh>%hearing_date%</doh>
+              <lja>South West London Magistrates; Court</lja>
+              <cmu>Gl Management Unit 1</cmu>
+              <panel>Adult Panel</panel>
+              <court>Sheffield Magistrates Court</court>
+              <room>00</room>
+              <sstart>09:00</sstart>
+              <send>12:00</send>
+              <blocks>
+                <block>
+                  <sb_id>758095</sb_id>
+                  <bstart>09:00</bstart>
+                  <bend>12:00</bend>
+                  <desc>First Hearings Slot</desc>
+                  <cases>
+                    <case>
+                      <c_id>1218461</c_id>
+                      <h_id>1294273</h_id>
+                      <valid>Y</valid>
+                      <caseno>%new_case_number%</caseno>
+                      <type>C</type>
+                      <def_name>Gordon Freeman</def_name>
+                      <def_name_elements>
+                        <title>Mr</title>
+                        <forename1>Gordon</forename1>
+                        <forename2/>
+                        <forename3/>
+                        <surname>Freeman</surname>
+                      </def_name_elements>
+                      <def_dob>15/04/1978</def_dob>
+                      <def_type>P</def_type>
+                      <def_sex>M</def_sex>
+                      <pnc_id/>
+                      <cro_number/>
+                      <def_addr>
+                        <line1>1 High Street</line1>
+                        <line2>Shangri La</line2>
+                        <line5>Bath</line5>
+                        <pcode>BA1 1AA</pcode>
+                      </def_addr>
+                      <inf>POL01</inf>
+                      <cseq>2</cseq>
+                      <listno>1st</listno>
+                      <offences>
+                        <offence>
+                          <oseq>1</oseq>
+                          <co_id>1185408</co_id>
+                          <code>TH68010</code>
+                          <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                          <title>Theft from a shop</title>
+                          <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                          <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                        </offence>
+                      </offences>
+                    </case>
+                  </cases>
+                </block>
+              </blocks>
+            </session>
+          </sessions>
+        </job>
+      </data>
+    </document>
+  </documents>
+</ns35:ExternalDocumentRequest>

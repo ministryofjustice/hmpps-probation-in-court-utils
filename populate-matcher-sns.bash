@@ -3,6 +3,7 @@ namespace=court-probation-dev
 topic_secret=court-case-events-topic
 local=false
 files=
+message_type=LIBRA_COURT_CASE
 
 # Read any named params
 while [ $# -gt 0 ]; do
@@ -51,7 +52,7 @@ aws sns get-topic-attributes --topic-arn "$TOPIC_ARN" $OPTIONS > /dev/null
 #exit_on_error $? !!
 
 # And start publishing the payloads
-CASES_PATH="./cases/$namespace"
+CASES_PATH="./cases/$namespace/cases"
 echo "📂 Checking for cases in $CASES_PATH"
 FILES=$(ls $CASES_PATH)
 HEARING_DATE=$(date +"%Y\-%m\-%d")
@@ -69,7 +70,7 @@ do
    PAYLOAD=$(echo $PAYLOAD | sed s/%hearing_date%/$HEARING_DATE/g)
    PAYLOAD=$(echo $PAYLOAD | sed s/%new_case_number%/$NEW_CASE_NO_PREFIX$i/g)
    echo $PAYLOAD
-   aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD"
+   aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD" --message-attributes "{\"messageType\" : { \"DataType\":\"String\", \"StringValue\":\"$message_type\"}}" $OPTIONS
    #exit_on_error $? !!
   fi
 done
