@@ -11,9 +11,9 @@ Run `./subscribe-to-topic.bash --email <your@email.address>` to subscribe to eve
 
 Run `./populate-cpg-sqs.bash` to push case lists to the `crime-portal-gateway-queue`
 
-Run `./populate.bash` to push some cases to the `court-case-events-topic` SNS topic
+Run `./populate-matcher-sns.bash` to push some cases to the `court-case-events-topic` SNS topic
 
-Run `./check-matcher-queue.bash` to check if there are any messages on the court-case-matcher queue
+Run `./check-queue.bash` to check if there are any messages on the court-case-matcher queue
 
 ## Parameters
 
