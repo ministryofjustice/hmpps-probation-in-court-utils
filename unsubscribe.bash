@@ -2,7 +2,7 @@
 namespace=court-probation-dev
 topic_secret=court-case-events-topic
 local=false
-email=
+subscription_arn=
 
 # Read any named params
 while [ $# -gt 0 ]; do
@@ -17,13 +17,6 @@ done
 
 set -o history -o histexpand
 set -e
-
-
-if [[ $email == "" ]]
-then
-  echo "⚠️ Parameter '--email' is required for subscription"
-  exit 1
-fi
 
 if [ $local = "true" ]
 then
@@ -42,7 +35,6 @@ else
 fi
 
 # Check the topic is accessible
-echo "📡 Checking connection to SNS..."
-aws sns get-topic-attributes --topic-arn "$TOPIC_ARN" $OPTIONS > /dev/null
+echo "📡 Getting subscriptions to SNS..."
 
-aws sns subscribe --topic-arn "$TOPIC_ARN" --protocol email-json --notification-endpoint "$email" $OPTIONS
+aws sns unsubscribe --subscription-arn "$subscription_arn"

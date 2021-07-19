@@ -23,8 +23,8 @@ then
   echo "🏠 Running against localstack"
   TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-case-events-topic"
   OPTIONS="--endpoint-url http://localhost:4566"
-  AWS_ACCESS_KEY_ID=
-  AWS_ACCESS_KEY_ID=
+  AWS_ACCESS_KEY_ID=foobar
+  AWS_ACCESS_KEY_ID=foobar
 else
   # Get credentials and queue details from namespace secret
   echo "🔑 Getting credentials for $namespace..."
@@ -37,4 +37,4 @@ fi
 # Check the topic is accessible
 echo "📡 Getting subscriptions to SNS..."
 
-aws sns list-subscriptions-by-topic --topic-arn "$TOPIC_ARN"
+aws sns list-subscriptions-by-topic --topic-arn "$TOPIC_ARN" $OPTIONS

@@ -33,8 +33,9 @@ then
   echo "🏠 Running against localstack"
   TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-case-events-topic"
   OPTIONS="--endpoint-url http://localhost:4566"
+  QUEUE_URL="http://localhost:4566/000000000000/test-queue"
   AWS_ACCESS_KEY_ID=
-  AWS_ACCESS_KEY_ID=
+  AWS_DEFAULT_REGION=eu-west-2
 else
   # Get credentials and queue details from namespace secret
   echo "🔑 Getting credentials for $namespace..."
@@ -45,5 +46,5 @@ else
 fi
 
 # Check how many messages are on the queue
-echo "✉️ Getting message from queue '$QUEUE_URL'..."
-aws sqs purge-queue --queue-url=$QUEUE_URL
+echo "🔥 Purging messages from queue '$QUEUE_URL'..."
+aws sqs purge-queue --queue-url=$QUEUE_URL $OPTIONS

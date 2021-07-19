@@ -18,13 +18,6 @@ done
 set -o history -o histexpand
 set -e
 
-
-if [[ $email == "" ]]
-then
-  echo "⚠️ Parameter '--email' is required for subscription"
-  exit 1
-fi
-
 if [ $local = "true" ]
 then
   echo "🏠 Running against localstack"
@@ -42,7 +35,9 @@ else
 fi
 
 # Check the topic is accessible
-echo "📡 Checking connection to SNS..."
-aws sns get-topic-attributes --topic-arn "$TOPIC_ARN" $OPTIONS > /dev/null
+echo "📡 Getting subscriptions to SNS..."
 
-aws sns subscribe --topic-arn "$TOPIC_ARN" --protocol email-json --notification-endpoint "$email" $OPTIONS
+aws sns set-subscription-attributes --subscription-arn \
+"arn:aws:sns:eu-west-2:754256621582:cloud-platform-probation-in-court-team-5b4824dca700d8b3ec75f25d24adfbb9:9de23d20-a783-43ba-9a7f-dd22fc924755" \
+--attribute-name FilterPolicy --attribute-value "{\"messageType\": [\"LIBRA_COURT_CASE\"]}"
+
