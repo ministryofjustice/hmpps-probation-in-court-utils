@@ -1,0 +1,30 @@
+{
+  "caseId": 1217464,
+  "caseNo": "%new_case_number%",
+  "name": {
+    "title": "Mr",
+    "forename1": "Timothy",
+    "surname": "Curry"
+  },
+  "defendantName": "Mr Timothy Curry",
+  "defendantType": "P",
+  "defendantSex": "N",
+  "defendantDob": "03/02/1955",
+  "defendantAddress": {
+    "line1": "39 The Street",
+    "line2": "Newtown",
+    "pcode": "NT4 6YH"
+  },
+  "listNo": "1st",
+  "nationality1": "Russian",
+  "offences": [{
+    "seq": 1,
+    "summary": "On 01/01/2016 at Town, escaped to the one place yet to be corrupted by capitalism",
+    "title": "Space communism",
+    "act": "Contrary to section 1(1) and 7 of the Capitalism Rules (Communism Drools) Act 1968."
+  }],
+  "sessionStartTime": "%hearing_date%T09:01:00",
+  "courtCode": "B10JQ",
+  "courtRoom": "03",
+  "seq": 3
+}

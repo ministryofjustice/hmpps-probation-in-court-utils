@@ -1,22 +1,20 @@
 {
   "caseId": 1217464,
+  "caseNo": "%new_case_number%",
   "name": {
     "title": "Mr",
-    "forename1": "David",
-    "surname": "DLONE"
+    "forename1": "Gordon",
+    "surname": "Freeman"
   },
-  "defendantName": "Mr David DLONE",
+  "defendantName": "Mr Gordon Freeman",
   "defendantType": "P",
   "defendantSex": "N",
-  "defendantDob": "02/02/2002",
-  "defendantAge": "20",
+  "defendantDob": "03/02/1995",
   "defendantAddress": {
     "line1": "39 The Street",
     "line2": "Newtown",
     "pcode": "NT4 6YH"
   },
-  "cro": "11111/79J",
-  "pnc": "PNC-ID1",
   "listNo": "1st",
   "nationality1": "Angolan",
   "nationality2": "Austrian",
@@ -26,8 +24,8 @@
     "title": "Theft from a shop",
     "act": "Contrary to section 1(1) and 7 of the Theft Act 1968."
   }],
-  "sessionStartTime": "%hearing_date%T09:01:00",
+  "sessionStartTime": "%hearing_date%T13:30:00",
   "courtCode": "B10JQ",
-  "courtRoom": "00",
+  "courtRoom": "01",
   "seq": 1
 }

@@ -1,0 +1,37 @@
+{
+  "caseId": 1217464,
+  "caseNo": "%new_case_number%",
+  "name": {
+    "title": "Miss.",
+    "forename1": "Portia",
+    "surname": "Labiata"
+  },
+  "defendantName": "Miss. Portia Labiata",
+  "defendantType": "P",
+  "defendantSex": "F",
+  "defendantDob": "28/11/1986",
+  "defendantAge": "34",
+  "defendantAddress": {
+    "line1": "39 The Street",
+    "line2": "Newtown",
+    "pcode": "NT4 6YH"
+  },
+  "listNo": "1st",
+  "nationality1": "Norwegian",
+  "offences": [{
+    "seq": 1,
+    "summary": "On 01/01/2016 at Town, caused alarm by jumping distance in excess of 10 times body length.",
+    "title": "Jumping around",
+    "act": "Contrary to section 1(1) and 7 of the Sit Down or I'll Turn The Car Around Act 1968."
+  },{
+    "seq": 1,
+    "summary": "On 01/01/2016 at Town, moved hand like appendages in waving motion causing upset to the man.",
+    "title": "Putting hands in air like they just don't care",
+    "act": "Contrary to section 1(1) and 7 of the Irreverent Hand Waving Act 1968."
+  }
+  ],
+  "sessionStartTime": "%hearing_date%T11:30:00",
+  "courtCode": "B10JQ",
+  "courtRoom": "03",
+  "seq": 1
+}

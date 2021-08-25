@@ -2,32 +2,30 @@
   "caseId": 1217464,
   "caseNo": "%new_case_number%",
   "name": {
-    "title": "Mr",
-    "forename1": "John",
-    "surname": "Marston"
+    "title": "Mrs",
+    "forename1": "Mary",
+    "surname": "Berry"
   },
-  "defendantName": "Mr John Marston",
+  "defendantName": "Mrs Mary Berry",
   "defendantType": "P",
-  "defendantSex": "N",
-  "defendantDob": "01/01/1975",
-  "defendantAge": "46",
+  "defendantSex": "F",
+  "defendantDob": "28/11/1986",
+  "defendantAge": "34",
   "defendantAddress": {
     "line1": "39 The Street",
     "line2": "Newtown",
     "pcode": "NT4 6YH"
   },
-  "pnc": "2018/0000001Z",
   "listNo": "1st",
-  "nationality1": "Angolan",
-  "nationality2": "Austrian",
+  "nationality1": "English",
   "offences": [{
     "seq": 1,
-    "summary": "On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.",
+    "summary": "On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to that Hollywood bloke.",
     "title": "Theft from a shop",
     "act": "Contrary to section 1(1) and 7 of the Theft Act 1968."
   }],
   "sessionStartTime": "%hearing_date%T15:00:00",
   "courtCode": "B10JQ",
-  "courtRoom": "02",
+  "courtRoom": "05",
   "seq": 1
 }

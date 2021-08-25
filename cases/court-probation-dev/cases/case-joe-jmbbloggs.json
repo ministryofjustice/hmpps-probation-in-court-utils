@@ -1,0 +1,31 @@
+{
+  "caseId": 1217464,
+  "caseNo": "%new_case_number%",
+  "name": {
+    "title": "Mr",
+    "forename1": "Joe",
+    "surname": "JMBBLOGGS"
+  },
+  "defendantName": "Mr Joe JMBBLOGGS",
+  "defendantType": "P",
+  "defendantSex": "M",
+  "defendantDob": "16/08/1990",
+  "defendantAge": "30",
+  "defendantAddress": {
+    "line1": "39 The Street",
+    "line2": "Newtown",
+    "pcode": "NT4 6YH"
+  },
+  "listNo": "1st",
+  "nationality1": "From far out",
+  "offences": [{
+    "seq": 1,
+    "summary": "On 01/01/2016 at Town, attempted to solicit exchange of goods and services using unlikely moniker.",
+    "title": "Possession of improbable surname",
+    "act": "Contrary to section 1(1) and 7 of the Weird Name Act 1968."
+  }],
+  "sessionStartTime": "%hearing_date%T18:00:00",
+  "courtCode": "B10JQ",
+  "courtRoom": "02",
+  "seq": 1
+}

@@ -3,31 +3,29 @@
   "caseNo": "%new_case_number%",
   "name": {
     "title": "Mr",
-    "forename1": "Arthur",
-    "surname": "Morgan"
+    "forename1": "Clifford",
+    "surname": "Li"
   },
-  "defendantName": "Mr Arthur Morgan",
+  "defendantName": "Mr Clifford Li",
   "defendantType": "P",
   "defendantSex": "N",
-  "defendantDob": "01/01/1975",
-  "defendantAge": "46",
+  "defendantDob": "07/06/1989",
+  "defendantAge": "31",
   "defendantAddress": {
     "line1": "39 The Street",
     "line2": "Newtown",
     "pcode": "NT4 6YH"
   },
-  "pnc": "2004/0046583U",
   "listNo": "1st",
-  "nationality1": "Angolan",
-  "nationality2": "Austrian",
+  "nationality1": "Mauritian",
   "offences": [{
     "seq": 1,
-    "summary": "On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.",
+    "summary": "On 01/01/2016 at Town, stole Article, to the value of £200.00, belonging to Person.",
     "title": "Theft from a shop",
     "act": "Contrary to section 1(1) and 7 of the Theft Act 1968."
   }],
-  "sessionStartTime": "%hearing_date%T09:01:00",
+  "sessionStartTime": "%hearing_date%T10:30:00",
   "courtCode": "B10JQ",
-  "courtRoom": "01",
+  "courtRoom": "04",
   "seq": 1
 }

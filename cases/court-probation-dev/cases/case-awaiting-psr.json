@@ -1,22 +1,21 @@
 {
   "caseId": 1217464,
+  "caseNo": "%new_case_number%",
   "name": {
     "title": "Mr",
-    "forename1": "David",
-    "surname": "DLONE"
+    "forename1": "Bare",
+    "surname": "Knuckles"
   },
-  "defendantName": "Mr David DLONE",
+  "defendantName": "Mr Bare Knuckles",
   "defendantType": "P",
   "defendantSex": "N",
-  "defendantDob": "02/02/2002",
-  "defendantAge": "20",
+  "defendantDob": "26/08/1969",
+  "defendantAge": "46",
   "defendantAddress": {
     "line1": "39 The Street",
     "line2": "Newtown",
     "pcode": "NT4 6YH"
   },
-  "cro": "11111/79J",
-  "pnc": "PNC-ID1",
   "listNo": "1st",
   "nationality1": "Angolan",
   "nationality2": "Austrian",
@@ -28,6 +27,6 @@
   }],
   "sessionStartTime": "%hearing_date%T09:01:00",
   "courtCode": "B10JQ",
-  "courtRoom": "00",
+  "courtRoom": "04",
   "seq": 1
 }
