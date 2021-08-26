@@ -19,6 +19,12 @@ Run `./check-queue.bash` to check if there are any messages on the court-case-ma
 
 ```
 --namespace - Defaults to court-probation-dev
+--files - May be used to specify individual files, defaults to all the files related to the script being used
+```
+
+Example 
+```
+./populate-matcher-sns.bash --files case-tim-curry.json
 ```
 
 
