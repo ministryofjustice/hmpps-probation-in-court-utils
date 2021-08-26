@@ -56,15 +56,17 @@ NEW_CASE_NO_PREFIX=$(date +"%y%m%d%M%s")
 i=0
 for f in $FILES
 do
- ((i++))
+  ((i++))
+  NEW_CASE_ID=$((1 + $RANDOM % 999999))
   # If there are specified files then only send those, otherwise send everything
   if [[ "$files" == *"$f"* || $files == "" ]]; then
-   echo "💻 $i. Processing $f..."
-   FILE_PATH="$CASES_PATH/$f"
-   PAYLOAD=$(cat "$FILE_PATH")
-   PAYLOAD=$(echo $PAYLOAD | sed s/%hearing_date%/$HEARING_DATE/g)
-   PAYLOAD=$(echo $PAYLOAD | sed s/%new_case_number%/$NEW_CASE_NO_PREFIX$i/g)
-   echo $PAYLOAD
-aws sqs send-message --endpoint-url https://sqs.eu-west-2.amazonaws.com --queue-url "$QUEUE_URL" --message-body "$PAYLOAD"
+    echo "💻 $i. Processing $f..."
+    FILE_PATH="$CASES_PATH/$f"
+    PAYLOAD=$(cat "$FILE_PATH")
+    PAYLOAD=$(echo $PAYLOAD | sed s/%hearing_date%/$HEARING_DATE/g)
+    PAYLOAD=$(echo $PAYLOAD | sed s/%new_case_number%/$NEW_CASE_NO_PREFIX$i/g)
+    PAYLOAD=$(echo $PAYLOAD | sed s/%new_case_id%/$NEW_CASE_ID/g)
+    echo $PAYLOAD
+    aws sqs send-message --endpoint-url https://sqs.eu-west-2.amazonaws.com --queue-url "$QUEUE_URL" --message-body "$PAYLOAD"
   fi
 done
