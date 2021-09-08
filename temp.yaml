@@ -1,0 +1,62 @@
+Name:                   court-case-service
+Namespace:              court-probation-preprod
+CreationTimestamp:      Thu, 24 Oct 2019 12:17:27 +0100
+Labels:                 app=court-case-service
+                        app.kubernetes.io/managed-by=Helm
+                        chart=court-case-service-0.1.0
+                        heritage=Helm
+                        release=court-case-service
+Annotations:            deployment.kubernetes.io/revision: 195
+                        meta.helm.sh/release-name: court-case-service
+                        meta.helm.sh/release-namespace: court-probation-preprod
+Selector:               app=court-case-service,release=court-case-service
+Replicas:               2 desired | 2 updated | 2 total | 2 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        10
+RollingUpdateStrategy:  0 max unavailable, 2 max surge
+Pod Template:
+  Labels:       app=court-case-service
+                release=court-case-service
+  Annotations:  kubectl.kubernetes.io/restartedAt: 2021-07-28T08:33:39+01:00
+  Containers:
+   court-case-service:
+    Image:      docker.io/mojdigitalstudio/court-case-service:2021-08-19.10049
+    Port:       8080/TCP
+    Host Port:  0/TCP
+    Limits:
+      cpu:     5
+      memory:  1200Mi
+    Requests:
+      cpu:      500m
+      memory:   700Mi
+    Liveness:   http-get http://:8080/ping delay=90s timeout=20s period=30s #success=1 #failure=10
+    Readiness:  http-get http://:8080/ping delay=60s timeout=30s period=20s #success=1 #failure=15
+    Environment:
+      SERVER_PORT:                             8080
+      SPRING_PROFILES_ACTIVE:                  instrumented
+      JAVA_OPTS:                               -Xmx512m
+      DATABASE_USERNAME:                       <set to the key 'database_username' in secret 'court-case-service-rds-instance-output'>      Optional: false
+      DATABASE_PASSWORD:                       <set to the key 'database_password' in secret 'court-case-service-rds-instance-output'>      Optional: false
+      DATABASE_NAME:                           <set to the key 'database_name' in secret 'court-case-service-rds-instance-output'>          Optional: false
+      DATABASE_ENDPOINT:                       <set to the key 'rds_instance_endpoint' in secret 'court-case-service-rds-instance-output'>  Optional: false
+      COMMUNITY_API_BASE_URL:                  https://community-api-secure.pre-prod.delius.probation.hmpps.dsd.io
+      NOMIS_OAUTH_BASE_URL:                    https://sign-in-preprod.hmpps.service.justice.gov.uk
+      OFFENDER_ASSESSMENTS_API_BASE_URL:       https://offender-prprod.aks-live-1.studio-hosting.service.justice.gov.uk/
+      PRISON_API_BASE_URL:                     https://api-preprod.prison.service.justice.gov.uk
+      DELIUS_BASE_URL:                         https://ndelius.stage.probation.service.justice.gov.uk
+      COMMUNITY_API_CLIENT_ID:                 <set to the key 'nomis-oauth-client-id' in secret 'court-case-service-secrets'>           Optional: false
+      COMMUNITY_API_CLIENT_SECRET:             <set to the key 'nomis-oauth-client-secret' in secret 'court-case-service-secrets'>       Optional: false
+      OFFENDER_ASSESSMENTS_API_CLIENT_ID:      <set to the key 'nomis-oauth-client-id' in secret 'court-case-service-secrets'>           Optional: false
+      OFFENDER_ASSESSMENTS_API_CLIENT_SECRET:  <set to the key 'nomis-oauth-client-secret' in secret 'court-case-service-secrets'>       Optional: false
+      PRISON_API_CLIENT_ID:                    <set to the key 'nomis-oauth-client-id' in secret 'court-case-service-secrets'>           Optional: false
+      PRISON_API_CLIENT_SECRET:                <set to the key 'nomis-oauth-client-secret' in secret 'court-case-service-secrets'>       Optional: false
+      APPINSIGHTS_INSTRUMENTATIONKEY:          <set to the key 'APPINSIGHTS_INSTRUMENTATIONKEY' in secret 'court-case-service-secrets'>  Optional: false
+    Mounts:                                    <none>
+  Volumes:                                     <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Progressing    True    NewReplicaSetAvailable
+  Available      True    MinimumReplicasAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   court-case-service-5f5cc4689f (2/2 replicas created)
