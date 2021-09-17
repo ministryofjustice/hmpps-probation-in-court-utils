@@ -3,7 +3,7 @@ namespace=court-probation-dev
 topic_secret=court-case-events-topic
 local=false
 files=
-message_type=LIBRA_COURT_CASE
+message_type=COMMON_PLATFORM_HEARING
 
 # Read any named params
 while [ $# -gt 0 ]; do
@@ -30,7 +30,7 @@ exit_on_error() {
     fi
 }
 
-if [ $local = "true" ]
+if [[ $local = "true" ]]
 then
   echo "🏠 Running against localstack"
   TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-case-events-topic"
@@ -52,27 +52,27 @@ aws sns get-topic-attributes --topic-arn "$TOPIC_ARN" $OPTIONS > /dev/null
 #exit_on_error $? !!
 
 # And start publishing the payloads
-CASES_PATH="./cases/$namespace/libra-cases"
+CASES_PATH="./cases/$namespace/common-platform-hearings"
 echo "📂 Checking for cases in $CASES_PATH"
 FILES=$(ls $CASES_PATH)
 HEARING_DATE=$(date +"%Y\-%m\-%d")
-NEW_CASE_NO_PREFIX=$(date +"%y%m%d%M%s")
 
 i=0
 for f in $FILES
 do
   ((i++))
-  # This can be used when we support a message type of CP_COURT_CASE
-  # NEW_CASE_ID=$(uuidgen | tr '[:upper:]' '[:lower:]')
-  NEW_CASE_ID=$((1 + $RANDOM % 999999))
+  NEW_CASE_ID=$(uuidgen | tr '[:upper:]' '[:lower:]')
+  NEW_DEFENDANT_ID=$(uuidgen | tr '[:upper:]' '[:lower:]')
+  NEW_OFFENCE_ID=$(uuidgen | tr '[:upper:]' '[:lower:]')
   # If there are specified files then only send those, otherwise send everything
   if [[ "$files" == *"$f"* || $files == "" ]]; then
     echo "💻 $i. Processing $f..."
     FILE_PATH="$CASES_PATH/$f"
     PAYLOAD=$(cat "$FILE_PATH")
     PAYLOAD=$(echo $PAYLOAD | sed s/%hearing_date%/$HEARING_DATE/g)
-    PAYLOAD=$(echo $PAYLOAD | sed s/%new_case_number%/$NEW_CASE_NO_PREFIX$i/g)
     PAYLOAD=$(echo $PAYLOAD | sed s/%new_case_id%/$NEW_CASE_ID/g)
+    PAYLOAD=$(echo $PAYLOAD | sed s/%new_defendant_id%/$NEW_DEFENDANT_ID/g)
+    PAYLOAD=$(echo $PAYLOAD | sed s/%new_offence_id%/$NEW_OFFENCE_ID/g)
     echo "${PAYLOAD}"
     aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD" --message-attributes "{\"messageType\" : { \"DataType\":\"String\", \"StringValue\":\"$message_type\"}}" $OPTIONS
    #exit_on_error $? !!

@@ -30,13 +30,14 @@ exit_on_error() {
     fi
 }
 
-if [ $local = "true" ]
+if [[ $local == "true" ]]
 then
   echo "🏠 Running against localstack"
   TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-case-events-topic"
   OPTIONS="--endpoint-url http://localhost:4566"
-  AWS_ACCESS_KEY_ID=
-  AWS_SECRET_ACCESS_KEY=
+  QUEUE_URL="http://localhost:4566/000000000000/court-case-matcher-queue"
+  AWS_ACCESS_KEY_ID=foobar
+  AWS_SECRET_ACCESS_KEY=foobar
 else
   # Get credentials and queue details from namespace secret
   echo "🔑 Getting credentials for $namespace..."
