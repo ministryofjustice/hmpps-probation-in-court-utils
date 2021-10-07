@@ -1,4 +1,5 @@
 {
+  "_file_comments_": "This file creates a case with 0 matches",
   "caseId": %new_case_id%,
   "caseNo": "%new_case_number%",
   "name": {
