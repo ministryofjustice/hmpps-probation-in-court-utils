@@ -1,0 +1,54 @@
+{
+  "hearing": {
+    "courtCentre": {
+      "id": "9b583616-049b-30f9-a14f-028a53b7cfe8",
+      "roomId": "7cb09222-49e1-3622-a5a6-ad253d2b3c39",
+      "roomName": "01",
+      "code": "B33HU00"
+    },
+    "hearingDays": [
+      {
+        "listedDurationMinutes": 60,
+        "listingSequence": 0,
+        "sittingDay": "%hearing_date%T09:00:00.000Z"
+      }
+    ],
+    "id": "1379cf3d-84db-4bbb-8778-581109c10d43",
+    "jurisdictionType": "MAGISTRATES",
+    "prosecutionCases": [
+      {
+        "defendants": [
+          {
+            "id": "6333e7a4-6b2a-4ca9-9f50-a13c4ca61b8f",
+            "offences": [
+              {
+                "id": "0c932f0c-282b-418e-b294-8966498b1eef",
+                "offenceLegislation": "JMBBLOGGS Contrary to section 20 of the Offences Against the    Person Act 1861.",
+                "offenceTitle": "JMBBLOGGS Wound / inflict grievous bodily harm without intent",
+                "wording": "JMBBLOGGS on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, John Smith"
+              }
+            ],
+            "personDefendant": {
+              "personDetails": {
+                "address": {
+                  "address1": "10 Jaws Lane",
+                  "address2": "Shaw",
+                  "address3": "Dreyfuss",
+                  "address5": "Cornwall",
+                  "postcode": "TR1 1JW"
+                },
+                "dateOfBirth": "1990-08-16",
+                "firstName": "Joseph",
+                "gender": "MALE",
+                "lastName": "JMBBLOGGS",
+                "title": "Mr"
+              }
+            },
+            "prosecutionCaseId": "%new_case_id%"
+          }
+        ],
+        "id": "%new_case_id%"
+      }
+    ]
+  }
+}
