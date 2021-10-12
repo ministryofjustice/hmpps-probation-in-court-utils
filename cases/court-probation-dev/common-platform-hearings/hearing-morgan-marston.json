@@ -25,6 +25,7 @@
         "__comment__": "This should give a single exact match by PNC, Name & DOB",
         "defendants": [
           {
+            "__comment__": "This defendant ID should be replaced. It can't exist on a different case ID.",
             "id": "0ab7c3e5-eb4c-4e3f-b9e6-b9e78d3ea199",
             "pncId": "2004/0046583U",
             "croNumber": "12345ABCDEF",

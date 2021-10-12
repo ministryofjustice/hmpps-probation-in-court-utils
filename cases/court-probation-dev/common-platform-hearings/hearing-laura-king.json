@@ -1,0 +1,66 @@
+{
+  "hearing": {
+    "courtCentre": {
+      "id": "9b583616-049b-30f9-a14f-028a53b7cfe8",
+      "roomId": "7cb09222-49e1-3622-a5a6-ad253d2b3c39",
+      "roomName": "Crown Court 3-1",
+      "code": "B14LO00"
+    },
+    "hearingDays": [
+      {
+        "listedDurationMinutes": 60,
+        "listingSequence": 0,
+        "sittingDay": "%hearing_date%T09:00:00.000Z"
+      },
+      {
+        "listedDurationMinutes": 30,
+        "listingSequence": 1,
+        "sittingDay": "%hearing_date%T10:30:00.000Z"
+      }
+    ],
+    "id": "8bbb4fe3-a899-45c7-bdd4-4ee25ac5a83f",
+    "jurisdictionType": "CROWN",
+    "prosecutionCases": [
+      {
+        "__comment__": "This should give a multiple matches from a PNC and Name",
+        "defendants": [
+          {
+            "id": "%new_defendant_id%",
+            "offences": [
+              {
+                "id": "6a2f41a3-c54c-fce8-32d2-0324e1c32e22",
+                "offenceLegislation": "Contrary to section 20 of the Offences Against the Person Act 1861.",
+                "offenceTitle": "Wound / inflict grievous bodily harm without intent",
+                "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, John Smith"
+              },
+              {
+                "id": "%new_offence_id%",
+                "offenceLegislation": "Contrary to section 20 of the Offences Against the Person Act 1861.",
+                "offenceTitle": "Wound / inflict grievous bodily harm without intent",
+                "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, Jane Smith"
+              }
+            ],
+            "personDefendant": {
+              "personDetails": {
+                "address": {
+                  "address1": "14 King Street",
+                  "address2": "Leicester",
+                  "address3": "Leicestershire",
+                  "address4": "UK",
+                  "address5": "Earth",
+                  "postcode": "LE1 6RJ"
+                },
+                "firstName": "Laura",
+                "gender": "MALE",
+                "lastName": "KING"
+              }
+            },
+            "pncId": "2010/0331249E",
+            "prosecutionCaseId": "%new_case_id%"
+          }
+        ],
+        "id": "%new_case_id%"
+      }
+    ]
+  }
+}
