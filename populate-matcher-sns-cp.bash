@@ -63,6 +63,7 @@ do
   ((i++))
   NEW_CASE_ID=$(uuidgen | tr '[:upper:]' '[:lower:]')
   NEW_DEFENDANT_ID=$(uuidgen | tr '[:upper:]' '[:lower:]')
+  NEW_DEFENDANT_ID_2=$(uuidgen | tr '[:upper:]' '[:lower:]')
   NEW_OFFENCE_ID=$(uuidgen | tr '[:upper:]' '[:lower:]')
   # If there are specified files then only send those, otherwise send everything
   if [[ "$files" == *"$f"* || $files == "" ]]; then
@@ -72,6 +73,7 @@ do
     PAYLOAD=$(echo $PAYLOAD | sed s/%hearing_date%/$HEARING_DATE/g)
     PAYLOAD=$(echo $PAYLOAD | sed s/%new_case_id%/$NEW_CASE_ID/g)
     PAYLOAD=$(echo $PAYLOAD | sed s/%new_defendant_id%/$NEW_DEFENDANT_ID/g)
+    PAYLOAD=$(echo $PAYLOAD | sed s/%new_defendant_id_2%/$NEW_DEFENDANT_ID_2/g)
     PAYLOAD=$(echo $PAYLOAD | sed s/%new_offence_id%/$NEW_OFFENCE_ID/g)
     echo "${PAYLOAD}"
     aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD" --message-attributes "{\"messageType\" : { \"DataType\":\"String\", \"StringValue\":\"$message_type\"}}" $OPTIONS

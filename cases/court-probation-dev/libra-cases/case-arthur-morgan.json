@@ -1,6 +1,6 @@
 {
-  "caseId": %new_case_id%,
-  "caseNo": "%new_case_number%",
+  "caseId": "999999",
+  "caseNo": "2106223516243653402",
   "name": {
     "title": "Mr",
     "forename1": "Arthur",

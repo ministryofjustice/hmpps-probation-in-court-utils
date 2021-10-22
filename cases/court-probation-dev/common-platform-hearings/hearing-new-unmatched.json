@@ -22,12 +22,10 @@
     "jurisdictionType": "CROWN",
     "prosecutionCases": [
       {
+        "__comment__": "This should give no matches",
         "defendants": [
           {
-            "__comment__": "This should give a single exact match by PNC, Name & DOB",
             "id": "%new_defendant_id%",
-            "pncId": "2004/0046583U",
-            "croNumber": "12345ABCDEF",
             "offences": [
               {
                 "id": "a63d9020-aa6b-4997-92fd-72a692b036de",
@@ -47,50 +45,16 @@
                 "address": {
                   "address1": "13 Wind Street",
                   "address2": "Swansea",
-                  "address3": "Wales",
+                  "address3": "Zanzibar",
                   "address4": "UK",
                   "address5": "Earth",
                   "postcode": "SA1 1FU"
                 },
                 "dateOfBirth": "1975-01-01",
-                "firstName": "Arthur",
+                "firstName": "Farooq",
                 "gender": "MALE",
-                "lastName": "Morgan",
+                "lastName": "Bulsara",
                 "title": "Mr"
-              }
-            },
-            "prosecutionCaseId": "%new_case_id%"
-          },
-          {
-            "id": "%new_defendant_id_2%",
-            "offences": [
-              {
-                "id": "6a2f41a3-c54c-fce8-32d2-0324e1c32e22",
-                "offenceLegislation": "Contrary to section 20 of the Offences Against the    Person Act 1861.",
-                "offenceTitle": "Wound / inflict grievous bodily harm without intent",
-                "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, John Smith"
-              },
-              {
-                "id": "%new_offence_id%",
-                "offenceLegislation": "Contrary to section 20 of the Offences Against the    Person Act 1861.",
-                "offenceTitle": "Wound / inflict grievous bodily harm without intent",
-                "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, Jane Smith"
-              }
-            ],
-            "personDefendant": {
-              "personDetails": {
-                "address": {
-                  "address1": "14 Tottenham Court Road",
-                  "address2": "London Road",
-                  "address3": "England",
-                  "address4": "UK",
-                  "address5": "Earth",
-                  "postcode": "W1T 7RJ"
-                },
-                "dateOfBirth": "1997-02-28",
-                "firstName": "John",
-                "gender": "MALE",
-                "lastName": "Marston"
               }
             },
             "prosecutionCaseId": "%new_case_id%"

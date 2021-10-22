@@ -22,10 +22,10 @@
     "jurisdictionType": "CROWN",
     "prosecutionCases": [
       {
+        "__comment__": "This should give a single exact match by PNC, Name & DOB",
         "defendants": [
           {
-            "__comment__": "This should give a single exact match by PNC, Name & DOB",
-            "id": "%new_defendant_id%",
+            "id": "0ab7c3e5-eb4c-4e3f-b9e6-b9e78d3ea199",
             "pncId": "2004/0046583U",
             "croNumber": "12345ABCDEF",
             "offences": [
@@ -62,7 +62,7 @@
             "prosecutionCaseId": "%new_case_id%"
           },
           {
-            "id": "%new_defendant_id_2%",
+            "id": "%new_defendant_id%",
             "offences": [
               {
                 "id": "6a2f41a3-c54c-fce8-32d2-0324e1c32e22",
@@ -96,7 +96,7 @@
             "prosecutionCaseId": "%new_case_id%"
           }
         ],
-        "id": "%new_case_id%"
+        "id": "ef0f33f9-3e60-420d-ad10-8c863c372bee"
       }
     ]
   }
