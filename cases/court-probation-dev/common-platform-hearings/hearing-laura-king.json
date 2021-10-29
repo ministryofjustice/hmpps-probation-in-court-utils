@@ -15,7 +15,7 @@
       {
         "listedDurationMinutes": 30,
         "listingSequence": 1,
-        "sittingDay": "%hearing_date%T10:30:00.000Z"
+        "sittingDay": "%hearing_date%T14:00:00.000Z"
       }
     ],
     "id": "8bbb4fe3-a899-45c7-bdd4-4ee25ac5a83f",
