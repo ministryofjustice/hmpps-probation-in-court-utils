@@ -20,11 +20,14 @@ Run `./check-queue.bash` to check if there are any messages on the court-case-ma
 ```
 --namespace - Defaults to court-probation-dev
 --files - May be used to specify individual files, defaults to all the files related to the script being used
+--cases_path - relative to the "base-path" which is at ./cases/$namespace/common-platform-hearings/, a path to files to be processed. See examples below. When cases_path is passed with this parameter, the script will recurse up to a maximum depth of 10. 
+ 
 ```
 
 Example 
 ```
-./populate-matcher-sns.bash --files case-tim-curry.json
+./populate-matcher-sns-cp.bash --files hearing-bloggs.json
+./populate-matcher-sns-cp.bash --generate_ids "false" --cases_path "sit/CONFIRM_UPDATE/B01DU00/"
 ```
 
 

@@ -4,6 +4,10 @@ topic_secret=court-case-events-topic
 local=false
 files=
 message_type=COMMON_PLATFORM_HEARING
+cp_base_path="./cases/$namespace/common-platform-hearings/"
+cases_path=""
+generate_ids=true
+recurse_max_depth=1
 
 # Read any named params
 while [ $# -gt 0 ]; do
@@ -51,32 +55,49 @@ echo "📡 Checking connection to SNS..."
 aws sns get-topic-attributes --topic-arn "$TOPIC_ARN" $OPTIONS > /dev/null
 #exit_on_error $? !!
 
-# And start publishing the payloads
-CASES_PATH="./cases/$namespace/common-platform-hearings"
-echo "📂 Checking for cases in $CASES_PATH"
-FILES=$(ls $CASES_PATH)
+if [[ -n "${cases_path}" ]]
+then
+  recurse_max_depth=10
+fi
+CASES_PATH="${cp_base_path}${cases_path}"
+FILES=$(find $CASES_PATH -maxdepth $recurse_max_depth -type f)
+echo "📂 Checking for cases in ${CASES_PATH}"
 HEARING_DATE=$(date +"%Y\-%m\-%d")
 
 i=0
-for f in $FILES
+for case_file in $FILES
 do
   ((i++))
-  NEW_CASE_ID=$(uuidgen | tr '[:upper:]' '[:lower:]')
-  NEW_DEFENDANT_ID=$(uuidgen | tr '[:upper:]' '[:lower:]')
-  NEW_DEFENDANT_ID_2=$(uuidgen | tr '[:upper:]' '[:lower:]')
-  NEW_OFFENCE_ID=$(uuidgen | tr '[:upper:]' '[:lower:]')
+  file=$(basename "${case_file}")
+
   # If there are specified files then only send those, otherwise send everything
-  if [[ "$files" == *"$f"* || $files == "" ]]; then
-    echo "💻 $i. Processing $f..."
-    FILE_PATH="$CASES_PATH/$f"
-    PAYLOAD=$(cat "$FILE_PATH")
-    PAYLOAD=$(echo $PAYLOAD | sed s/%hearing_date%/$HEARING_DATE/g)
-    PAYLOAD=$(echo $PAYLOAD | sed s/%new_case_id%/$NEW_CASE_ID/g)
-    PAYLOAD=$(echo $PAYLOAD | sed s/%new_defendant_id%/$NEW_DEFENDANT_ID/g)
-    PAYLOAD=$(echo $PAYLOAD | sed s/%new_defendant_id_2%/$NEW_DEFENDANT_ID_2/g)
-    PAYLOAD=$(echo $PAYLOAD | sed s/%new_offence_id%/$NEW_OFFENCE_ID/g)
+  if [[ "$files" == *"${file}"* || $files == "" ]]; then
+
+    # Temporary ignore files we can't send to SNS
+    file_size=$(du -shk ${case_file} | cut -f1)
+    if [[ $file_size -gt 256 ]]
+    then
+      echo $case_file has size of $file_size and is too large, ignoring
+      continue
+    fi
+
+    echo "💻 $i. Processing $case_file..."
+    PAYLOAD=$(cat "${case_file}")
+
+    if [[ $generate_ids = "true" ]]
+    then
+      NEW_CASE_ID=$(uuidgen | tr '[:upper:]' '[:lower:]')
+      NEW_DEFENDANT_ID=$(uuidgen | tr '[:upper:]' '[:lower:]')
+      NEW_DEFENDANT_ID_2=$(uuidgen | tr '[:upper:]' '[:lower:]')
+      NEW_OFFENCE_ID=$(uuidgen | tr '[:upper:]' '[:lower:]')
+      PAYLOAD=$(echo $PAYLOAD | sed s/%hearing_date%/$HEARING_DATE/g)
+      PAYLOAD=$(echo $PAYLOAD | sed s/%new_case_id%/$NEW_CASE_ID/g)
+      PAYLOAD=$(echo $PAYLOAD | sed s/%new_defendant_id%/$NEW_DEFENDANT_ID/g)
+      PAYLOAD=$(echo $PAYLOAD | sed s/%new_defendant_id_2%/$NEW_DEFENDANT_ID_2/g)
+      PAYLOAD=$(echo $PAYLOAD | sed s/%new_offence_id%/$NEW_OFFENCE_ID/g)
+    fi
     echo "${PAYLOAD}"
     aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD" --message-attributes "{\"messageType\" : { \"DataType\":\"String\", \"StringValue\":\"$message_type\"}}" $OPTIONS
-   #exit_on_error $? !!
+    #exit_on_error $? !!
   fi
 done
