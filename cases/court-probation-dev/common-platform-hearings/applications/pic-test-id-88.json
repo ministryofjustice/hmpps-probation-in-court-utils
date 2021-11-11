@@ -1,0 +1,234 @@
+{
+  "hearing": {
+    "id": "ec529b12-8703-45b7-b4aa-7dddc2982bdf",
+    "jurisdictionType": "MAGISTRATES",
+    "courtCentre": {
+      "address": {
+        "address1": "176A Lavender Hill",
+        "address2": "London",
+        "address3": "",
+        "address4": "",
+        "address5": "",
+        "postcode": "SW11 1JU"
+      },
+      "code": "B01LY00",
+      "id": "f8254db1-1683-483e-afb3-b87fde5a0a26",
+      "lja": {
+        "ljaCode": "2577",
+        "ljaName": "South West London Magistrates' Court"
+      },
+      "name": "Lavender Hill Magistrates' Court",
+      "roomId": "9e4932f7-97b2-3010-b942-ddd2624e4dd8",
+      "roomName": "Courtroom 01"
+    },
+    "type": {
+      "description": "Application",
+      "id": "3449743b-95d6-4836-8941-57f588b52068"
+    },
+    "hearingDays": [
+      {
+        "courtCentreId": "f8254db1-1683-483e-afb3-b87fde5a0a26",
+        "courtRoomId": "9e4932f7-97b2-3010-b942-ddd2624e4dd8",
+        "isCancelled": false,
+        "listedDurationMinutes": 1,
+        "listingSequence": 0,
+        "sittingDay": "2021-11-08T10:00:00.000Z"
+      }
+    ],
+    "hearingLanguage": "ENGLISH",
+    "hasSharedResults": false,
+    "courtApplications": [
+      {
+        "id": "4da83065-fb9e-4984-b80f-abfff03d8745",
+        "type": {
+          "appealFlag": false,
+          "applicantAppellantFlag": false,
+          "boxworkNotifTemplate": "NOT_APPLICABLE",
+          "breachType": "NOT_APPLICABLE",
+          "categoryCode": "CO",
+          "code": "MC80524",
+          "commrOfOathFlag": false,
+          "courtExtractAvlFlag": true,
+          "courtOfAppealFlag": false,
+          "hearingCode": "APN",
+          "id": "44c238d9-3bc2-3cf3-a2eb-a7d1437b8383",
+          "jurisdiction": "MAGISTRATES",
+          "legislation": "In accordance with section 142 of the Magistrates' Courts Act 1980.",
+          "linkType": "SJP",
+          "listingNotifTemplate": "POSTAL_NOTIFICATION",
+          "offenceActiveOrder": "OFFENCE",
+          "pleaApplicableFlag": false,
+          "prosecutorThirdPartyFlag": true,
+          "spiOutApplicableFlag": true,
+          "summonsTemplateType": "NOT_APPLICABLE",
+          "type": "Application to reopen case"
+        },
+        "applicationReceivedDate": "2021-11-04",
+        "applicant": {
+          "id": "1ef4ed3b-58f8-4e3f-8423-5c5ac4c58e10",
+          "masterDefendant": {
+            "defendantCase": [
+              {
+                "caseId": "0e038f85-3e59-4743-83fa-083406ba4517",
+                "caseReference": "25GD2178221",
+                "defendantId": "e623393f-b8ac-498e-aaf7-0217d4ca824c"
+              }
+            ],
+            "masterDefendantId": "e623393f-b8ac-498e-aaf7-0217d4ca824c",
+            "personDefendant": {
+              "arrestSummonsNumber": "TVL",
+              "bailStatus": {
+                "code": "A",
+                "description": "Not applicable",
+                "id": "86009c70-759d-3308-8de4-194886ff9a77"
+              },
+              "personDetails": {
+                "address": {
+                  "address1": "1234",
+                  "address2": "StreetDescription",
+                  "address3": "Locality2O",
+                  "postcode": "DA8 7ND"
+                },
+                "dateOfBirth": "1982-06-29",
+                "documentationLanguageNeeds": "ENGLISH",
+                "firstName": "Flossie",
+                "gender": "MALE",
+                "hearingLanguageNeeds": "ENGLISH",
+                "lastName": "Boyle",
+                "title": "Mr"
+              },
+              "policeBailStatus": {
+                "code": "C",
+                "description": "Custody",
+                "id": "12e69486-4d01-3403-a50a-7419ca040635"
+              }
+            }
+          },
+          "notificationRequired": true,
+          "summonsRequired": false
+        },
+        "applicationStatus": "LISTED",
+        "subject": {
+          "id": "1ef4ed3b-58f8-4e3f-8423-5c5ac4c58e10",
+          "masterDefendant": {
+            "defendantCase": [
+              {
+                "caseId": "0e038f85-3e59-4743-83fa-083406ba4517",
+                "caseReference": "25GD2178221",
+                "defendantId": "e623393f-b8ac-498e-aaf7-0217d4ca824c"
+              }
+            ],
+            "masterDefendantId": "e623393f-b8ac-498e-aaf7-0217d4ca824c",
+            "personDefendant": {
+              "arrestSummonsNumber": "TVL",
+              "bailStatus": {
+                "code": "A",
+                "description": "Not applicable",
+                "id": "86009c70-759d-3308-8de4-194886ff9a77"
+              },
+              "personDetails": {
+                "address": {
+                  "address1": "1234",
+                  "address2": "StreetDescription",
+                  "address3": "Locality2O",
+                  "postcode": "DA8 7ND"
+                },
+                "dateOfBirth": "1982-06-29",
+                "documentationLanguageNeeds": "ENGLISH",
+                "firstName": "Flossie",
+                "gender": "MALE",
+                "hearingLanguageNeeds": "ENGLISH",
+                "lastName": "Boyle",
+                "title": "Mr"
+              },
+              "policeBailStatus": {
+                "code": "C",
+                "description": "Custody",
+                "id": "12e69486-4d01-3403-a50a-7419ca040635"
+              }
+            }
+          },
+          "notificationRequired": true,
+          "summonsRequired": false
+        },
+        "applicationReference": "25GD2178221",
+        "applicationParticulars": "test",
+        "courtApplicationCases": [
+          {
+            "prosecutionCaseId": "0e038f85-3e59-4743-83fa-083406ba4517",
+            "isSJP": false,
+            "caseStatus": "INACTIVE",
+            "prosecutionCaseIdentifier": {
+              "address": {
+                "address1": "Barton House",
+                "address2": "Bond Street",
+                "address3": "Bristol",
+                "postcode": "BS98 1TL"
+              },
+              "contact": {
+                "primaryEmail": "court.results@tvl.cjsm.net"
+              },
+              "majorCreditorCode": "TVL3",
+              "prosecutionAuthorityCode": "TVL",
+              "prosecutionAuthorityId": "6b7b9adc-ccee-4b13-b2c7-499c28e98962",
+              "prosecutionAuthorityName": "TV Licensing",
+              "prosecutionAuthorityOUCode": "GAEAA01",
+              "caseURN": "25GD2178221"
+            },
+            "offences": [
+              {
+                "arrestDate": "2020-02-09",
+                "chargeDate": "2020-02-09",
+                "count": 0,
+                "endorsableFlag": false,
+                "id": "1cfe204f-460c-4445-b39b-149792af5f79",
+                "isDisposed": true,
+                "listingNumber": 1,
+                "modeOfTrial": "Either Way",
+                "offenceCode": "SX03209",
+                "offenceDateCode": 1,
+                "offenceDefinitionId": "1136fd5e-d9d3-4df6-a6a6-a79c8530379f",
+                "offenceLegislation": "Contrary to section 41 of the Sexual Offences Act 2003.",
+                "offenceTitle": "Care worker cause mentally disordered person to watch a sexual act - SOA 2003",
+                "orderIndex": 1,
+                "proceedingsConcluded": true,
+                "reportingRestrictions": [
+                  {
+                    "id": "3517e2a9-4eec-49aa-af55-02fc6a5eda88",
+                    "label": "Complainant's anonymity protected by virtue of Section 1 of the Sexual Offences Amendment Act 1992",
+                    "orderedDate": "2021-11-05"
+                  }
+                ],
+                "startDate": "2020-02-09",
+                "wording": "Has a violent past and fear that he will commit further offences and\n                interfere with witnesse"
+              }
+            ]
+          }
+        ],
+        "thirdParties": [
+          {
+            "id": "18671ddc-9a85-4f3b-a744-fdb7a4bb6538",
+            "summonsRequired": true,
+            "notificationRequired": true,
+            "prosecutingAuthority": {
+              "address": {
+                "address1": "Barton House",
+                "address2": "Bond Street",
+                "address3": "Bristol",
+                "postcode": "BS98 1TL"
+              },
+              "contact": {
+                "primaryEmail": "court.results@tvl.cjsm.net"
+              },
+              "majorCreditorCode": "TVL3",
+              "name": "TV Licensing",
+              "prosecutionAuthorityCode": "TVL",
+              "prosecutionAuthorityId": "6b7b9adc-ccee-4b13-b2c7-499c28e98962",
+              "prosecutionAuthorityOUCode": "GAEAA01"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

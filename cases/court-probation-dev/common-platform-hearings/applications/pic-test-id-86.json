@@ -1,0 +1,233 @@
+{
+  "hearing": {
+    "id": "984ba15a-f44d-48b6-aef3-c1b980935ef7",
+    "jurisdictionType": "CROWN",
+    "courtCentre": {
+      "id": "9b583616-049b-30f9-a14f-028a53b7cfe8",
+      "name": "Liverpool Crown Court",
+      "roomId": "7cb09222-49e1-3622-a5a6-ad253d2b3c39",
+      "roomName": "Crown Court 3-1"
+    },
+    "type": {
+      "description": "Breach of Order",
+      "id": "136dfc3a-a874-32ce-8493-e50849590b49"
+    },
+    "hearingDays": [
+      {
+        "listedDurationMinutes": 10,
+        "sittingDay": "2021-11-08T11:00:00.000Z"
+      }
+    ],
+    "hasSharedResults": false,
+    "courtApplications": [
+      {
+        "id": "be28ba29-a0cc-46a0-b14b-0baca3d456c7",
+        "type": {
+          "appealFlag": false,
+          "applicantAppellantFlag": false,
+          "boxworkNotifTemplate": "NOT_APPLICABLE",
+          "breachType": "GENERIC_BREACH",
+          "categoryCode": "CB",
+          "code": "CJ03510",
+          "commrOfOathFlag": false,
+          "courtExtractAvlFlag": true,
+          "courtOfAppealFlag": false,
+          "hearingCode": "BOO",
+          "id": "214a102c-fc5f-3c86-bd8a-b48f4c6076c7",
+          "jurisdiction": "EITHER",
+          "legislation": "In accordance with Part 2 of Schedule 8 to the Criminal Justice Act 2003.",
+          "linkType": "LINKED",
+          "listingNotifTemplate": "NOT_APPLICABLE",
+          "offenceActiveOrder": "COURT_ORDER",
+          "pleaApplicableFlag": true,
+          "prefix": "Resentenced",
+          "prosecutorThirdPartyFlag": false,
+          "resentencingActivationCode": "CJO3522",
+          "spiOutApplicableFlag": true,
+          "summonsTemplateType": "BREACH",
+          "type": "Failing to comply with the requirements of a community order"
+        },
+        "applicationReceivedDate": "2021-11-05",
+        "applicant": {
+          "id": "08e0efa6-9300-4aa7-a76a-b82da4160a68",
+          "masterDefendant": {
+            "defendantCase": [
+              {
+                "caseId": "64f7d64e-2695-428d-a4fa-f720f324bc46",
+                "caseReference": "49GD7287821",
+                "defendantId": "ebf37479-3a24-4b61-a5da-7bf1f7e1ffed"
+              }
+            ],
+            "masterDefendantId": "ebf37479-3a24-4b61-a5da-7bf1f7e1ffed",
+            "personDefendant": {
+              "arrestSummonsNumber": "TVL",
+              "bailStatus": {
+                "code": "A",
+                "description": "Not applicable",
+                "id": "86009c70-759d-3308-8de4-194886ff9a77"
+              },
+              "personDetails": {
+                "address": {
+                  "address1": "1234",
+                  "address2": "StreetDescription",
+                  "address3": "Locality2O",
+                  "postcode": "DA8 7ND"
+                },
+                "contact": {
+                  "primaryEmail": "test@test.com"
+                },
+                "dateOfBirth": "1983-06-29",
+                "documentationLanguageNeeds": "ENGLISH",
+                "firstName": "Jermaine",
+                "gender": "MALE",
+                "hearingLanguageNeeds": "ENGLISH",
+                "lastName": "Dickinson",
+                "title": "Mr"
+              },
+              "policeBailStatus": {
+                "code": "C",
+                "description": "Custody",
+                "id": "12e69486-4d01-3403-a50a-7419ca040635"
+              }
+            }
+          },
+          "notificationRequired": true,
+          "summonsRequired": true
+        },
+        "applicationStatus": "LISTED",
+        "subject": {
+          "id": "08e0efa6-9300-4aa7-a76a-b82da4160a68",
+          "masterDefendant": {
+            "defendantCase": [
+              {
+                "caseId": "64f7d64e-2695-428d-a4fa-f720f324bc46",
+                "caseReference": "49GD7287821",
+                "defendantId": "ebf37479-3a24-4b61-a5da-7bf1f7e1ffed"
+              }
+            ],
+            "masterDefendantId": "ebf37479-3a24-4b61-a5da-7bf1f7e1ffed",
+            "personDefendant": {
+              "arrestSummonsNumber": "TVL",
+              "bailStatus": {
+                "code": "A",
+                "description": "Not applicable",
+                "id": "86009c70-759d-3308-8de4-194886ff9a77"
+              },
+              "personDetails": {
+                "address": {
+                  "address1": "1234",
+                  "address2": "StreetDescription",
+                  "address3": "Locality2O",
+                  "postcode": "DA8 7ND"
+                },
+                "contact": {
+                  "primaryEmail": "test@test.com"
+                },
+                "dateOfBirth": "1983-06-29",
+                "documentationLanguageNeeds": "ENGLISH",
+                "firstName": "Jermaine",
+                "gender": "MALE",
+                "hearingLanguageNeeds": "ENGLISH",
+                "lastName": "Dickinson",
+                "title": "Mr"
+              },
+              "policeBailStatus": {
+                "code": "C",
+                "description": "Custody",
+                "id": "12e69486-4d01-3403-a50a-7419ca040635"
+              }
+            }
+          },
+          "notificationRequired": true,
+          "summonsRequired": true
+        },
+        "applicationReference": "49GD7287821",
+        "applicationParticulars": "Test",
+        "allegationOrComplaintEndDate": "2021-11-05",
+        "allegationOrComplaintStartDate": "2021-11-03",
+        "courtOrder": {
+          "id": "63f0c10f-6707-4045-b9c6-78b288f96a3c",
+          "judicialResultTypeId": "418b3aa7-65ab-4a4a-bab9-2f96b698118c",
+          "label": "Community order England / Wales",
+          "orderDate": "2021-11-05",
+          "startDate": "2021-11-05",
+          "orderingCourt": {
+            "address": {
+              "address1": "176A Lavender Hill",
+              "address2": "London",
+              "address3": "",
+              "address4": "",
+              "address5": "",
+              "postcode": "SW11 1JU"
+            },
+            "code": "B01LY00",
+            "id": "f8254db1-1683-483e-afb3-b87fde5a0a26",
+            "lja": {
+              "ljaCode": "2577",
+              "ljaName": "South West London Magistrates' Court"
+            },
+            "name": "Lavender Hill Magistrates' Court",
+            "roomId": "9e4932f7-97b2-3010-b942-ddd2624e4dd8",
+            "roomName": "Courtroom 01"
+          },
+          "orderingHearingId": "7f74c179-579e-4b22-a9a7-0cde2974a7fd",
+          "isSJPOrder": false,
+          "canBeSubjectOfBreachProceedings": true,
+          "canBeSubjectOfVariationProceedings": true,
+          "courtOrderOffences": [
+            {
+              "offence": {
+                "arrestDate": "2020-02-09",
+                "chargeDate": "2020-02-09",
+                "count": 0,
+                "endorsableFlag": false,
+                "id": "5092a589-3a1b-45ed-a9d7-62c4bccec034",
+                "isDisposed": true,
+                "listingNumber": 1,
+                "modeOfTrial": "Either Way",
+                "offenceCode": "CJO3522",
+                "offenceDateCode": 1,
+                "offenceDefinitionId": "1136fd5e-d9d3-4df6-a6a6-a79c8530379f",
+                "offenceLegislation": "Contrary to section 41 of the Sexual Offences Act 2003.",
+                "offenceTitle": "Care worker cause mentally disordered person to watch a sexual act - SOA 2003",
+                "orderIndex": 1,
+                "reportingRestrictions": [
+                  {
+                    "id": "96a2d15f-0087-4be6-94ca-1d628eb85737",
+                    "label": "Complainant's anonymity protected by virtue of Section 1 of the Sexual Offences Amendment Act 1992",
+                    "orderedDate": "2021-11-05"
+                  }
+                ],
+                "startDate": "2020-02-09",
+                "wording": "Resentenced Original code : SX03209, Original details: Has a violent past and fear that he will commit further offences and\n                interfere with witnesse"
+              },
+              "prosecutionCaseId": "64f7d64e-2695-428d-a4fa-f720f324bc46",
+              "prosecutionCaseIdentifier": {
+                "address": {
+                  "address1": "Barton House",
+                  "address2": "Bond Street",
+                  "address3": "Bristol",
+                  "postcode": "BS98 1TL"
+                },
+                "contact": {
+                  "primaryEmail": "court.results@tvl.cjsm.net"
+                },
+                "majorCreditorCode": "TVL3",
+                "prosecutionAuthorityCode": "TVL",
+                "prosecutionAuthorityId": "6b7b9adc-ccee-4b13-b2c7-499c28e98962",
+                "prosecutionAuthorityName": "TV Licensing",
+                "prosecutionAuthorityOUCode": "GAEAA01",
+                "caseURN": "49GD7287821"
+              }
+            }
+          ],
+          "defendantIds": [
+            "ebf37479-3a24-4b61-a5da-7bf1f7e1ffed"
+          ],
+          "endDate": "2021-12-11",
+          "masterDefendantId": "ebf37479-3a24-4b61-a5da-7bf1f7e1ffed"
+        }
+      }
+    ]
+  }
+}
