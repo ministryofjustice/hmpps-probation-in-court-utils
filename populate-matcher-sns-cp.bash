@@ -63,6 +63,7 @@ CASES_PATH="${cp_base_path}${cases_path}"
 FILES=$(find $CASES_PATH -maxdepth $recurse_max_depth -type f)
 echo "📂 Checking for cases in ${CASES_PATH}"
 HEARING_DATE=$(date +"%Y\-%m\-%d")
+TOMORROW_DATE=$(date -v+1d +"%Y\-%m\-%d")
 
 i=0
 for case_file in $FILES
@@ -91,6 +92,7 @@ do
       NEW_DEFENDANT_ID_2=$(uuidgen | tr '[:upper:]' '[:lower:]')
       NEW_OFFENCE_ID=$(uuidgen | tr '[:upper:]' '[:lower:]')
       PAYLOAD=$(echo $PAYLOAD | sed s/%hearing_date%/$HEARING_DATE/g)
+      PAYLOAD=$(echo $PAYLOAD | sed s/%hearing_date_2%/$TOMORROW_DATE/g)
       PAYLOAD=$(echo $PAYLOAD | sed s/%new_case_id%/$NEW_CASE_ID/g)
       PAYLOAD=$(echo $PAYLOAD | sed s/%new_defendant_id%/$NEW_DEFENDANT_ID/g)
       PAYLOAD=$(echo $PAYLOAD | sed s/%new_defendant_id_2%/$NEW_DEFENDANT_ID_2/g)

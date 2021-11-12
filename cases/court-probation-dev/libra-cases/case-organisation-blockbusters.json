@@ -1,0 +1,26 @@
+{
+  "caseId": %new_case_id%,
+  "caseNo": "%new_case_number%",
+  "name": {
+    "forename1": "Block",
+    "surname": "BUSTERS"
+  },
+  "defendantName": "Blockbusters",
+  "defendantType": "O",
+  "defendantAddress": {
+    "line1": "VHS Video Shop",
+    "line2": "Wigan",
+    "pcode": "WN8 0PZ"
+  },
+  "listNo": "1st",
+  "offences": [{
+    "seq": 1,
+    "summary": "Loaned a Nicholas CAGE film, viz. Gone in 60 seconds.",
+    "title": "Loaned a Nicholas CAGE film",
+    "act": "Contrary to all decent sensibilities around film-making and distribution."
+  }],
+  "sessionStartTime": "%hearing_date%T15:00:00",
+  "courtCode": "B10JQ",
+  "courtRoom": "1",
+  "seq": 1
+}
