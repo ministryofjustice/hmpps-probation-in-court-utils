@@ -1,6 +1,8 @@
 #!/bin/bash
 namespace=court-probation-dev
 s3_secret=crime-portal-gateway-s3-credentials
+path=
+options=--recursive
 
 # Read any named params
 while [ $# -gt 0 ]; do
@@ -24,5 +26,5 @@ export AWS_SECRET_ACCESS_KEY=$(echo "$secret_json" | jq -r .data.secret_access_k
 export BUCKET_NAME=$(echo "$secret_json" | jq -r .data.bucket_name)
 
 
-echo "🗂️ Listing files in '$BUCKET_NAME'..."
-aws s3 ls s3://cloud-platform-1e06f7e4db1226ba8e586a2526b70e06
+echo "🗂️ Listing files in '$BUCKET_NAME$path'..."
+aws s3 ls s3://$BUCKET_NAME$path $options

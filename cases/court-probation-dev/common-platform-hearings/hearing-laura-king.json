@@ -15,14 +15,14 @@
       {
         "listedDurationMinutes": 30,
         "listingSequence": 1,
-        "sittingDay": "%hearing_date%T14:00:00.000Z"
+        "sittingDay": "%hearing_date_2%T14:00:00.000Z"
       }
     ],
     "id": "8bbb4fe3-a899-45c7-bdd4-4ee25ac5a83f",
     "jurisdictionType": "CROWN",
     "prosecutionCases": [
       {
-        "__comment__": "This should give a multiple matches from a PNC and Name",
+        "__comment__": "This should give a multiple matches from a PNC and Name and has a pnc missing its slash",
         "defendants": [
           {
             "id": "%new_defendant_id%",
@@ -55,7 +55,7 @@
                 "lastName": "KING"
               }
             },
-            "pncId": "2010/0331249E",
+            "pncId": "20100331249E",
             "prosecutionCaseId": "%new_case_id%"
           }
         ],

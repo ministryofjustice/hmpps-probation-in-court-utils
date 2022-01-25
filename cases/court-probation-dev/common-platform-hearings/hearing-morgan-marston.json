@@ -15,7 +15,7 @@
       {
         "listedDurationMinutes": 30,
         "listingSequence": 1,
-        "sittingDay": "%hearing_date%T10:30:00.000Z"
+        "sittingDay": "%hearing_date_2%T10:30:00.000Z"
       }
     ],
     "id": "8bbb4fe3-a899-45c7-bdd4-4ee25ac5a83f",
@@ -24,21 +24,21 @@
       {
         "defendants": [
           {
-            "__comment__": "This should give a single exact match by PNC, Name & DOB",
+            "__comment__": "This should give a single exact match by PNC, Name & DOB and has a pnc missing its slash",
             "id": "%new_defendant_id%",
-            "pncId": "2004/0046583U",
+            "pncId": "20040046583U",
             "croNumber": "12345ABCDEF",
             "offences": [
               {
                 "id": "a63d9020-aa6b-4997-92fd-72a692b036de",
                 "offenceLegislation": "Contrary to section 20 of the Offences Against the    Person Act 1861.",
-                "offenceTitle": "Wound / inflict grievous bodily harm without intent",
+                "offenceTitle": "Wound / inflict grievous bodily harm without intent (co-defendant)",
                 "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, John Smith"
               },
               {
                 "id": "ea1c2cf1-f155-483b-a908-81158a9b2f9b",
                 "offenceLegislation": "Contrary to section 20 of the Offences Against the    Person Act 1861.",
-                "offenceTitle": "Wound / inflict grievous bodily harm without intent",
+                "offenceTitle": "Wound / inflict grievous bodily harm without intent (co-defendant)",
                 "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, Jane Smith"
               }
             ],
@@ -67,13 +67,13 @@
               {
                 "id": "6a2f41a3-c54c-fce8-32d2-0324e1c32e22",
                 "offenceLegislation": "Contrary to section 20 of the Offences Against the    Person Act 1861.",
-                "offenceTitle": "Wound / inflict grievous bodily harm without intent",
+                "offenceTitle": "Wound / inflict grievous bodily harm without intent (co-defendant)",
                 "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, John Smith"
               },
               {
                 "id": "%new_offence_id%",
                 "offenceLegislation": "Contrary to section 20 of the Offences Against the    Person Act 1861.",
-                "offenceTitle": "Wound / inflict grievous bodily harm without intent",
+                "offenceTitle": "Wound / inflict grievous bodily harm without intent (co-defendant)",
                 "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, Jane Smith"
               }
             ],
