@@ -9,7 +9,6 @@
     "hearingDays": [
       {
         "listedDurationMinutes": 60,
-        "listingSequence": 0,
         "sittingDay": "%hearing_date%T09:00:00.000Z"
       }
     ],
@@ -26,7 +25,10 @@
                 "id": "0c932f0c-282b-418e-b294-8966498b1eef",
                 "offenceLegislation": "JMBBLOGGS Contrary to section 20 of the Offences Against the    Person Act 1861.",
                 "offenceTitle": "JMBBLOGGS Wound / inflict grievous bodily harm without intent",
-                "wording": "JMBBLOGGS on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, John Smith"
+                "wording": "JMBBLOGGS on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, John Smith",
+                "listingNumber": 3,
+                "offenceDefinitionId": "1136fd5e-d9d3-4df6-a6a6-a79c8530379f",
+                "offenceCode": "CJO3523"
               }
             ],
             "personDefendant": {
@@ -48,8 +50,19 @@
             "prosecutionCaseId": "%new_case_id%"
           }
         ],
+        "initiationCode": "C",
+        "prosecutionCaseIdentifier": {
+          "prosecutionAuthorityCode": "CPS",
+          "prosecutionAuthorityId": "52b27284-0686-4894-b1c7-7d4b634cacdb",
+          "caseURN": "25GD34377719"
+        },
         "id": "%new_case_id%"
       }
-    ]
+    ],
+    "id": "%hearing_id%",
+    "type": {
+      "description": "Sentence",
+      "id": "5ae4c090-0f70-4694-b4fc-707633d2b430"
+    }
   }
 }

@@ -35,7 +35,7 @@ then
   echo "🏠 Running against localstack"
   TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-case-events-topic"
   OPTIONS="--endpoint-url http://localhost:4566"
-  QUEUE_URL="http://localhost:4566/000000000000/court-case-matcher-queue"
+  QUEUE_URL="http://localhost:4566/000000000000/test-queue"
   AWS_ACCESS_KEY_ID=foobar
   AWS_SECRET_ACCESS_KEY=foobar
 else
@@ -49,4 +49,4 @@ fi
 
 # Check how many messages are on the queue
 echo "📡 Checking queue status for '$QUEUE_URL'..."
-aws sqs get-queue-attributes --queue-url=$QUEUE_URL --attribute-names=ApproximateNumberOfMessages
+aws sqs get-queue-attributes --queue-url="$QUEUE_URL" --attribute-names=ApproximateNumberOfMessages $OPTIONS
