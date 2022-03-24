@@ -40,6 +40,12 @@
                   "address5": "Cornwall",
                   "postcode": "TR1 1JW"
                 },
+                "contact": {
+                  "email": "bloggo@foo.com",
+                  "home": "01144960023",
+                  "work": "(08081) 570 000",
+                  "mobile": "07700 900003"
+                },
                 "dateOfBirth": "1993-02-01",
                 "firstName": "Joe",
                 "gender": "MALE",

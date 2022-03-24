@@ -50,6 +50,11 @@
                   "address5": "Earth",
                   "postcode": "SA1 1FU"
                 },
+                "contact": {
+                  "home": "+44 114 496 2345",
+                  "mobile": "555 CRIME",
+                  "work": "0114 496 0000"
+                },
                 "dateOfBirth": "1975-01-01",
                 "firstName": "Arthur",
                 "gender": "MALE",

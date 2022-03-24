@@ -44,6 +44,9 @@
                   "address5": "NEW YORK",
                   "postcode": "NY1 1NY"
                 },
+                "contact": {
+                  "mobile": "07700 900 001"
+                },
                 "dateOfBirth": "1965-01-01",
                 "firstName": "Cyndi",
                 "gender": "NOT_SPECIFIED",

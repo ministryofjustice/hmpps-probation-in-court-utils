@@ -54,8 +54,11 @@
                   "address5": "Earth",
                   "postcode": "LE1 6RJ"
                 },
+                "contact": {
+                  "email": "lozking@foo.com"
+                },
                 "firstName": "Laura",
-                "gender": "MALE",
+                "gender": "FEMALE",
                 "lastName": "KING"
               }
             },
