@@ -77,7 +77,7 @@ do
       NEW_DEFENDANT_ID=$(uuidgen | tr '[:upper:]' '[:lower:]')
       NEW_DEFENDANT_ID_2=$(uuidgen | tr '[:upper:]' '[:lower:]')
       NEW_OFFENCE_ID=$(uuidgen | tr '[:upper:]' '[:lower:]')
-      PAYLOAD=$(echo $PAYLOAD | sed s/%hearing_id%/$NEW_HEARING_ID/g)
+      PAYLOAD=$(echo $PAYLOAD | sed s/%new_hearing_id%/$NEW_HEARING_ID/g)
       PAYLOAD=$(echo $PAYLOAD | sed s/%hearing_date%/$HEARING_DATE/g)
       PAYLOAD=$(echo $PAYLOAD | sed s/%hearing_date_2%/$TOMORROW_DATE/g)
       PAYLOAD=$(echo $PAYLOAD | sed s/%new_case_id%/$NEW_CASE_ID/g)

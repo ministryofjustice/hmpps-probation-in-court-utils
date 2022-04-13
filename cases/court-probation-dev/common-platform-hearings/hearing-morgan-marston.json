@@ -18,7 +18,6 @@
         "sittingDay": "%hearing_date_2%T10:30:00.000Z"
       }
     ],
-    "id": "8bbb4fe3-a899-45c7-bdd4-4ee25ac5a83f",
     "jurisdictionType": "CROWN",
     "prosecutionCases": [
       {
@@ -117,7 +116,7 @@
         "id": "%new_case_id%"
       }
     ],
-    "id": "%hearing_id%",
+    "id": "%new_hearing_id%",
     "jurisdictionType": "CROWN",
     "type": {
       "description": "Sentence",

@@ -12,7 +12,6 @@
         "sittingDay": "%hearing_date%T09:00:00.000Z"
       }
     ],
-    "id": "1379cf3d-84db-4bbb-8778-581109c10d43",
     "jurisdictionType": "MAGISTRATES",
     "prosecutionCases": [
       {
@@ -65,7 +64,7 @@
         "id": "%new_case_id%"
       }
     ],
-    "id": "%hearing_id%",
+    "id": "%new_hearing_id%",
     "type": {
       "description": "Sentence",
       "id": "5ae4c090-0f70-4694-b4fc-707633d2b430"

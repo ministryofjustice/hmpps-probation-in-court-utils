@@ -10,35 +10,30 @@
       {
         "listedDurationMinutes": 60,
         "sittingDay": "%hearing_date%T09:00:00.000Z"
-      },
-      {
-        "listedDurationMinutes": 30,
-        "sittingDay": "%hearing_date_2%T14:00:00.000Z"
       }
     ],
-    "jurisdictionType": "CROWN",
     "prosecutionCases": [
       {
-        "__comment__": "This should give a multiple matches from a PNC and Name and has a pnc missing its slash",
         "defendants": [
           {
-            "id": "%new_defendant_id%",
+            "__comment__": "This should give a single exact match by PNC, Name & DOB and will update an existing case",
+            "id": "663a2417-11da-4bb4-acee-f7c0e752ebd2",
             "offences": [
               {
-                "id": "6a2f41a3-c54c-fce8-32d2-0324e1c32e22",
-                "offenceLegislation": "Contrary to section 20 of the Offences Against the Person Act 1861.",
-                "offenceTitle": "Wound / inflict grievous bodily harm without intent",
+                "id": "a63d9020-aa6b-4997-92fd-72a692b036de",
+                "offenceLegislation": "Contrary to section 20 of the Offences Against the    Person Act 1861.",
+                "offenceTitle": "Wound / inflict grievous bodily harm without intent (sole defendant)",
                 "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, John Smith",
-                "listingNumber": 2,
+                "listingNumber": 5,
                 "offenceDefinitionId": "1136fd5e-d9d3-4df6-a6a6-a79c8530379f",
                 "offenceCode": "CJO3523"
               },
               {
-                "id": "%new_offence_id%",
-                "offenceLegislation": "Contrary to section 20 of the Offences Against the Person Act 1861.",
-                "offenceTitle": "Wound / inflict grievous bodily harm without intent",
+                "id": "ea1c2cf1-f155-483b-a908-81158a9b2f9b",
+                "offenceLegislation": "Contrary to section 20 of the Offences Against the    Person Act 1861.",
+                "offenceTitle": "Wound / inflict grievous bodily harm without intent (sole defendant)",
                 "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, Jane Smith",
-                "listingNumber": 6,
+                "listingNumber": 7,
                 "offenceDefinitionId": "1136fd5e-d9d3-4df6-a6a6-a79c8530379f",
                 "offenceCode": "CJO3523"
               }
@@ -46,23 +41,26 @@
             "personDefendant": {
               "personDetails": {
                 "address": {
-                  "address1": "14 King Street",
-                  "address2": "Leicester",
-                  "address3": "Leicestershire",
+                  "address1": "13 Wind Street",
+                  "address2": "Swansea",
+                  "address3": "Wales",
                   "address4": "UK",
                   "address5": "Earth",
-                  "postcode": "LE1 6RJ"
+                  "postcode": "SA1 1FU"
                 },
                 "contact": {
-                  "email": "lozking@foo.com"
+                  "home": "+44 114 496 2345",
+                  "mobile": "555 CRIME",
+                  "work": "0114 496 0000"
                 },
-                "firstName": "Laura",
-                "gender": "FEMALE",
-                "lastName": "KING"
+                "dateOfBirth": "1975-01-01",
+                "firstName": "Arthur",
+                "gender": "MALE",
+                "lastName": "Update-Morgan",
+                "title": "Mr"
               }
             },
-            "pncId": "20100331249E",
-            "prosecutionCaseId": "%new_case_id%"
+            "prosecutionCaseId": "160609b7-b5d2-43d1-a915-a44b860361ee"
           }
         ],
         "initiationCode": "C",
@@ -71,10 +69,11 @@
           "prosecutionAuthorityId": "52b27284-0686-4894-b1c7-7d4b634cacdb",
           "caseURN": "25GD34377719"
         },
-        "id": "%new_case_id%"
+        "id": "160609b7-b5d2-43d1-a915-a44b860361ee"
       }
     ],
-    "id": "%new_hearing_id%",
+    "id": "66206aef-b1e7-4375-b29f-4838bc0c4b73",
+    "jurisdictionType": "CROWN",
     "type": {
       "description": "Sentence",
       "id": "5ae4c090-0f70-4694-b4fc-707633d2b430"
