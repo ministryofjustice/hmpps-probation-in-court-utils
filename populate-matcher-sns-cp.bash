@@ -8,6 +8,7 @@ cp_base_path="./cases/$namespace/common-platform-hearings/"
 cases_path=""
 generate_ids=true
 recurse_max_depth=1
+court_code=B14LO
 
 # Read any named params
 while [ $# -gt 0 ]; do
@@ -99,6 +100,7 @@ do
       PAYLOAD=$(echo $PAYLOAD | sed s/%new_defendant_id%/$NEW_DEFENDANT_ID/g)
       PAYLOAD=$(echo $PAYLOAD | sed s/%new_defendant_id_2%/$NEW_DEFENDANT_ID_2/g)
       PAYLOAD=$(echo $PAYLOAD | sed s/%new_offence_id%/$NEW_OFFENCE_ID/g)
+      PAYLOAD=$(echo $PAYLOAD | sed s/%court_code%/$court_code/g)
     fi
     echo "${PAYLOAD}"
     aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD" --message-attributes "{\"messageType\" : { \"DataType\":\"String\", \"StringValue\":\"$message_type\"}}" $OPTIONS

@@ -26,7 +26,7 @@
     "act": "Contrary to section 1(1) and 7 of the Theft Act 1968."
   }],
   "sessionStartTime": "%hearing_date%T09:01:00",
-  "courtCode": "B14LO",
+  "courtCode": "%court_code%",
   "courtRoom": "04",
   "seq": 1
 }

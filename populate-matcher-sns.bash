@@ -4,6 +4,7 @@ topic_secret=court-case-events-topic
 local=false
 files=
 message_type=LIBRA_COURT_CASE
+court_code=B14LO
 
 # Read any named params
 while [ $# -gt 0 ]; do
@@ -73,6 +74,7 @@ do
     PAYLOAD=$(echo $PAYLOAD | sed s/%hearing_date%/$HEARING_DATE/g)
     PAYLOAD=$(echo $PAYLOAD | sed s/%new_case_number%/$NEW_CASE_NO_PREFIX$i/g)
     PAYLOAD=$(echo $PAYLOAD | sed s/%new_case_id%/$NEW_CASE_ID/g)
+    PAYLOAD=$(echo $PAYLOAD | sed s/%court_code%/$court_code/g)
     echo "${PAYLOAD}"
     aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD" --message-attributes "{\"messageType\" : { \"DataType\":\"String\", \"StringValue\":\"$message_type\"}}" $OPTIONS
    #exit_on_error $? !!

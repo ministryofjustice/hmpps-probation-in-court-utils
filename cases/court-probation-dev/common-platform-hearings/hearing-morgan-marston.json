@@ -4,7 +4,7 @@
       "id": "9b583616-049b-30f9-a14f-028a53b7cfe8",
       "roomId": "7cb09222-49e1-3622-a5a6-ad253d2b3c39",
       "roomName": "Crown Court 3-1",
-      "code": "B14LO00"
+      "code": "%court_code%00"
     },
     "hearingDays": [
       {

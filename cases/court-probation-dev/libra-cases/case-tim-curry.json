@@ -24,7 +24,7 @@
     "act": "Contrary to section 1(1) and 7 of the Capitalism Rules (Communism Drools) Act 1968."
   }],
   "sessionStartTime": "%hearing_date%T09:01:00",
-  "courtCode": "B14LO",
+  "courtCode": "%court_code%",
   "courtRoom": "03",
   "seq": 3
 }

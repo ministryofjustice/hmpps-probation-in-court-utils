@@ -31,7 +31,7 @@
   }
   ],
   "sessionStartTime": "%hearing_date%T11:30:00",
-  "courtCode": "B14LO",
+  "courtCode": "%court_code%",
   "courtRoom": "03",
   "seq": 1
 }
