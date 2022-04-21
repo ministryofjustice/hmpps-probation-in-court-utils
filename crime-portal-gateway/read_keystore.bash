@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# 📄 Decrypts and reads the keystore in the provided namespace
+
+
 namespace=court-probation-dev
 
 # Read any named params
