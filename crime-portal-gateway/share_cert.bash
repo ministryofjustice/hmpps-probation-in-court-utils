@@ -1,4 +1,10 @@
 #!/bin/bash
+
+# 📄 This script will zip up the public cert and put it on the $ftp_server. The password will be saved locally in the
+# 📄 namespace folder and should be sent to the recipient through a different channel. You will be prompted to provide
+# 📄 a password.
+
+
 env=preprod
 zip_pass=$(openssl rand -base64 8)
 ftp_server=public.cgi.com
@@ -20,7 +26,7 @@ zip_path=$working_directory/crime-portal-gateway-$env.zip
 zip_pass_path=$zip_path.pass
 ftp_path=/public_html/keystore-$env.zip
 
-set -ex
+set -e
 
 echo "🗜 Zipping $public_cert_path"
 zip $zip_path $public_cert_path -ej -P $zip_pass

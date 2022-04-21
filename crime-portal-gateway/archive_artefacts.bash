@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# 📄 Moves all files out of the common working directory for a namespace and into a timestamped sub folder
+
+
 namespace=court-probation-dev
 
 # Read any named params

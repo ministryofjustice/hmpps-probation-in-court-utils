@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# 📄 Reads a cert generated locally by one of the other scripts in this folder
+
+
 namespace=court-probation-dev
 # Read any named params
 while [ $# -gt 0 ]; do

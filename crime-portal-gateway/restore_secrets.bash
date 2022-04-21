@@ -1,4 +1,10 @@
 #!/bin/bash
+
+# 📄 This script will restore backed up secrets from the latest backups for the provided namespace
+# 🐛 Known issue: The backups contain metadata, including the uid of the secret as it was. As these are unique you will
+# 🐛 have to manually remove this item from the metadata or it will fail to apply. TODO: script this step
+
+
 namespace=court-probation-dev
 
 # Read any named params
