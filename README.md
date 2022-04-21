@@ -1,9 +1,50 @@
 # court-case-source
-### A tool for testing the prepare-a-case stack
+### A tool for testing the prepare-a-case stack, plus utility scripts for managing it.
 
 ## Prerequisites
 
-You will need both the [Cloud-Platform CLI](https://user-guide.cloud-platform.service.justice.gov.uk/documentation/getting-started/cloud-platform-cli.html#the-cloud-platform-cli) and the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-mac.html) installed to run these scripts. You will also need `jq`.
+These scripts assume that you have a number of common developer tools installed, most notably `kubectl` and `keytool`. The scripts will use your kubectl credentials for accessing protected resources so these must be set up for the scripts to work.
+
+And you will need some or all of these tools, depending on the scripts you want to run:
+- kubectl
+- jq
+- awscli
+- [cloud-platform cli](https://user-guide.cloud-platform.service.justice.gov.uk/documentation/getting-started/cloud-platform-cli.html#the-cloud-platform-cli)
+- keytool
+
+## kubectl contexts
+The scripts assume that you have contexts set up for the `live` cluster for each of the `court-probation-*` namespaces. Your `~/.kube/config` file should have a section which looks something like this:
+
+```
+contexts:
+- context:
+    cluster: live.cloud-platform.service.justice.gov.uk
+    namespace: court-probation-dev
+    user: <youruser>
+  name: court-probation-dev
+- context:
+    cluster: live.cloud-platform.service.justice.gov.uk
+    namespace: court-probation-preprod
+    user: <youruser>
+  name: court-probation-preprod
+- context:
+    cluster: live.cloud-platform.service.justice.gov.uk
+    namespace: court-probation-prod
+    user: <youruser>
+  name: court-probation-prod
+  ```
+
+## Making changes
+
+Feel free to add useful scripts relevant to the prepare-a-case stack and raise a PR to get them merged. Given the sensitive nature of the data these scripts handle please be very careful not to expose credentials or inadvertently add sensitive data to the repo. When downloading anything remotely sensitive make sure to place it in a temporary folder in a completely separate location to remove the risk of accidentally committing anything. `~/temp/` has been adopted as an informal standard for this purpose.  
+
+Helpful messages for the user are always appreciated, as are emojis giving an at a glance idea of what's going on. Bash scripts can be dense and difficult to read so they also make good documentation. 
+
+An example:
+
+```
+echo "✨ Creating a shiny new thing!"
+```
 
 ## Quickstart
 
