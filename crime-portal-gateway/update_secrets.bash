@@ -47,3 +47,6 @@ then
   cat $app_secrets_backup_path | jq --arg a "$encoded_password" '.data.KEYSTORE_PASSWORD = $a' > $updated_app_secrets_path
   kubectl replace secret $app_secret -f $updated_app_secrets_path
 fi
+
+echo "♻️ Restarting pods"
+kubectl rollout restart deployment crime-portal-gateway
