@@ -45,6 +45,8 @@ else
   export QUEUE_URL=$(echo "$secret_json" | jq -r .data.sqs_id)
 fi
 
-# Check how many messages are on the queue
 echo "✉️ Getting message from queue '$QUEUE_URL'..."
-aws sqs receive-message --region eu-west-2 --queue-url=$QUEUE_URL $OPTIONS
+FILENAME=message-$(date "+%Y-%m-%dT%H-%M-%S").json
+OUTPUT_DIRECTORY=~/temp/$namespace/
+mkdir -p $OUTPUT_DIRECTORY
+aws sqs receive-message --region eu-west-2 --queue-url=$QUEUE_URL $OPTIONS > $OUTPUT_DIRECTORY$FILENAME
