@@ -10,6 +10,9 @@ generate_ids=true
 recurse_max_depth=1
 host=https://court-hearing-event-receiver-dev.hmpps.service.justice.gov.uk
 auth_host=https://sign-in-dev.hmpps.service.justice.gov.uk
+court_code=B14LO
+token=
+url_suffix=
 
 # Read any named params
 while [ $# -gt 0 ]; do
@@ -26,14 +29,17 @@ set -o history -o histexpand
 set -e
 
 authenticate() {
-  auth_header="Authorization: Basic $(echo -n "$client_id:$client_secret" | base64)"
-  url=$auth_host/auth/oauth/token
-  token="$(curl -X POST \
-    -H application/x-www-form-urlencoded \
-    -H "$auth_header" -F grant_type=client_credentials \
-    https://sign-in-dev.hmpps.service.justice.gov.uk/auth/oauth/token \
-    | jq -r .access_token
-    )"
+  if [[ -z "${token}" ]]
+  then
+    auth_header="Authorization: Basic $(echo -n "$client_id:$client_secret" | base64)"
+    url=$auth_host/auth/oauth/token
+    token="$(curl -X POST \
+      -H application/x-www-form-urlencoded \
+      -H "$auth_header" -F grant_type=client_credentials \
+      https://sign-in-dev.hmpps.service.justice.gov.uk/auth/oauth/token \
+      | jq -r .access_token
+      )"
+  fi
 }
 
 if [[ $local = "true" ]]
@@ -58,6 +64,7 @@ FILES=$(find $CASES_PATH -maxdepth $recurse_max_depth -type f)
 echo "📂 Checking for cases in ${CASES_PATH}"
 HEARING_DATE=$(date +"%Y\-%m\-%d")
 TOMORROW_DATE=$(date -v+1d +"%Y\-%m\-%d")
+YESTERDAY_DATE=$(date -v-2d +"%Y\-%m\-%d")
 
 i=0
 for case_file in $FILES
@@ -80,9 +87,11 @@ do
       PAYLOAD=$(echo $PAYLOAD | sed s/%new_hearing_id%/$NEW_HEARING_ID/g)
       PAYLOAD=$(echo $PAYLOAD | sed s/%hearing_date%/$HEARING_DATE/g)
       PAYLOAD=$(echo $PAYLOAD | sed s/%hearing_date_2%/$TOMORROW_DATE/g)
+      PAYLOAD=$(echo $PAYLOAD | sed s/%hearing_date_yesterday%/$YESTERDAY_DATE/g)
       PAYLOAD=$(echo $PAYLOAD | sed s/%new_case_id%/$NEW_CASE_ID/g)
       PAYLOAD=$(echo $PAYLOAD | sed s/%new_defendant_id%/$NEW_DEFENDANT_ID/g)
       PAYLOAD=$(echo $PAYLOAD | sed s/%new_defendant_id_2%/$NEW_DEFENDANT_ID_2/g)
+      PAYLOAD=$(echo $PAYLOAD | sed s/%court_code%/$court_code/g)
       PAYLOAD=$(echo $PAYLOAD | sed s/%new_offence_id%/$NEW_OFFENCE_ID/g)
     fi
     echo "${PAYLOAD}"
@@ -93,6 +102,6 @@ do
   -H 'Content-Type: application/json' \
   -H "Authorization: Bearer $token" \
   -d "$PAYLOAD" \
-  "$host/hearing/$NEW_HEARING_ID"
+  "$host/hearing/$NEW_HEARING_ID$url_suffix"
   fi
 done

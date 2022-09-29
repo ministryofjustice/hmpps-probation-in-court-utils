@@ -3,6 +3,7 @@ namespace=court-probation-dev
 topic_secret=court-case-events-topic
 local=false
 email=
+attributes=
 
 # Read any named params
 while [ $# -gt 0 ]; do
@@ -45,4 +46,4 @@ fi
 echo "📡 Checking connection to SNS..."
 aws sns get-topic-attributes --topic-arn "$TOPIC_ARN" $OPTIONS > /dev/null
 
-aws sns subscribe --topic-arn "$TOPIC_ARN" --protocol email-json --notification-endpoint "$email" $OPTIONS
+aws sns subscribe --topic-arn "$TOPIC_ARN" --protocol email-json --notification-endpoint "$email" $OPTIONS --attributes "$attributes"
