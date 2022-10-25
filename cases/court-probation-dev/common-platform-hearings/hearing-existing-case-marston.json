@@ -1,0 +1,77 @@
+{
+  "hearing": {
+    "courtCentre": {
+      "id": "9b583616-049b-30f9-a14f-028a53b7cfe8",
+      "roomId": "7cb09222-49e1-3622-a5a6-ad253d2b3c39",
+      "roomName": "Crown Court 3-1",
+      "code": "%court_code%00"
+    },
+    "hearingDays": [
+      {
+        "listedDurationMinutes": 60,
+        "listingSequence": 0,
+        "sittingDay": "2022-09-08T09:00:00.000Z"
+      }
+    ],
+    "jurisdictionType": "CROWN",
+    "prosecutionCases": [
+      {
+        "defendants": [
+          {
+            "id": "1ad0ff49-8e6c-42e1-868d-8fcc35fa4d61",
+            "offences": [
+              {
+                "id": "6a2f41a3-c54c-fce8-32d2-0324e1c32e22",
+                "offenceLegislation": "Contrary to section 20 of the Offences Against the    Person Act 1861.",
+                "offenceTitle": "Wound / inflict grievous bodily harm without intent (co-defendant)",
+                "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, John Smith",
+                "listingNumber": 1,
+                "offenceDefinitionId": "1136fd5e-d9d3-4df6-a6a6-a79c8530379f",
+                "offenceCode": "CJO3523"
+              },
+              {
+                "id": "4ce1cffc-2794-4e2c-933a-c251656317b2",
+                "offenceLegislation": "Contrary to section 20 of the Offences Against the    Person Act 1861.",
+                "offenceTitle": "Wound / inflict grievous bodily harm without intent (co-defendant)",
+                "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, Jane Smith",
+                "offenceDefinitionId": "1136fd5e-d9d3-4df6-a6a6-a79c8530379f",
+                "offenceCode": "CJO3523",
+                "listingNo": 3
+              }
+            ],
+            "personDefendant": {
+              "personDetails": {
+                "address": {
+                  "address1": "14 Tottenham Court Road",
+                  "address2": "London Road",
+                  "address3": "England",
+                  "address4": "UK",
+                  "address5": "Earth",
+                  "postcode": "W1T 7RJ"
+                },
+                "dateOfBirth": "1997-02-28",
+                "firstName": "Jean-Jacque",
+                "gender": "MALE",
+                "lastName": "Marston"
+              }
+            },
+            "prosecutionCaseId": "220df99b-7318-4f74-8a88-2e6d2c2f0560"
+          }
+        ],
+        "initiationCode": "C",
+        "prosecutionCaseIdentifier": {
+          "prosecutionAuthorityCode": "CPS",
+          "prosecutionAuthorityId": "52b27284-0686-4894-b1c7-7d4b634cacdb",
+          "caseURN": "25GD34377719"
+        },
+        "id": "220df99b-7318-4f74-8a88-2e6d2c2f0560"
+      }
+    ],
+    "id": "%new_hearing_id%",
+    "jurisdictionType": "CROWN",
+    "type": {
+      "description": "Post-sentence refreshments",
+      "id": "5ae4c090-0f70-4694-b4fc-707633d2b430"
+    }
+  }
+}

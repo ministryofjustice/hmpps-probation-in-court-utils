@@ -2,6 +2,7 @@
 namespace=court-probation-dev
 queue_secret=court-case-matcher-queue-dead-letter-queue-credentials
 local=false
+OPTIONS=--visibility-timeout=120
 
 # Read any named params
 while [ $# -gt 0 ]; do

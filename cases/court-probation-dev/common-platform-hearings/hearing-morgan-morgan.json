@@ -1,0 +1,131 @@
+{
+  "hearing": {
+    "__comment__": "This file has two identical defendants, a situation which is known to happen in prod, see https://dsdmoj.atlassian.net/browse/PIC-2539",
+    "courtCentre": {
+      "id": "9b583616-049b-30f9-a14f-028a53b7cfe8",
+      "roomId": "7cb09222-49e1-3622-a5a6-ad253d2b3c39",
+      "roomName": "Crown Court 3-1",
+      "code": "%court_code%00"
+    },
+    "hearingDays": [
+      {
+        "listedDurationMinutes": 60,
+        "listingSequence": 0,
+        "sittingDay": "%hearing_date%T09:00:00.000Z"
+      },
+      {
+        "listedDurationMinutes": 30,
+        "listingSequence": 1,
+        "sittingDay": "%hearing_date_2%T10:30:00.000Z"
+      }
+    ],
+    "jurisdictionType": "CROWN",
+    "prosecutionCases": [
+      {
+        "defendants": [
+          {
+            "__comment__": "This should give a single exact match by PNC, Name & DOB and has a pnc missing its slash",
+            "id": "%new_defendant_id%",
+            "pncId": "20040046583U",
+            "croNumber": "12345ABCDEF",
+            "offences": [
+              {
+                "id": "a63d9020-aa6b-4997-92fd-72a692b036de",
+                "offenceLegislation": "Contrary to section 20 of the Offences Against the    Person Act 1861.",
+                "offenceTitle": "Wound / inflict grievous bodily harm without intent (co-defendant)",
+                "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, John Smith",
+                "listingNumber": 1,
+                "offenceDefinitionId": "1136fd5e-d9d3-4df6-a6a6-a79c8530379f",
+                "offenceCode": "CJO3523"
+              },
+              {
+                "id": "ea1c2cf1-f155-483b-a908-81158a9b2f9b",
+                "offenceLegislation": "Contrary to section 20 of the Offences Against the    Person Act 1861.",
+                "offenceTitle": "Wound / inflict grievous bodily harm without intent (co-defendant)",
+                "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, Jane Smith",
+                "listingNumber": 2,
+                "offenceDefinitionId": "1136fd5e-d9d3-4df6-a6a6-a79c8530379f",
+                "offenceCode": "CJO3523"
+              }
+            ],
+            "personDefendant": {
+              "personDetails": {
+                "address": {
+                  "address1": "13 Wind Street",
+                  "address2": "Swansea",
+                  "address3": "Wales",
+                  "address4": "UK",
+                  "address5": "Earth",
+                  "postcode": "SA1 1FU"
+                },
+                "dateOfBirth": "1975-01-01",
+                "firstName": "Arthur",
+                "gender": "MALE",
+                "lastName": "Morgan",
+                "title": "Mr"
+              }
+            },
+            "prosecutionCaseId": "%new_case_id%"
+          },
+          {
+            "__comment__": "This should give a single exact match by PNC, Name & DOB and has a pnc missing its slash",
+            "id": "%new_defendant_id_2%",
+            "pncId": "20040046583U",
+            "croNumber": "12345ABCDEF",
+            "offences": [
+              {
+                "id": "a63d9020-aa6b-4997-92fd-72a692b036de",
+                "offenceLegislation": "Contrary to section 20 of the Offences Against the    Person Act 1861.",
+                "offenceTitle": "Wound / inflict grievous bodily harm without intent (co-defendant)",
+                "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, John Smith",
+                "listingNumber": 1,
+                "offenceDefinitionId": "1136fd5e-d9d3-4df6-a6a6-a79c8530379f",
+                "offenceCode": "CJO3523"
+              },
+              {
+                "id": "ea1c2cf1-f155-483b-a908-81158a9b2f9b",
+                "offenceLegislation": "Contrary to section 20 of the Offences Against the    Person Act 1861.",
+                "offenceTitle": "Wound / inflict grievous bodily harm without intent (co-defendant)",
+                "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, Jane Smith",
+                "listingNumber": 2,
+                "offenceDefinitionId": "1136fd5e-d9d3-4df6-a6a6-a79c8530379f",
+                "offenceCode": "CJO3523"
+              }
+            ],
+            "personDefendant": {
+              "personDetails": {
+                "address": {
+                  "address1": "13 Wind Street",
+                  "address2": "Swansea",
+                  "address3": "Wales",
+                  "address4": "UK",
+                  "address5": "Earth",
+                  "postcode": "SA1 1FU"
+                },
+                "dateOfBirth": "1975-01-01",
+                "firstName": "Arthur",
+                "gender": "MALE",
+                "lastName": "Morgan",
+                "title": "Mr"
+              }
+            },
+            "prosecutionCaseId": "%new_case_id%"
+          }
+        ],
+        "initiationCode": "C",
+        "prosecutionCaseIdentifier": {
+          "prosecutionAuthorityCode": "CPS",
+          "prosecutionAuthorityId": "52b27284-0686-4894-b1c7-7d4b634cacdb",
+          "caseURN": "25GD34377719"
+        },
+        "id": "%new_case_id%"
+      }
+    ],
+    "id": "%new_hearing_id%",
+    "jurisdictionType": "CROWN",
+    "type": {
+      "description": "Sentence",
+      "id": "5ae4c090-0f70-4694-b4fc-707633d2b430"
+    }
+  }
+}

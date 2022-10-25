@@ -1,10 +1,8 @@
 #!/bin/bash
 namespace=court-probation-dev
-topic_secret=court-case-events-topic
+topic_secret=probation-offender-events-court-case-service-main-queue
 local=false
 files=
-message_type=COMMON_PLATFORM_HEARING
-hearing_event_type=ConfirmedOrUpdated
 cp_base_path="./cases/$namespace/common-platform-hearings/"
 cases_path=""
 generate_ids=true
@@ -104,7 +102,7 @@ do
       PAYLOAD=$(echo $PAYLOAD | sed s/%court_code%/$court_code/g)
     fi
     echo "${PAYLOAD}"
-    aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD" --message-attributes "{\"messageType\" : { \"DataType\":\"String\", \"StringValue\":\"$message_type\"}, \"hearingEventType\" : { \"DataType\":\"String\", \"StringValue\":\"$hearing_event_type\"}}" $OPTIONS
+    aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD" --message-attributes "{\"messageType\" : { \"DataType\":\"String\", \"StringValue\":\"$message_type\"}}" $OPTIONS
     #exit_on_error $? !!
   fi
 done
