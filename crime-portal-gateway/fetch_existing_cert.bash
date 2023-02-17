@@ -1,11 +1,9 @@
 #!/bin/bash
 
-# 📄 Fetches the existing keystore from the namespace and creates a local copy, updated with the provided
-# 📄 --trusted_cert with alias $trusted_alias. It retains the same private key and password.
+# 📄 Fetches the existing keystore from the namespace and exports the trusted cert to a file which can then be imported
+# 📄 to a new keystore
 
-# 📄 Once this script is run, you can check the keystore with ./read_generated_keystore.bash
-# 📄 If you're happy you can apply it with ./update_secrets.bash (Note: it uses the same keystore password so you don't
-# 📄 need to update this)
+# 📄 Once this script is run, you can check cert with read_existing_cert_from_local.bash
 
 set -e
 

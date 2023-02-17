@@ -2,7 +2,10 @@
 
 # 📄 This script will restore backed up secrets from the latest backups for the provided namespace
 # 🐛 Known issue: The backups contain metadata, including the uid of the secret as it was. As these are unique you will
-# 🐛 have to manually remove this item from the metadata or it will fail to apply. TODO: script this step
+# 🐛 have to manually remove this item from the metadata or it will fail to apply.
+# 🐛 This can't easily be scripted because though you can use | sed '/\"uid\"/d' to remove the offending line, it will
+# 🐛 generally leave a trailing comma as well which is much harder to get rid of. Obviously possible but hasn't been
+# 🐛 worth the effort so far.
 
 
 namespace=court-probation-dev
