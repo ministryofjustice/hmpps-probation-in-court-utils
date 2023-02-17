@@ -31,7 +31,117 @@
                 "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, John Smith",
                 "listingNumber": 1,
                 "offenceDefinitionId": "1136fd5e-d9d3-4df6-a6a6-a79c8530379f",
-                "offenceCode": "CJO3523"
+                "offenceCode": "CJO3523",
+                "judicialResults": [
+                  {
+                    "alwaysPublished": false,
+                    "category": "INTERMEDIARY",
+                    "cjsCode": "4506",
+                    "courtClerk": {
+                      "firstName": "Erica",
+                      "lastName": "Wilson",
+                      "userId": "31ec3a16-8721-498c-8da5-f099390ee254"
+                    },
+                    "d20": false,
+                    "excludedFromResults": false,
+                    "isAdjournmentResult": false,
+                    "isAvailableForCourtExtract": true,
+                    "isConvictedResult": false,
+                    "isDeleted": false,
+                    "isFinancialResult": false,
+                    "isUnscheduled": false,
+                    "judicialResultId": "01e6ee48-8f90-476e-ae58-5bf85bf831bd",
+                    "judicialResultPrompts": [
+                      {
+                        "courtExtract": "Y",
+                        "judicialResultPromptTypeId": "fbed768b-ee95-4434-87c8-e81cbc8d24c8",
+                        "label": "Next hearing in Crown Court",
+                        "promptReference": "12dbd09b-5c4d-4524-bd9d-a1751ce151b7",
+                        "promptSequence": 0,
+                        "usergroups": [],
+                        "value": "Fixed Date:29/04/2021\nTime of hearing:15:55\nCourtroom:Courtroom 01\nHearing type:Plea and Trial Preparation\nEstimated duration:20 Minutes\nRemand Status:Conditional Bail\nCourthouse organisation name:Derby Crown Court\nCourthouse address line 1:Derby Combined Court Centre\nCourthouse address line 2:Morledge\nCourthouse address line 3:Derby\nCourthouse post code:DE1 2XE\nCourthouse email address 1:EMCorrespondence@cps.gov.uk\nCourthouse email address 2:derbycc@geoamey.co.uk",
+                        "welshLabel": "Bydd y gwrandawiad nesaf yn Llys y Goron"
+                      },
+                      {
+                        "courtExtract": "Y",
+                        "isFinancialImposition": false,
+                        "judicialResultPromptTypeId": "61f951c3-f18d-4a44-ae4a-0cad4efb4133",
+                        "label": "Defendant to attend the next hearing",
+                        "promptReference": "defendantToAttendTheNextHearing",
+                        "promptSequence": 100,
+                        "type": "BOOLEAN",
+                        "usergroups": [],
+                        "value": "true",
+                        "welshLabel": "Diffynnydd i fynychu’r gwrandawiad nesaf",
+                        "welshValue": "true"
+                      },
+                      {
+                        "courtExtract": "Y",
+                        "judicialResultPromptTypeId": "a0bdcc1b-fd72-4515-91ba-01807dfdf880",
+                        "label": "Case part heard",
+                        "promptReference": "fb0aa0a4-cf10-4b98-83d2-96f1833fd06c",
+                        "promptSequence": 200,
+                        "usergroups": [],
+                        "value": "",
+                        "welshLabel": "Gwrandawyd yr achos yn rhannol"
+                      },
+                      {
+                        "courtExtract": "N",
+                        "judicialResultPromptTypeId": "7fc17a01-2f5a-4433-aae9-28e0c959f73b",
+                        "label": "Adjournment reasons",
+                        "promptReference": "e5a1f349-5eef-4824-90f3-38dcf0dd3eb3",
+                        "promptSequence": 300,
+                        "usergroups": [],
+                        "value": "",
+                        "welshLabel": "Rheswm dros ohirio:"
+                      }
+                    ],
+                    "judicialResultTypeId": "d278650c-e429-11e8-9f32-f2801f1b9fd1",
+                    "label": "Adjournment",
+                    "lastSharedDateTime": "2021-04-29",
+                    "level": "O",
+                    "lifeDuration": false,
+                    "nextHearing": {
+                      "adjournmentReason": "Case part heard",
+                      "courtCentre": {
+                        "address": {
+                          "address1": "Derby Combined Court Centre",
+                          "address2": "Morledge",
+                          "address3": "Derby",
+                          "postcode": "DE1 2XE"
+                        },
+                        "courtHearingLocation": "C30DE00",
+                        "id": "6131bd34-33d9-3d1e-8152-8b5a2084f1bd",
+                        "name": "Derby Crown Court",
+                        "psaCode": 1428,
+                        "roomId": "594d6332-9806-38ab-830d-5941e671e0bb",
+                        "roomName": "Courtroom 01",
+                        "welshName": "Llys Y Goron Derby"
+                      },
+                      "estimatedMinutes": 20,
+                      "jurisdictionType": "CROWN",
+                      "listedStartDateTime": "2021-04-29T14:55:00.000Z",
+                      "type": {
+                        "description": "Plea and Trial Preparation",
+                        "id": "06b0c2bf-3f98-46ed-ab7e-56efaf9ecced"
+                      }
+                    },
+                    "orderedDate": "2021-04-29",
+                    "orderedHearingId": "4ab895ad-056f-42a4-aecb-76a4cd96ad40",
+                    "postHearingCustodyStatus": "A",
+                    "publishedAsAPrompt": false,
+                    "publishedForNows": false,
+                    "rank": 76400,
+                    "resultText": "Adjournment\nNext hearing in Crown Court Fixed Date:29/04/2021\nTime of hearing:15:55\nCourtroom:Courtroom 01\nHearing type:Plea and Trial Preparation\nEstimated duration:20 Minutes\nRemand Status:Conditional Bail\nCourthouse organisation name:Derby Crown Court\nCourthouse address line 1:Derby Combined Court Centre\nCourthouse address line 2:Morledge\nCourthouse address line 3:Derby\nCourthouse post code:DE1 2XE\nCourthouse email address 1:EMCorrespondence@cps.gov.uk\nCourthouse email address 2:derbycc@geoamey.co.uk\nDefendant to attend the next hearing true\nCase part heard \nAdjournment reasons ",
+                    "rollUpPrompts": true,
+                    "rootJudicialResultId": "01e6ee48-8f90-476e-ae58-5bf85bf831bd",
+                    "rootJudicialResultTypeId": "d278650c-e429-11e8-9f32-f2801f1b9fd1",
+                    "terminatesOffenceProceedings": false,
+                    "urgent": false,
+                    "usergroups": [],
+                    "welshLabel": "Gohiriad"
+                  }
+                ]
               },
               {
                 "id": "ea1c2cf1-f155-483b-a908-81158a9b2f9b",

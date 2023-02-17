@@ -1,5 +1,5 @@
 {
-  "_file_comments_": "Create a case with hearings on two days, NOT_SPECIFIED as gender",
+  "_file_comments_": "Create a case with hearings on two days, NOT_SPECIFIED as gender, SENTENCED",
   "hearing": {
     "courtCentre": {
       "id": "9b583616-049b-30f9-a14f-028a53b7cfe8",

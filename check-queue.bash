@@ -2,6 +2,7 @@
 namespace=court-probation-dev
 queue_secret=court-case-matcher-queue-credentials
 local=false
+queue_url_data_key=sqs_id
 
 # Note: there can be a noticeable delay on the order of tens of seconds between items being added to or removed from a queue and the count updating.
 
@@ -44,7 +45,7 @@ else
   secret_json=$(cloud-platform decode-secret -s $queue_secret -n $namespace --skip-version-check)
   export AWS_ACCESS_KEY_ID=$(echo "$secret_json" | jq -r .data.access_key_id)
   export AWS_SECRET_ACCESS_KEY=$(echo "$secret_json" | jq -r .data.secret_access_key)
-  export QUEUE_URL=$(echo "$secret_json" | jq -r .data.sqs_id)
+  export QUEUE_URL=$(echo "$secret_json" | jq -r .data.$queue_url_data_key)
 fi
 
 # Check how many messages are on the queue

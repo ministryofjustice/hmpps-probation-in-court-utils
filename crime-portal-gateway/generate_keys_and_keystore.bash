@@ -41,6 +41,12 @@ password_path=$keystore_path.pwd
 public_cert_path=$working_directory/crime-portal-gateway.crt
 
 echo "🚚 Cert '${trusted_cert:? ⚠️ --trusted_cert parameter is required to create keystore}' will be added to the generated keystore"
+if [[ -f "$keystore_path" ]];
+then
+  echo "⚠️ Keystore $keystore_path already exists, delete it to continue."
+  echo "👋 Exiting"
+  exit 1
+fi
 keytool -genkey -alias $key_alias -keyalg RSA -keystore $keystore_path  -keysize 2048 -validity $cert_validity -dname "CN=$cert_cn, OU=$cert_ou, O=$cert_o, L=$cert_l, ST=$cert_st, C=$cert_c" -storepass $keystore_pass
 
 echo "✨ New keystore created at '$keystore_path'"
