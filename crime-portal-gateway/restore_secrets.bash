@@ -34,3 +34,6 @@ cert_secret_backup_path=$working_directory/$cert_secret.json.bk
 
 kubectl replace secret $app_secret -f $app_secrets_backup_path
 kubectl replace secret $cert_secret -f $cert_secret_backup_path
+
+echo "♻️ Restarting pods"
+kubectl rollout restart deployment crime-portal-gateway
