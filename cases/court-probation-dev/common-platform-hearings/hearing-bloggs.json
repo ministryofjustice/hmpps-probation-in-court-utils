@@ -85,7 +85,7 @@
         ]
       }
     ],
-    "id": "c5d0eda4-ef43-11ed-a05b-0242ac120003",
+    "id": "%new_hearing_id%",
     "type": {
       "description": "Sentence",
       "id": "5ae4c090-0f70-4694-b4fc-707633d2b430"
