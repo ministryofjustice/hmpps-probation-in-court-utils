@@ -10,6 +10,23 @@ generate_ids=true
 recurse_max_depth=1
 host=https://court-hearing-event-receiver-dev.hmpps.service.justice.gov.uk
 auth_host=https://sign-in-dev.hmpps.service.justice.gov.uk
+client_id=
+client_secret=
+
+# Read personal HMPPS Auth client id and secret from the command line
+read -p "Enter your client_id: " client_id
+
+if [[ -z "$client_id" ]]; then
+  echo "Error: no client_id provided"
+  exit 1
+fi
+
+read -p "Enter your client_secret: " client_secret
+
+if [[ -z "$client_secret" ]]; then
+  echo "Error: no client_secret provided"
+  exit 1
+fi
 
 # Read any named params
 while [ $# -gt 0 ]; do
@@ -30,10 +47,11 @@ authenticate() {
   url=$auth_host/auth/oauth/token
   token="$(curl -X POST \
     -H application/x-www-form-urlencoded \
-    -H "$auth_header" -F grant_type=client_credentials \
+    -H "$auth_header" -F grant_type=client_credentials -F scope=read \
     https://sign-in-dev.hmpps.service.justice.gov.uk/auth/oauth/token \
     | jq -r .access_token
     )"
+    echo "🔑 Token returned = $token"
 }
 
 if [[ $local = "true" ]]
@@ -41,12 +59,6 @@ then
   echo "🏠 Running against local"
   host=http://localhost:8080
 fi
-
-# Get credentials from namespace secret
-echo "🔑 Getting credentials for $namespace..."
-secret_json=$(cloud-platform decode-secret -s $secret -n $namespace --skip-version-check)
-client_id=$(echo "$secret_json" | jq -r .data.NOMIS_OAUTH_API_CLIENT_ID)
-client_secret=$(echo "$secret_json" | jq -r .data.NOMIS_OAUTH_API_CLIENT_SECRET)
 
 
 if [[ -n "${cases_path}" ]]
@@ -88,6 +100,7 @@ do
     echo "${PAYLOAD}"
 
   authenticate
+  echo "🔑 After authenticate......."
 
   curl -i -X POST \
   -H 'Content-Type: application/json' \

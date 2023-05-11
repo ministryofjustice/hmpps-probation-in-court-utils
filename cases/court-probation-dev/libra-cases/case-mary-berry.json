@@ -23,7 +23,8 @@
     "seq": 1,
     "summary": "On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to that Hollywood bloke.",
     "title": "Theft from a shop",
-    "act": "Contrary to section 1(1) and 7 of the Theft Act 1968."
+    "act": "Contrary to section 1(1) and 7 of the Theft Act 1968.",
+    "code": "SE20516"
   }],
   "sessionStartTime": "%hearing_date%T15:00:00",
   "courtCode": "%court_code%",
