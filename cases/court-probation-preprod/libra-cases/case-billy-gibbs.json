@@ -3,13 +3,13 @@
   "caseId": %new_case_id%,
   "caseNo": "%new_case_number%",
   "name": {
-    "title": "Miss",
-    "forename1": "Esther",
-    "surname": "Egge"
+    "title": "Mr",
+    "forename1": "Billy",
+    "surname": "Gibbs"
   },
-  "defendantName": "Miss Esther Egge",
+  "defendantName": "Mr Billy Gibbs",
   "defendantType": "P",
-  "defendantSex": "F",
+  "defendantSex": "M",
   "defendantDob": "28/11/1986",
   "defendantAge": "34",
   "defendantAddress": {
@@ -25,11 +25,11 @@
     "summary": "On 01/01/2016 at Town, made up stupid offences to amuse self.",
     "title": "Making up test data last thing on a Friday",
     "act": "Contrary to section 1(1) and 7 of the Poor Use of Company Time Act 1968.",
-    "code": "CJ88144"
+    "code": "RT88191"
   }
   ],
   "sessionStartTime": "%hearing_date%T11:30:00",
-  "courtCode": "%court_code%",
+  "courtCode": "C22SW",
   "courtRoom": "04",
   "seq": 1
 }

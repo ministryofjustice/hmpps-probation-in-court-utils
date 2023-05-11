@@ -24,7 +24,8 @@
     "seq": 1,
     "summary": "On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.",
     "title": "Theft from a shop",
-    "act": "Contrary to section 1(1) and 7 of the Theft Act 1968."
+    "act": "Contrary to section 1(1) and 7 of the Theft Act 1968.",
+    "code": "RT88191"
   }],
   "sessionStartTime": "%hearing_date%T09:01:00",
   "courtCode": "%court_code%",

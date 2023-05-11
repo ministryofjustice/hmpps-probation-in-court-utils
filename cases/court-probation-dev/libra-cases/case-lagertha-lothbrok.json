@@ -23,7 +23,8 @@
     "seq": 1,
     "summary": "On 01/01/2016 at Town, wrought havoc.",
     "title": "Pillage etc.",
-    "act": "Contrary to section 1(1) and 7 of the Vikings Doing Viking Things Act 1968."
+    "act": "Contrary to section 1(1) and 7 of the Vikings Doing Viking Things Act 1968.",
+    "code": "RW89008"
   }],
   "sessionStartTime": "%hearing_date%T15:00:00",
   "courtCode": "%court_code%",
