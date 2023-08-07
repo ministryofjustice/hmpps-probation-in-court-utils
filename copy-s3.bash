@@ -28,4 +28,9 @@ export BUCKET_NAME=$(echo "$secret_json" | jq -r .data.bucket_name)
 
 OUTPUT_PATH=$output_folder/$BUCKET_NAME/$bucket_path
 echo "🗂️ Copying files from '$BUCKET_NAME/$bucket_path' to '$OUTPUT_PATH'..."
-aws s3 cp s3://$BUCKET_NAME/$bucket_path $OUTPUT_PATH $options
+aws s3 cp s3://$BUCKET_NAME/$bucket_path $OUTPUT_PATH --recursive --exclude="*" --include="2023-08-07-B10LX*.xml"
+#############################################################################################################
+# Modify the above --include filter to only copy a subset of the files in the bucket to the local filesystem
+# The --exclude="*" is also required according to the aws cli docs:
+# https://docs.aws.amazon.com/cli/latest/reference/s3/index.html#use-of-exclude-and-include-filters
+#############################################################################################################
