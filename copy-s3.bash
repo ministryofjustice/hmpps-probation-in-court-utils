@@ -1,5 +1,5 @@
 #!/bin/bash
-namespace=court-probation-prod
+namespace=court-probation-dev
 s3_secret=crime-portal-gateway-s3-credentials
 output_folder=~/temp
 bucket_path=
