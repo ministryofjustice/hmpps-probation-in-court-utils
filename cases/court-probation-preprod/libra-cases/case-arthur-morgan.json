@@ -1,6 +1,6 @@
 {
-  "caseId": "999999",
-  "caseNo": "2106223516243653402",
+  "caseId": %new_case_id%,
+  "caseNo": "%new_case_number%",
   "name": {
     "title": "Mr",
     "forename1": "Arthur",
@@ -17,6 +17,7 @@
     "pcode": "NT4 6YH"
   },
   "pnc": "2004/0046583U",
+  "urn": "12GD3124119",
   "listNo": "1st",
   "nationality1": "Angolan",
   "nationality2": "Austrian",
@@ -24,10 +25,11 @@
     "seq": 1,
     "summary": "On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.",
     "title": "Theft from a shop",
-    "act": "Contrary to section 1(1) and 7 of the Theft Act 1968."
+    "act": "Contrary to section 1(1) and 7 of the Theft Act 1968.",
+    "code": "RT88191"
   }],
   "sessionStartTime": "2021-11-09T09:01:00",
-  "courtCode": "B42CM",
+  "courtCode": "%court_code%",
   "courtRoom": "01",
   "seq": 1
 }

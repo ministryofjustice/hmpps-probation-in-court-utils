@@ -33,13 +33,15 @@
                 "id": "a63d9020-aa6b-4997-92fd-72a692b036de",
                 "offenceLegislation": "Contrary to section 20 of the Offences Against the    Person Act 1861.",
                 "offenceTitle": "Wound / inflict grievous bodily harm without intent",
-                "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, John Smith"
+                "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, John Smith",
+                "offenceCode": "MC80528"
               },
               {
                 "id": "ea1c2cf1-f155-483b-a908-81158a9b2f9b",
                 "offenceLegislation": "Contrary to section 20 of the Offences Against the    Person Act 1861.",
                 "offenceTitle": "Wound / inflict grievous bodily harm without intent",
-                "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, Jane Smith"
+                "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, Jane Smith",
+                "offenceCode": "MC80528"
               }
             ],
             "personDefendant": {
