@@ -1,20 +1,10 @@
 #!/bin/bash
-namespace=court-probation-dev
+# set the name space using envirnment variable KUBE_ENV_NAMESPACE, defaults to dev.
+namespace=${KUBE_ENV_NAMESPACE:-court-probation-dev}
 s3_secret=crime-portal-gateway-s3-credentials
 output_folder=~/temp
 bucket_path=
 options=--recursive
-
-# Read any named params
-while [ $# -gt 0 ]; do
-
-   if [[ $1 == *"--"* ]]; then
-        param="${1/--/}"
-        declare $param="$2"
-   fi
-
-  shift
-done
 
 set -o history -o histexpand
 set -e
@@ -28,4 +18,4 @@ export BUCKET_NAME=$(echo "$secret_json" | jq -r .data.bucket_name)
 
 OUTPUT_PATH=$output_folder/$BUCKET_NAME/$bucket_path
 echo "🗂️ Copying files from '$BUCKET_NAME/$bucket_path' to '$OUTPUT_PATH'..."
-aws s3 cp s3://$BUCKET_NAME/$bucket_path $OUTPUT_PATH $options
+aws s3 cp s3://$BUCKET_NAME/$bucket_path $OUTPUT_PATH $options "$@" # ****passes all the cli options to the aws cp command. ****
