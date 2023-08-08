@@ -102,8 +102,11 @@ do
       PAYLOAD=$(echo $PAYLOAD | sed s/%new_offence_id%/$NEW_OFFENCE_ID/g)
       PAYLOAD=$(echo $PAYLOAD | sed s/%court_code%/$court_code/g)
     fi
+    
+    MSG_ATTRIBS="{\"messageType\" : { \"DataType\":\"String\", \"StringValue\":\"$message_type\"}, \"hearingEventType\" : { \"DataType\":\"String\", \"StringValue\":\"Unknown\"}}"
+
     echo "${PAYLOAD}"
-    aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD" --message-attributes "{\"messageType\" : { \"DataType\":\"String\", \"StringValue\":\"$message_type\"}}" $OPTIONS
+    aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD" --message-attributes "$MSG_ATTRIBS" $OPTIONS
     #exit_on_error $? !!
   fi
 done

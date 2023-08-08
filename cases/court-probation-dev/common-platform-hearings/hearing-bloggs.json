@@ -27,7 +27,23 @@
                 "wording": "JMBBLOGGS on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, John Smith",
                 "listingNumber": 3,
                 "offenceDefinitionId": "1136fd5e-d9d3-4df6-a6a6-a79c8530379f",
-                "offenceCode": "CJO3523"
+                "offenceCode": "CJO3523",
+                "plea": {
+                  "pleaValue": "not guilty"
+                },
+                "verdict": {
+                  "verdictType": {
+                    "description": "verdict"
+                  }
+                },
+                "judicialResults": [
+                  {
+                    "label": "label",
+                    "resultText": "resultText",
+                    "isConvictedResult": false,
+                    "judicialResultTypeId": "id"
+                  }
+                ]
               }
             ],
             "personDefendant": {
@@ -61,7 +77,12 @@
           "prosecutionAuthorityId": "52b27284-0686-4894-b1c7-7d4b634cacdb",
           "caseURN": "25GD34377719"
         },
-        "id": "%new_case_id%"
+        "id": "%new_case_id%",
+        "caseMarkers": [
+          {
+            "markerTypeDescription": "marker"
+          }
+        ]
       }
     ],
     "id": "%new_hearing_id%",

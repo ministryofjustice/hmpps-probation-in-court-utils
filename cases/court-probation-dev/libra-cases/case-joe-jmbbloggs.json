@@ -23,7 +23,8 @@
     "seq": 1,
     "summary": "On 01/01/2016 at Town, attempted to solicit exchange of goods and services using unlikely moniker.",
     "title": "Possession of improbable surname",
-    "act": "Contrary to section 1(1) and 7 of the Weird Name Act 1968."
+    "act": "Contrary to section 1(1) and 7 of the Weird Name Act 1968.",
+    "code": "SE20502"
   }],
   "sessionStartTime": "%hearing_date%T18:00:00",
   "courtCode": "%court_code%",
