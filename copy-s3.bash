@@ -3,7 +3,14 @@ namespace=court-probation-dev
 s3_secret=crime-portal-gateway-s3-credentials
 output_folder=~/temp
 bucket_path=
-options=--recursive
+include=*
+##########################################################################################
+# To Modify the above include filter  on the command line to only copy a subset of the
+# files in the bucket to the local filesystem:
+#
+# $ ./copy-s3.bash --include "2023-08-07-B10LX*.xml"
+#
+##########################################################################################
 
 # Read any named params
 while [ $# -gt 0 ]; do
@@ -28,4 +35,4 @@ export BUCKET_NAME=$(echo "$secret_json" | jq -r .data.bucket_name)
 
 OUTPUT_PATH=$output_folder/$BUCKET_NAME/$bucket_path
 echo "🗂️ Copying files from '$BUCKET_NAME/$bucket_path' to '$OUTPUT_PATH'..."
-aws s3 cp s3://$BUCKET_NAME/$bucket_path $OUTPUT_PATH $options
+aws s3 cp s3://$BUCKET_NAME/$bucket_path $OUTPUT_PATH --recursive --exclude="*" --include="$include"
