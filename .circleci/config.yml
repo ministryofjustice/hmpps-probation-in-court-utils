@@ -1,0 +1,130 @@
+version: 2.1
+commands:
+  set_app_version:
+    description: "Set app version string"
+    steps:
+      - run:
+          name: create app version string
+          command: |
+            DATE=$(date '+%Y-%m-%d')
+            VERSION=${DATE}.${CIRCLE_BUILD_NUM}
+            echo "Created version string: ${VERSION}"
+            echo "export VERSION=$VERSION" >> $BASH_ENV
+      - mem/remember:
+          env_var: APP_VERSION
+          value: "${VERSION}"
+
+executors:
+  builder:
+    docker:
+      - image: cimg/node:16.17.0-browsers
+    working_directory: ~/app
+
+orbs:
+  mem: circleci/rememborb@0.0.2
+  snyk: snyk/snyk@1.1.2
+
+_snyk_options: &snyk_options
+  organization: "digital-probation-services"
+  severity-threshold: "high" # note: this does not affect snyk 'monitor' commands
+  fail-on-issues: true
+
+jobs:
+  build_docker:
+    executor: deployer
+    parameters:
+      main:
+        type: boolean
+        default: false
+    steps:
+      - checkout
+      - mem/recall:
+          env_var: APP_VERSION
+      - attach_workspace:
+          at: ~/app
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: Build docker image
+          command: |
+            docker build --pull \
+               --rm=false . \
+               --tag "hmpps/court-case-source:$APP_VERSION" \
+               --label "maintainer=info@digital.justice.gov.uk" \
+               --label "app.version=$APP_VERSION" \
+               --label "build.version=$APP_VERSION" \
+               --label "build.number=$CIRCLE_BUILD_NUM" \
+               --label "build.url=$CIRCLE_BUILD_URL" \
+               --label "build.gitref=$CIRCLE_SHA1" \
+               --build-arg BUILD_NUMBER=$APP_VERSION \
+               --build-arg GIT_REF=$CIRCLE_SHA1 \
+      - run:
+          name: Publish to docker hub
+          command: |
+            docker login -u="${QUAYIO_USERNAME}" -p="${QUAYIO_PASSWORD}" quay.io
+            docker tag hmpps/court-case-source:$APP_VERSION quay.io/hmpps/prepare-a-case:$APP_VERSION
+            docker tag hmpps/court-case-source:$APP_VERSION quay.io/hmpps/prepare-a-case:latest
+            docker push quay.io/hmpps/court-case-source:$APP_VERSION
+            docker push quay.io/hmpps/court-case-source:latest
+
+  app_scan:
+    executor: builder
+    parameters:
+      main:
+        type: boolean
+        default: false
+    steps:
+      - checkout
+      - snyk/scan:
+          project: '${CIRCLE_PROJECT_REPONAME}/${CIRCLE_BRANCH}'
+          monitor-on-build: << parameters.main >>
+          <<: *snyk_options
+
+  image_scan:
+    executor: deployer
+    steps:
+      - checkout
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - snyk/scan:
+          project: '${CIRCLE_PROJECT_REPONAME}-docker/${CIRCLE_BRANCH}'
+          docker-image-name: 'quay.io/hmpps/prepare-a-case:latest'
+          target-file: 'Dockerfile'
+          monitor-on-build: true
+          <<: *snyk_options
+
+workflows:
+  version: 2
+  scheduled:
+    triggers:
+      - schedule:
+          cron: "0 7 * * 1-5"
+          filters:
+            branches:
+              only:
+                - main
+    jobs:
+      - app_scan:
+          main: true
+      - image_scan
+
+  build-and-push-container:
+    jobs:
+      - app_scan:
+          filters:
+            branches:
+              ignore: main
+      - app_scan:
+          name: app_scan_main
+          filters:
+            branches:
+              only: main
+          main: true
+      - build_docker:
+          context: [ hmpps-common-vars ]
+      - image_scan:
+          requires:
+            - build_docker_main
+          filters:
+            branches:
+              only: main
