@@ -48,6 +48,10 @@ echo "✨ Creating a shiny new thing!"
 
 ## Quickstart
 
+**Update:** Since the changes to move from long lived credentials to IRSA based auth, we need to create this pod in the namespace and establish a bash session, using the command below, to the pod to run these utilities.
+
+
+
 Run `./subscribe-to-topic.bash --email <your@email.address>` to subscribe to events from the `court-case-events-topic` SNS topic
 
 Run `./populate-cpg-sqs.bash` to push case lists to the `crime-portal-gateway-queue`
