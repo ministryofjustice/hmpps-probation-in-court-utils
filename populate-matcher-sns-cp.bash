@@ -1,14 +1,16 @@
 #!/bin/bash
-namespace=court-probation-dev
+namespace=${$namespace:-court-probation-dev}
 topic_secret=court-case-events-topic
 local=false
 files=
 message_type=COMMON_PLATFORM_HEARING
-cp_base_path="./cases/$namespace/common-platform-hearings/"
 cases_path=""
 generate_ids=true
 recurse_max_depth=1
 court_code=B14LO
+event_type=Unknown
+
+export AWS_REGION=eu-west-2
 
 # Read any named params
 while [ $# -gt 0 ]; do
@@ -20,6 +22,8 @@ while [ $# -gt 0 ]; do
 
   shift
 done
+
+cp_base_path="./cases/$namespace/common-platform-hearings/"
 
 set -o history -o histexpand
 set -e
@@ -38,17 +42,12 @@ exit_on_error() {
 if [[ $local = "true" ]]
 then
   echo "🏠 Running against localstack"
-  TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-case-events-topic"
+  MATCHER_TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-case-events-topic"
   OPTIONS="--endpoint-url http://localhost:4566"
   AWS_ACCESS_KEY_ID=
   AWS_ACCESS_KEY_ID=
 else
-  # Get credentials and queue details from namespace secret
-  echo "🔑 Getting credentials for $namespace..."
-  secret_json=$(cloud-platform decode-secret -s $topic_secret -n $namespace --skip-version-check)
-  export AWS_ACCESS_KEY_ID=$(echo "$secret_json" | jq -r .data.access_key_id)
-  export AWS_SECRET_ACCESS_KEY=$(echo "$secret_json" | jq -r .data.secret_access_key)
-  export TOPIC_ARN=$(echo "$secret_json" | jq -r .data.topic_arn)
+  export TOPIC_ARN=$MATCHER_TOPIC_ARN
 fi
 
 # Check the topic is accessible
@@ -63,14 +62,22 @@ fi
 CASES_PATH="${cp_base_path}${cases_path}"
 FILES=$(find $CASES_PATH -maxdepth $recurse_max_depth -type f)
 echo "📂 Checking for cases in ${CASES_PATH}"
-HEARING_DATE=$(date +"%Y\-%m\-%d")
-TOMORROW_DATE=$(date -v+1d +"%Y\-%m\-%d")
+HEARING_DATE=$(date +"%Y-%m-%d")
+TOMORROW_DATE=$(date -d "+1 days" +"%Y-%m-%d")
 
 i=0
+echo "The files are ... $FILES"
+
 for case_file in $FILES
 do
-  ((i++))
+  echo "In for loop... $case_file"
+
+  i=$((i++))
+
+  echo "Incremented i $i..."
+
   file=$(basename "${case_file}")
+  echo "💻 $i. Processing $case_file..."
 
   # If there are specified files then only send those, otherwise send everything
   if [[ "$files" == *"${file}"* || $files == "" ]]; then
@@ -83,7 +90,6 @@ do
       continue
     fi
 
-    echo "💻 $i. Processing $case_file..."
     PAYLOAD=$(cat "${case_file}")
 
     if [[ $generate_ids = "true" ]]
@@ -103,10 +109,12 @@ do
       PAYLOAD=$(echo $PAYLOAD | sed s/%court_code%/$court_code/g)
     fi
     
-    MSG_ATTRIBS="{\"messageType\" : { \"DataType\":\"String\", \"StringValue\":\"$message_type\"}, \"hearingEventType\" : { \"DataType\":\"String\", \"StringValue\":\"Unknown\"}}"
+    MSG_ATTRIBS="{\"messageType\" : { \"DataType\":\"String\", \"StringValue\":\"$message_type\"}, \"hearingEventType\" : { \"DataType\":\"String\", \"StringValue\":\"${event_type}\"}}"
 
     echo "${PAYLOAD}"
     aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD" --message-attributes "$MSG_ATTRIBS" $OPTIONS
     #exit_on_error $? !!
   fi
 done
+
+echo "Script completed"

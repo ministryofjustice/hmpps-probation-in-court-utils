@@ -1,5 +1,5 @@
 #!/bin/bash
-namespace=court-probation-dev
+namespace={$namespace:-court-probation-dev}
 queue_secret=court-case-matcher-queue-credentials
 dlq_secret=court-case-matcher-queue-dead-letter-queue-credentials
 local=false
@@ -34,12 +34,7 @@ then
   echo "🏠 Not implemented! Exiting"
   exit 1
 else
-  # Get credentials and queue details from namespace secret
-  echo "🔑 Getting DLQ credentials for $namespace..."
-  secret_json=$(cloud-platform decode-secret -s $dlq_secret -n $namespace --skip-version-check)
-  export AWS_ACCESS_KEY_ID=$(echo "$secret_json" | jq -r .data.access_key_id)
-  export AWS_SECRET_ACCESS_KEY=$(echo "$secret_json" | jq -r .data.secret_access_key)
-  export DLQ_URL=$(echo "$secret_json" | jq -r .data.sqs_id)
+  export DLQ_URL=$MATCHER_DLQ_QUEUE_URL
 fi
 
 
@@ -65,11 +60,7 @@ then
   echo "🏠 Not implemented! Exiting"
   exit 1
 else
-  echo "🔑 Getting queue credentials for $namespace..."
-  secret_json=$(cloud-platform decode-secret -s $queue_secret -n $namespace --skip-version-check)
-  export AWS_ACCESS_KEY_ID=$(echo "$secret_json" | jq -r .data.access_key_id)
-  export AWS_SECRET_ACCESS_KEY=$(echo "$secret_json" | jq -r .data.secret_access_key)
-  export QUEUE_URL=$(echo "$secret_json" | jq -r .data.sqs_id)
+  export QUEUE_URL=$MATCHER_QUEUE_URL
 fi
 
 echo "✉️ Resending message from DLQ '$DLQ_URL' to ..."

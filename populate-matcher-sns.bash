@@ -39,12 +39,7 @@ then
   AWS_ACCESS_KEY_ID=
   AWS_ACCESS_KEY_ID=
 else
-  # Get credentials and queue details from namespace secret
-  echo "🔑 Getting credentials for $namespace..."
-  secret_json=$(cloud-platform decode-secret -s $topic_secret -n $namespace --skip-version-check)
-  export AWS_ACCESS_KEY_ID=$(echo "$secret_json" | jq -r .data.access_key_id)
-  export AWS_SECRET_ACCESS_KEY=$(echo "$secret_json" | jq -r .data.secret_access_key)
-  export TOPIC_ARN=$(echo "$secret_json" | jq -r .data.topic_arn)
+  export TOPIC_ARN=$MATCHER_TOPIC_ARN
 fi
 
 # Check the topic is accessible

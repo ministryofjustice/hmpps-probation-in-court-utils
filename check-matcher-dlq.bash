@@ -1,7 +1,5 @@
 #!/bin/bash
-namespace=court-probation-dev
-queue_secret=court-case-matcher-queue-dead-letter-queue-credentials
-local=false
+local=${local_env:-false}
 
 # Read any named params
 while [ $# -gt 0 ]; do
@@ -31,17 +29,12 @@ exit_on_error() {
 if [ $local = "true" ]
 then
   echo "🏠 Running against localstack"
-  TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-case-events-topic"
+  MATCHER_TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-case-events-topic"
   OPTIONS="--endpoint-url http://localhost:4566"
   AWS_ACCESS_KEY_ID=
   AWS_ACCESS_KEY_ID=
 else
-  # Get credentials and queue details from namespace secret
-  echo "🔑 Getting credentials for $namespace..."
-  secret_json=$(cloud-platform decode-secret -s $queue_secret -n $namespace --skip-version-check)
-  export AWS_ACCESS_KEY_ID=$(echo "$secret_json" | jq -r .data.access_key_id)
-  export AWS_SECRET_ACCESS_KEY=$(echo "$secret_json" | jq -r .data.secret_access_key)
-  export QUEUE_URL=$(echo "$secret_json" | jq -r .data.sqs_id)
+  export QUEUE_URL=$MATCHER_DLQ_URL
 fi
 
 # Check how many messages are on the queue

@@ -1,6 +1,4 @@
 #!/bin/bash
-namespace=court-probation-dev
-queue_secret=crime-portal-gateway-queue-credentials
 local=false
 files=
 
@@ -37,13 +35,7 @@ then
   AWS_ACCESS_KEY_ID=
   AWS_ACCESS_KEY_ID=
 else
-  # Get credentials and queue details from namespace secret
-  echo "🔑 Getting credentials for $namespace..."
-  secret_json=$(cloud-platform decode-secret -s $queue_secret -n $namespace --skip-version-check)
-  export AWS_ACCESS_KEY_ID=$(echo "$secret_json" | jq -r .data.access_key_id)
-  export AWS_SECRET_ACCESS_KEY=$(echo "$secret_json" | jq -r .data.secret_access_key)
-  export QUEUE_URL=$(echo "$secret_json" | jq -r .data.sqs_id)
-
+  export QUEUE_URL=$CRIME_PORTAL_GATEWAY_QUEUE_URL
 fi
 
 # And start publishing the payloads
