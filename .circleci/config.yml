@@ -62,13 +62,24 @@ jobs:
                --build-arg BUILD_NUMBER=$APP_VERSION \
                --build-arg GIT_REF=$CIRCLE_SHA1 \
       - run:
-          name: Publish to docker hub
+          name: Publish to docker hub - branches
           command: |
             docker login -u="${QUAYIO_USERNAME}" -p="${QUAYIO_PASSWORD}" quay.io
             docker tag hmpps/hmpps-probation-in-court-utils:$APP_VERSION quay.io/hmpps/hmpps-probation-in-court-utils:$APP_VERSION
-            docker tag hmpps/hmpps-probation-in-court-utils:$APP_VERSION quay.io/hmpps/hmpps-probation-in-court-utils:latest
             docker push quay.io/hmpps/hmpps-probation-in-court-utils:$APP_VERSION
-            docker push quay.io/hmpps/hmpps-probation-in-court-utils:latest
+      - when:
+          condition:
+            equal: [ main, << pipeline.git.branch >> ]
+          steps:
+            - run:
+                name: Publish to docker hub - main
+                filters:
+                  branches:
+                    only: main
+                command: |
+                  docker login -u="${QUAYIO_USERNAME}" -p="${QUAYIO_PASSWORD}" quay.io
+                  docker tag hmpps/hmpps-probation-in-court-utils:$APP_VERSION quay.io/hmpps/hmpps-probation-in-court-utils:latest
+                  docker push quay.io/hmpps/hmpps-probation-in-court-utils:latest
 
   image_scan:
     executor: deployer
