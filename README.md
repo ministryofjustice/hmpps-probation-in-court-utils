@@ -48,9 +48,8 @@ echo "✨ Creating a shiny new thing!"
 
 ## Quickstart
 
-**Update:** Since the changes to move from long lived credentials to IRSA based auth, we need to create this pod in the namespace and establish a bash session, using the command below, to the pod to run these utilities.
-
-
+**Update:** Since the changes to move from long lived credentials to IRSA based auth, we need to create a service pod in the namespace and establish a bash session, using the script `setup-service-pod.bash` which would create a pod and opens a bash session which then can be used to run below scripts.
+    By default, the service pod name is `hmpps-probation-in-coourt-utils` and namespace is `court-probation-dev` which can be overwritten by `setup-service-pod.bash --debug_pod_name your-own-debug-pod-name --namespace your-alternate-name-space` 
 
 Run `./subscribe-to-topic.bash --email <your@email.address>` to subscribe to events from the `court-case-events-topic` SNS topic
 

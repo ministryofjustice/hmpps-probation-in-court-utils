@@ -19,7 +19,4 @@ COPY . .
 
 ENV APP_VERSION=${BUILD_NUMBER}
 
-RUN addgroup --gid 2000 --system appgroup && \
-    adduser --uid 2000 --system appuser --gid 2000 --home /home/appuser
-
 USER 2000

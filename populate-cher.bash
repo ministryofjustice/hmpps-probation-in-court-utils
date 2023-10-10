@@ -1,5 +1,4 @@
 #!/bin/bash
-namespace=court-probation-dev
 secret=court-hearing-event-receiver
 local=false
 files=

@@ -1,14 +1,14 @@
 #!/bin/bash
-namespace=court-probation-dev
+namespace=${$namespace:-court-probation-dev}
 topic_secret=court-case-events-topic
 local=false
 files=
 message_type=COMMON_PLATFORM_HEARING
-cp_base_path="./cases/$namespace/common-platform-hearings/"
 cases_path=""
 generate_ids=true
 recurse_max_depth=1
 court_code=B14LO
+event_type=Unknown
 
 export AWS_REGION=eu-west-2
 
@@ -22,6 +22,8 @@ while [ $# -gt 0 ]; do
 
   shift
 done
+
+cp_base_path="./cases/$namespace/common-platform-hearings/"
 
 set -o history -o histexpand
 set -e
@@ -40,17 +42,12 @@ exit_on_error() {
 if [[ $local = "true" ]]
 then
   echo "🏠 Running against localstack"
-  TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-case-events-topic"
+  MATCHER_TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-case-events-topic"
   OPTIONS="--endpoint-url http://localhost:4566"
   AWS_ACCESS_KEY_ID=
   AWS_ACCESS_KEY_ID=
 else
-  # Get credentials and queue details from namespace secret
-  echo "🔑 Getting credentials for $namespace..."
-#  secret_json=$(kubectl get secret court-case-events-topic -o json)
-#  export AWS_ACCESS_KEY_ID=$(echo "$secret_json" | jq -r .data.access_key_id)
-#  export AWS_SECRET_ACCESS_KEY=$(echo "$secret_json" | jq -r .data.secret_access_key)
-#  export TOPIC_ARN=$(echo "$secret_json" | jq -r .data.topic_arn)
+  export TOPIC_ARN=$MATCHER_TOPIC_ARN
 fi
 
 # Check the topic is accessible
@@ -112,7 +109,7 @@ do
       PAYLOAD=$(echo $PAYLOAD | sed s/%court_code%/$court_code/g)
     fi
     
-    MSG_ATTRIBS="{\"messageType\" : { \"DataType\":\"String\", \"StringValue\":\"$message_type\"}, \"hearingEventType\" : { \"DataType\":\"String\", \"StringValue\":\"Unknown\"}}"
+    MSG_ATTRIBS="{\"messageType\" : { \"DataType\":\"String\", \"StringValue\":\"$message_type\"}, \"hearingEventType\" : { \"DataType\":\"String\", \"StringValue\":\"${event_type}\"}}"
 
     echo "${PAYLOAD}"
     aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD" --message-attributes "$MSG_ATTRIBS" $OPTIONS
