@@ -1,0 +1,197 @@
+Court Code,Court Name,HMPPS area,HMPPS Sub-area
+B01BE,Belmarsh,London,London
+B01BH,Bexley,London,London
+B01CE,Willesden,London,London
+B01CN,Bromley (London Road),London,London
+B01CX,Camberwell Green,London,London
+B01DU,City of London (Queen Victoria Street),London,London
+B01EF,Croydon,London,London
+B01FA,Ealing,London,London
+B01GQ,Hendon,London,London
+B01GU,Highbury Corner,London,London
+B01HG,ILCFPC (Wells Street),London,London
+B01IX,Westminster Magistrates' Court,London,London
+B01KR,Barkingside,London,London
+B01LA,Romford,London,London
+B01LY,Lavender Hill,London,London
+B01MN,Stratford,London,London
+B01ND,Thames,London,London
+B01NM,Uxbridge,London,London
+B01OB,Hammersmith,London,London
+B01OK,Wimbledon,London,London
+B03AX,Barrow in Furness,North West,North West
+B03DE,Carlisle,North West,North West
+B03HG,Kendal Town Hall,North West,North West
+B03OT,Workington,North West,North West
+B04AH,Lancaster Magistrates' Court sitting at Ashton Hall,North West,North West
+B04BP,Blackburn,North West,North West
+B04BQ,Blackpool Magistrates' and Civil Court,North West,North West
+B04CO,Burnley,North West,North West
+B04DS,Chorley,North West,North West
+B04HQ,Lancaster,North West,North West
+B04KO,Preston,North West,North West
+B05BK,Wirral,North West,North West
+B05BW,South Sefton,North West,North West
+B05GP,St George's Hall,North West,North West
+B05PK,Liverpool Magistrates' Court,North West,North West
+B05SC,Liverpool Civil and Family Court (Vernon Street),North West,North West
+B06AN,Ashton under Lyne (Henry Sq),North West,Greater Manchester
+B06BV,Bolton,North West,Greater Manchester
+B06CR,Manchester (Crown Square),North West,Greater Manchester
+B06IS,Manchester,North West,Greater Manchester
+B06MK,Stockport,North West,Greater Manchester
+B06MS,Manchester & Salford Magistrates' Court sitting at the Lowry Theatre,North West,Greater Manchester
+B06OJ,Wigan,North West,Greater Manchester
+B06TL,Tameside Magistrates' Court sitting at the Lowry Theatre,North West,Greater Manchester
+B06WL,Wigan Magistrates' Court sitting at the Lowry Theatre,North West,Greater Manchester
+B06WX,Manchester Civil Justice Centre,North West,Greater Manchester
+B07DM,Chester,North West,North West
+B07ED,Crewe,North West,North West
+B07FQ,Warrington,North West,North West
+B10BD,Bedlington,North East,North East
+B10BF,Berwick upon Tweed,North East,North East
+B10FR,Gateshead,North East,North East
+B10JJ,Newcastle Upon Tyne,North East,North East
+B10JL,Newcastle,North East,North East
+B10JQ,North Shields,North East,North East
+B10LX,South Shields (Millbank),North East,North East
+B10MR,Sunderland,North East,North East
+B11EI,Darlington,North East,North East
+B11JP,Newton Aycliffe,North East,North East
+B11KF,Peterlee,North East,North East
+B12GH,Harrogate,North East,Yorkshire & Humber
+B12JR,Northallerton,North East,Yorkshire & Humber
+B12LK,Scarborough (Northway),North East,Yorkshire & Humber
+B12LT,Skipton,North East,Yorkshire & Humber
+B12PA,York,North East,Yorkshire & Humber
+B13CC,Bradford,North East,Yorkshire & Humber
+B13HD,Huddersfield,North East,Yorkshire & Humber
+B13HT,Leeds,North East,Yorkshire & Humber
+B14AV,Barnsley,North East,Yorkshire & Humber
+B14ET,Doncaster,North East,Yorkshire & Humber
+B14LO,Sheffield,North East,Yorkshire & Humber
+B16BG,Beverley,North East,Yorkshire & Humber
+B16CJ,Bridlington,North East,Yorkshire & Humber
+B16GB,Grimsby,North East,Yorkshire & Humber
+B16HE,Kingston upon Hull,North East,Yorkshire & Humber
+B16LL,Scunthorpe,North East,Yorkshire & Humber
+B17JA,Middlesbrough (Teesside),North East,North East
+B20BL,Birmingham (Corporation St),Midlands,West Midlands
+B20EB,Coventry,Midlands,West Midlands
+B20EY,Dudley,Midlands,West Midlands
+B20MP,Birmingham Magistrates' Court sitting at Maple House,Midlands,West Midlands
+B20NP,Walsall (Aldridge),Midlands,West Midlands
+B20NQ,Walsall (Stafford Street),Midlands,West Midlands
+B20OQ,Wolverhampton,Midlands,West Midlands
+B20TJ,Birmingham Civil Justice Centre (Bull Street),Midlands,West Midlands
+B21DA,Cannock,Midlands,West Midlands
+B21JI,North Staffordshire Justice Centre,Midlands,West Midlands
+B21XA,AIT Stoke-on-Trent,Midlands,West Midlands
+B22GR,Hereford (Bath Street),Midlands,West Midlands
+B22HM,Kidderminster (Comberton Place),Midlands,West Midlands
+B22KS,Redditch,Midlands,West Midlands
+B22LQ,Shrewsbury,Midlands,West Midlands
+B22MZ,Telford,Midlands,West Midlands
+B22OS,Worcester (Castle St),Midlands,West Midlands
+B23HS,Leamington Spa,Midlands,West Midlands
+B23PP,"Nuneaton, Vicarage St",Midlands,West Midlands
+B30FS,Glossop,Midlands,East Midlands
+B30PG,Chesterfield (Tapton Lane),Midlands,East Midlands
+B30PI,Derby Justice Centre,Midlands,East Midlands
+B31IT,Mansfield (Rosemary St),Midlands,East Midlands
+B31JV,Nottingham (Carrington St),Midlands,East Midlands
+B32BX,Boston,Midlands,East Midlands
+B32FQ,Gainsborough,Midlands,East Midlands
+B32FX,Grantham,Midlands,East Midlands
+B32HX,Lincoln,Midlands,East Midlands
+B33HU,Leicester,Midlands,East Midlands
+B33II,Loughborough,Midlands,East Midlands
+B34JS,Northampton,South East & East,East of England
+B34NX,Wellingborough,South East & East,East of England
+B35CZ,Cambridge,South East & East,East of England
+B35HF,Huntingdon,South East & East,East of England
+B35KE,Peterborough,South East & East,East of England
+B36FZ,Great Yarmouth,South East & East,East of England
+B36HN,King's Lynn,South East & East,East of England
+B36JU,Norwich,South East & East,East of England
+B37CR,Bury St Edmunds,South East & East,East of England
+B37HI,Ipswich,South East & East,East of England
+B40BC,Bedford,South East & East,East of England
+B40IM,Luton,South East & East,East of England
+B41GS,Hertford,South East & East,East of England
+B41ME,St Albans,South East & East,East of England
+B41MJ,Stevenage,South East & East,East of England
+B41NW,Watford,South East & East,East of England
+B41US,Hatfield Magistrates’ Court,South East & East,East of England
+B42AZ,Basildon,South East & East,East of England
+B42CM,Chelmsford,South East & East,East of England
+B42CO,Colchester,South East & East,East of England
+B42MB,Southend on Sea,South East & East,East of England
+B43AJ,Amersham,South West & South Central,South Central
+B43AQ,Banbury,South West & South Central,South Central
+B43IQ,Maidenhead,South West & South Central,South Central
+B43JC,Milton Keynes,South West & South Central,South Central
+B43KB,Oxford,South West & South Central,South Central
+B43KQ,Reading,South West & South Central,South Central
+B43LV,Slough,South West & South Central,South Central
+B43OX,Wycombe,South West & South Central,South Central
+B44AG,Aldershot,South West & South Central,South Central
+B44BA,Basingstoke,South West & South Central,South Central
+B44JK,Newport,South West & South Central,South Central
+B44KM,Portsmouth,South West & South Central,South Central
+B44MA,Southampton (The Avenue),South West & South Central,South Central
+B44WZ,Winchester Combined Court Centre,South West & South Central,South Central
+B45GC,Guildford,South East & East,"Kent, Surrey & Sussex"
+B45MH,Staines,South East & East,"Kent, Surrey & Sussex"
+B46DB,Canterbury,South East & East,"Kent, Surrey & Sussex"
+B46DH,Medway,South East & East,"Kent, Surrey & Sussex"
+B46FO,Folkestone,South East & East,"Kent, Surrey & Sussex"
+B46IR,Maidstone,South East & East,"Kent, Surrey & Sussex"
+B46IU,Margate,South East & East,"Kent, Surrey & Sussex"
+B46LN,Sevenoaks,South East & East,"Kent, Surrey & Sussex"
+B47CL,Brighton (Edward Street),South East & East,"Kent, Surrey & Sussex"
+B47EC,Crawley,South East & East,"Kent, Surrey & Sussex"
+B47FB,Eastbourne,South East & East,"Kent, Surrey & Sussex"
+B47GL,Hastings,South East & East,"Kent, Surrey & Sussex"
+B47HB,Horsham,South East & East,"Kent, Surrey & Sussex"
+B47OV,Worthing,South East & East,"Kent, Surrey & Sussex"
+B50AW,Barnstaple,South West & South Central,South West
+B50BU,Bodmin,South West & South Central,South West
+B50HJ,Isles of Scilly,South West & South Central,South West
+B50JO,Newton Abbot,South West & South Central,South West
+B50KH,Plymouth,South West & South Central,South West
+B50KI,"Plymouth (Combined Court, The Law Courts, Amanda Way)",South West & South Central,South West
+B50NL,Truro,South West & South Central,South West
+B50VR,Exeter,South West & South Central,South West
+B52BB,Bath,South West & South Central,South West
+B52CM,Bristol,South West & South Central,South West
+B52MY,Taunton,South West & South Central,South West
+B52OC,Weston-super-Mare,South West & South Central,South West
+B52OZ,Yeovil,South West & South Central,South West
+B52QA,Bristol Civil Justice Centre,South West & South Central,South West
+B53DJ,Cheltenham,South West & South Central,South West
+B53DT,Cirencester,South West & South Central,South West
+B54DR,Chippenham (Pewsham Way),South West & South Central,South West
+B54MW,Swindon,South West & South Central,South West
+B54WV,Salisbury,South West & South Central,South West
+B55IS,Bournemouth Combined Court,South West & South Central,South West
+B55KL,"Poole (The Law Courts, Park Road)",South West & South Central,South West
+B55OE,Weymouth,South West & South Central,South West
+B60ID,Llandudno,Wales,Wales
+B60IF,Llangefni Shire Hall,Wales,Wales
+B60JE,Mold,Wales,Wales
+B60OW,Wrexham,Wales,Wales
+B60WU,Caernarfon,Wales,Wales
+B61EH,Cwmbran,Wales,Wales
+B61NP,Newport,Wales,Wales
+B61WY,Newport (Crown Court Building),Wales,Wales
+B62DC,Cardiff,Wales,Wales
+B62IZ,Merthyr Tydfil,Wales,Wales
+B62KL,Port Talbot,Wales,Wales
+B62MV,Swansea (Grove Place),Wales,Wales
+B62PM,Pontypridd (Union Street),Wales,Wales
+B63AD,Aberystwyth,Wales,Wales
+B63GN,Haverfordwest,Wales,Wales
+B63IE,Llanelli,Wales,Wales
+B63LW,Llandrindod Wells Justice Centre,Wales,Wales
+B63NZ,Welshpool,Wales,Wales
