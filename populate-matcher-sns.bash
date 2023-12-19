@@ -6,6 +6,7 @@ files=
 message_type=LIBRA_COURT_CASE
 court_code=B14LO
 
+set -x
 # Read any named params
 while [ $# -gt 0 ]; do
 
@@ -31,7 +32,7 @@ exit_on_error() {
     fi
 }
 
-if [ $local = "true" ]
+if [ "$local" = "true" ]
 then
   echo "🏠 Running against localstack"
   TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-case-events-topic"

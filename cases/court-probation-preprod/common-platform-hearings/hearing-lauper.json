@@ -1,0 +1,73 @@
+{
+  "_file_comments_": "Create a case with hearings on two days, NOT_SPECIFIED as gender",
+  "hearing": {
+    "courtCentre": {
+      "id": "9b583616-049b-30f9-a14f-028a53b7cfe8",
+      "roomId": "7cb09222-49e1-3622-a5a6-ad253d2b3c39",
+      "roomName": "Crown Court 3-1",
+      "code": "%court_code%00"
+    },
+    "hearingDays": [
+      {
+        "listedDurationMinutes": 60,
+        "sittingDay": "%hearing_date%T09:00:00.000Z"
+      },
+      {
+        "listedDurationMinutes": 30,
+        "sittingDay": "%hearing_date_2%T14:30:00.000Z"
+      }
+    ],
+    "jurisdictionType": "CROWN",
+    "prosecutionCases": [
+      {
+        "defendants": [
+          {
+            "id": "%new_defendant_id%",
+            "pncId": "1965/0046583U",
+            "croNumber": "199999ABCDEF",
+            "offences": [
+              {
+                "id": "%new_offence_id%",
+                "offenceLegislation": "repetitious song playing.",
+                "offenceTitle": "Repetitious song playing (Girls just want to have fun)",
+                "wording": "It's just been on the radio too often.",
+                "listingNumber": 4,
+                "offenceDefinitionId": "1136fd5e-d9d3-4df6-a6a6-a79c8530379f",
+                "offenceCode": "CJO3523"
+              }
+            ],
+            "personDefendant": {
+              "personDetails": {
+                "address": {
+                  "address1": "Studio 54",
+                  "address5": "NEW YORK",
+                  "postcode": "NY1 1NY"
+                },
+                "contact": {
+                  "mobile": "07700 900 001"
+                },
+                "dateOfBirth": "1965-01-01",
+                "firstName": "Cyndi",
+                "gender": "NOT_SPECIFIED",
+                "lastName": "LAUPER"
+              }
+            },
+            "prosecutionCaseId": "%new_case_id%"
+          }
+        ],
+        "initiationCode": "C",
+        "prosecutionCaseIdentifier": {
+          "prosecutionAuthorityCode": "CPS",
+          "prosecutionAuthorityId": "52b27284-0686-4894-b1c7-7d4b634cacdb",
+          "caseURN": "25GD34377719"
+        },
+        "id": "%new_case_id%"
+      }
+    ],
+    "id": "%new_hearing_id%",
+    "type": {
+      "description": "Sentence",
+      "id": "5ae4c090-0f70-4694-b4fc-707633d2b430"
+    }
+  }
+}
