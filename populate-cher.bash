@@ -73,7 +73,7 @@ TOMORROW_DATE=$(date -v+1d +"%Y\-%m\-%d")
 i=0
 for case_file in $FILES
 do
-  ((i++))
+  i=$((i++))
   file=$(basename "${case_file}")
 
   # If there are specified files then only send those, otherwise send everything

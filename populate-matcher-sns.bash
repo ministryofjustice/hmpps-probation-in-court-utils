@@ -1,5 +1,5 @@
 #!/bin/bash
-namespace=court-probation-dev
+namespace=${$namespace:-court-probation-dev}
 topic_secret=court-case-events-topic
 local=false
 files=
@@ -58,7 +58,7 @@ NEW_CASE_NO_PREFIX=$(date +"%y%m%d%M%s")
 i=0
 for f in $FILES
 do
-  ((i++))
+  i=$((i++))
   # This can be used when we support a message type of CP_COURT_CASE
   # NEW_CASE_ID=$(uuidgen | tr '[:upper:]' '[:lower:]')
   NEW_CASE_ID=$((1 + $RANDOM % 999999))
