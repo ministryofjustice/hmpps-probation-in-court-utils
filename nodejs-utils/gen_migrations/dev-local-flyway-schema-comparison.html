@@ -1,0 +1,3233 @@
+
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html
+		PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+	<title>Compare report</title>
+</head>
+<body>
+<style>table {font-family:"Lucida Sans Unicode", "Lucida Grande", Sans-Serif;font-size:12px;text-align:left;} .missing {color:red;} .differs {color:blue;}.object td,th {border-top:solid 1px; border-right:solid 1px; border-color: black; white-space:nowrap;} .property td,th {border-top:dashed 1px; border-right:solid 1px; border-color: black; white-space:pre; } .struct {border-top:none; !important } td,th {word-break: break-word; max-width: 0; white-space: normal !important;}td:hover { background-color: #f2f2f2;}.level1 td,th { text-align:left; padding-left:20px; } .level2 td,th { text-align:left; padding-left:40px; } .level3 td,th { text-align:left; padding-left:60px; } .level4 td,th { text-align:left; padding-left:80px; } .level5 td,th { text-align:left; padding-left:100px; } .level6 td,th { text-align:left; padding-left:120px; } .level7 td,th { text-align:left; padding-left:140px; } </style>
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<th>Structure</th>
+		<th>postgres.courtcaseservice</th>
+		<th>postgres.required</th>
+	</tr>
+	<tr class="object level1" valign="top">
+		<td>Schema</td>
+		<td>courtcaseservice</td>
+		<td>required</td>
+	</tr>
+	<tr class="property level2 differs" valign="top">
+		<td>Name</td>
+		<td>courtcaseservice</td>
+		<td>required</td>
+	</tr>
+	<tr class="property level2 differs" valign="top">
+		<td>Namespace ID</td>
+		<td>43613</td>
+		<td>46077</td>
+	</tr>
+	<tr class="object level2" valign="top">
+		<td>Tables</td>
+		<td>Tables</td>
+		<td>Tables</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>case_comments</td>
+		<td>case_comments</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>44044</td>
+		<td>46509</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Row Count Estimate</td>
+		<td>2</td>
+		<td>0</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Columns</td>
+		<td>Columns</td>
+		<td>Columns</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>id</td>
+		<td>id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>bigserial</td>
+		<td>serial4</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Default</td>
+		<td>nextval(&#39;courtcaseservice.case_comments_id_seq&#39;::regclass)</td>
+		<td>nextval(&#39;required.case_comments_id_seq&#39;::regclass)</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>case_id</td>
+		<td>case_id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>author</td>
+		<td>author</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created</td>
+		<td>created</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created_by</td>
+		<td>created_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created_by_uuid</td>
+		<td>created_by_uuid</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>uuid</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated</td>
+		<td>last_updated</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated_by</td>
+		<td>last_updated_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Constraints</td>
+		<td>Constraints</td>
+		<td>Constraints</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>case_comments_pkey</td>
+		<td>case_comments_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>47284</td>
+		<td>46521</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Indexes</td>
+		<td>Indexes</td>
+		<td>Indexes</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>case_comment_case_id_idx</td>
+		<td>case_comment_case_id_idx</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>case_comments_pkey</td>
+		<td>case_comments_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>case_marker</td>
+		<td>case_marker</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>44192</td>
+		<td>46657</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Columns</td>
+		<td>Columns</td>
+		<td>Columns</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>id</td>
+		<td>id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>bigserial</td>
+		<td>serial4</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Default</td>
+		<td>nextval(&#39;courtcaseservice.case_marker_id_seq&#39;::regclass)</td>
+		<td>nextval(&#39;required.case_marker_id_seq&#39;::regclass)</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>type_description</td>
+		<td>type_description</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created</td>
+		<td>created</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created_by</td>
+		<td>created_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated</td>
+		<td>last_updated</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated_by</td>
+		<td>last_updated_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Constraints</td>
+		<td>Constraints</td>
+		<td>Constraints</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>case_marker_pkey</td>
+		<td>case_marker_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>47344</td>
+		<td>46668</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Foreign Keys</td>
+		<td>Foreign Keys</td>
+		<td>Foreign Keys</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Foreign Key</td>
+		<td>fk_case_marker_case</td>
+		<td>fk_case_marker_case</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>47433</td>
+		<td>46669</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>case_marker_aud</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>court</td>
+		<td>court</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43626</td>
+		<td>46090</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Row Count Estimate</td>
+		<td>5</td>
+		<td>250</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Columns</td>
+		<td>Columns</td>
+		<td>Columns</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>id</td>
+		<td>id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>bigserial</td>
+		<td>serial4</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Default</td>
+		<td>nextval(&#39;courtcaseservice.court_id_seq&#39;::regclass)</td>
+		<td>nextval(&#39;required.court_id_seq&#39;::regclass)</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>name</td>
+		<td>name</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>court_code</td>
+		<td>court_code</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created</td>
+		<td>created</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated</td>
+		<td>last_updated</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created_by</td>
+		<td>created_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated_by</td>
+		<td>last_updated_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Constraints</td>
+		<td>Constraints</td>
+		<td>Constraints</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>court_court_code_idempotent</td>
+		<td>court_court_code_idempotent</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>47403</td>
+		<td>46100</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>court_pkey</td>
+		<td>court_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>47376</td>
+		<td>46098</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Indexes</td>
+		<td>Indexes</td>
+		<td>Indexes</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>court_court_code_idempotent</td>
+		<td>court_court_code_idempotent</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Num Scans</td>
+		<td>0</td>
+		<td>250</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>court_case</td>
+		<td>court_case</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>44094</td>
+		<td>46559</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Row Count Estimate</td>
+		<td>9</td>
+		<td>0</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Columns</td>
+		<td>Columns</td>
+		<td>Columns</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>id</td>
+		<td>id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>int8</td>
+		<td>int4</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>case_id</td>
+		<td>case_id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>case_no</td>
+		<td>case_no</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created</td>
+		<td>created</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created_by</td>
+		<td>created_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>source_type</td>
+		<td>source_type</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>urn</td>
+		<td>urn</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated</td>
+		<td>last_updated</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated_by</td>
+		<td>last_updated_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Constraints</td>
+		<td>Constraints</td>
+		<td>Constraints</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>court_case_new_pkey</td>
+		<td>court_case_new_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>47427</td>
+		<td>46566</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Indexes</td>
+		<td>Indexes</td>
+		<td>Indexes</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>case_id_new_idx</td>
+		<td>case_id_new_idx</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>court_case_new_pkey</td>
+		<td>court_case_new_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>court_case_aud</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>court_case_old</td>
+		<td>court_case_old</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43941</td>
+		<td>46406</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Columns</td>
+		<td>Columns</td>
+		<td>Columns</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>id</td>
+		<td>id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Default</td>
+		<td>nextval(&#39;courtcaseservice.court_case_id_seq&#39;::regclass)</td>
+		<td>nextval(&#39;required.court_case_id_seq&#39;::regclass)</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Constraints</td>
+		<td>Constraints</td>
+		<td>Constraints</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>court_case_pkey</td>
+		<td>court_case_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>43951</td>
+		<td>46416</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>defendant</td>
+		<td>defendant</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43980</td>
+		<td>46445</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Row Count Estimate</td>
+		<td>9</td>
+		<td>0</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Columns</td>
+		<td>Columns</td>
+		<td>Columns</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>id</td>
+		<td>id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>bigserial</td>
+		<td>serial4</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Default</td>
+		<td>nextval(&#39;courtcaseservice.defendant_id_seq&#39;::regclass)</td>
+		<td>nextval(&#39;required.defendant_id_seq&#39;::regclass)</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>defendant_name</td>
+		<td>defendant_name</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>type</td>
+		<td>type</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>crn</td>
+		<td>crn</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>pnc</td>
+		<td>pnc</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>cro</td>
+		<td>cro</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>sex</td>
+		<td>sex</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>nationality_1</td>
+		<td>nationality_1</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>nationality_2</td>
+		<td>nationality_2</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created</td>
+		<td>created</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created_by</td>
+		<td>created_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>defendant_id</td>
+		<td>defendant_id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>uuid</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>person_id</td>
+		<td>person_id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>uuid</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated</td>
+		<td>last_updated</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated_by</td>
+		<td>last_updated_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Constraints</td>
+		<td>Constraints</td>
+		<td>Constraints</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>defendant_id_unique_key</td>
+		<td>defendant_id_unique_key</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>47567</td>
+		<td>46624</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>defendant_pkey</td>
+		<td>defendant_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>47498</td>
+		<td>46452</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Foreign Keys</td>
+		<td>Foreign Keys</td>
+		<td>Foreign Keys</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Foreign Key</td>
+		<td>fk_defendant_offender</td>
+		<td>fk_defendant_offender</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>48133</td>
+		<td>46577</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Indexes</td>
+		<td>Indexes</td>
+		<td>Indexes</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>defendant_crn_idx</td>
+		<td>defendant_crn_idx</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>defendant_defendant_id_key</td>
+		<td>defendant_defendant_id_key</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>defendant_id_unique_key</td>
+		<td>defendant_id_unique_key</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>defendant_pkey</td>
+		<td>defendant_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Num Scans</td>
+		<td>0</td>
+		<td>1</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>fk_defendant_offender_id_idx</td>
+		<td>fk_defendant_offender_id_idx</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Triggers</td>
+		<td>Triggers</td>
+		<td>Triggers</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Trigger</td>
+		<td>tsvector_update_defendant_tsv_name</td>
+		<td>tsvector_update_defendant_tsv_name</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Manipulation</td>
+		<td>[Lorg.jkiss.dbeaver.model.struct.rdb.DBSManipulationType;@2fa128c8</td>
+		<td>[Lorg.jkiss.dbeaver.model.struct.rdb.DBSManipulationType;@4283617d</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>44330</td>
+		<td>46718</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>defendant_aud</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>flyway_schema_history</td>
+		<td>flyway_schema_history</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43614</td>
+		<td>46078</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Constraints</td>
+		<td>Constraints</td>
+		<td>Constraints</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>flyway_schema_history_pk</td>
+		<td>flyway_schema_history_pk</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>43622</td>
+		<td>46086</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Indexes</td>
+		<td>Indexes</td>
+		<td>Indexes</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>flyway_schema_history_pk</td>
+		<td>flyway_schema_history_pk</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Num Scans</td>
+		<td>4</td>
+		<td>0</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>hearing</td>
+		<td>hearing</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43639</td>
+		<td>46103</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Row Count Estimate</td>
+		<td>9</td>
+		<td>0</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Columns</td>
+		<td>Columns</td>
+		<td>Columns</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>id</td>
+		<td>id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>bigserial</td>
+		<td>serial4</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Default</td>
+		<td>nextval(&#39;courtcaseservice.hearing_id_seq&#39;::regclass)</td>
+		<td>nextval(&#39;required.hearing_id_seq&#39;::regclass)</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>hearing_id</td>
+		<td>hearing_id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created</td>
+		<td>created</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created_by</td>
+		<td>created_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>first_created</td>
+		<td>first_created</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>hearing_event_type</td>
+		<td>hearing_event_type</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>hearing_type</td>
+		<td>hearing_type</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>list_no</td>
+		<td>list_no</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated</td>
+		<td>last_updated</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated_by</td>
+		<td>last_updated_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>fk_hearing_outcome</td>
+		<td>fk_hearing_outcome</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>int8</td>
+		<td>int4</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Constraints</td>
+		<td>Constraints</td>
+		<td>Constraints</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>hearing_id_unique_key</td>
+		<td>hearing_id_unique_key</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>47727</td>
+		<td>46622</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>hearing_pkey</td>
+		<td>hearing_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>47668</td>
+		<td>46112</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Foreign Keys</td>
+		<td>Foreign Keys</td>
+		<td>Foreign Keys</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Foreign Key</td>
+		<td>fk_hearing_court_case</td>
+		<td>fk_hearing_court_case</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>47428</td>
+		<td>46594</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Foreign Key</td>
+		<td>fk_hearing_outcome</td>
+		<td>fk_hearing_outcome</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>47936</td>
+		<td>46688</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Indexes</td>
+		<td>Indexes</td>
+		<td>Indexes</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>court_case_case_id_idx</td>
+		<td>court_case_case_id_idx</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>fk_hearing_court_case_id_idx</td>
+		<td>fk_hearing_court_case_id_idx</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>hearing_created_idx</td>
+		<td>hearing_created_idx</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>hearing_id_unique_key</td>
+		<td>hearing_id_unique_key</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>hearing_pkey</td>
+		<td>hearing_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>hearing_aud</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>hearing_day</td>
+		<td>hearing_day</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43777</td>
+		<td>46241</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Row Count Estimate</td>
+		<td>9</td>
+		<td>0</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Columns</td>
+		<td>Columns</td>
+		<td>Columns</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>id</td>
+		<td>id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>bigserial</td>
+		<td>serial4</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Default</td>
+		<td>nextval(&#39;courtcaseservice.hearing_day_id_seq&#39;::regclass)</td>
+		<td>nextval(&#39;required.hearing_day_id_seq&#39;::regclass)</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>hearing_time</td>
+		<td>hearing_time</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>time(6)</td>
+		<td>time</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>court_code</td>
+		<td>court_code</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>court_room</td>
+		<td>court_room</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created</td>
+		<td>created</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created_by</td>
+		<td>created_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated</td>
+		<td>last_updated</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated_by</td>
+		<td>last_updated_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Constraints</td>
+		<td>Constraints</td>
+		<td>Constraints</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>hearing_day_pkey</td>
+		<td>hearing_day_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>47780</td>
+		<td>46250</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Foreign Keys</td>
+		<td>Foreign Keys</td>
+		<td>Foreign Keys</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Foreign Key</td>
+		<td>fk_hearing_day_court</td>
+		<td>fk_hearing_day_court</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>47813</td>
+		<td>46299</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Foreign Key</td>
+		<td>fk_hearing_day_court_case</td>
+		<td>fk_hearing_day_court_case</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>47669</td>
+		<td>46490</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Indexes</td>
+		<td>Indexes</td>
+		<td>Indexes</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>hearing_court_case_id_idx</td>
+		<td>hearing_court_case_id_idx</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>hearing_day_court_code_idx</td>
+		<td>hearing_day_court_code_idx</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>hearing_day_idx</td>
+		<td>hearing_day_idx</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>hearing_day_pkey</td>
+		<td>hearing_day_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>hearing_day_aud</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>hearing_defendant</td>
+		<td>hearing_defendant</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43794</td>
+		<td>46258</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Row Count Estimate</td>
+		<td>10</td>
+		<td>0</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Columns</td>
+		<td>Columns</td>
+		<td>Columns</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>id</td>
+		<td>id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>bigserial</td>
+		<td>serial4</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Default</td>
+		<td>nextval(&#39;courtcaseservice.hearing_defendant_id_seq&#39;::regclass)</td>
+		<td>nextval(&#39;required.hearing_defendant_id_seq&#39;::regclass)</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created</td>
+		<td>created</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created_by</td>
+		<td>created_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>defendant_id</td>
+		<td>defendant_id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>uuid</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated</td>
+		<td>last_updated</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated_by</td>
+		<td>last_updated_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Constraints</td>
+		<td>Constraints</td>
+		<td>Constraints</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>hearing_defendant_pkey</td>
+		<td>hearing_defendant_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>47840</td>
+		<td>46268</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Foreign Keys</td>
+		<td>Foreign Keys</td>
+		<td>Foreign Keys</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Foreign Key</td>
+		<td>fk_hearing_defendant_defendant</td>
+		<td>fk_hearing_defendant_defendant</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>47499</td>
+		<td>46616</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Foreign Key</td>
+		<td>fk_hearing_defendant_hearing</td>
+		<td>fk_hearing_defendant_hearing</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>47674</td>
+		<td>46611</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Indexes</td>
+		<td>Indexes</td>
+		<td>Indexes</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>hearing_defendant_fk_hearing_id_idx</td>
+		<td>hearing_defendant_fk_hearing_id_idx</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>hearing_defendant_pkey</td>
+		<td>hearing_defendant_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>hearing_defendant_aud</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>hearing_notes</td>
+		<td>hearing_notes</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>44079</td>
+		<td>46544</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Columns</td>
+		<td>Columns</td>
+		<td>Columns</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>id</td>
+		<td>id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>bigserial</td>
+		<td>serial4</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Default</td>
+		<td>nextval(&#39;courtcaseservice.hearing_notes_id_seq&#39;::regclass)</td>
+		<td>nextval(&#39;required.hearing_notes_id_seq&#39;::regclass)</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>hearing_id</td>
+		<td>hearing_id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>note</td>
+		<td>note</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>author</td>
+		<td>author</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created</td>
+		<td>created</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created_by</td>
+		<td>created_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created_by_uuid</td>
+		<td>created_by_uuid</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>uuid</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated</td>
+		<td>last_updated</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated_by</td>
+		<td>last_updated_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Constraints</td>
+		<td>Constraints</td>
+		<td>Constraints</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>hearing_notes_pkey</td>
+		<td>hearing_notes_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>47881</td>
+		<td>46556</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>hearing_outcome</td>
+		<td>hearing_outcome</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>44288</td>
+		<td>46676</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Columns</td>
+		<td>Columns</td>
+		<td>Columns</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>id</td>
+		<td>id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>bigserial</td>
+		<td>serial4</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Default</td>
+		<td>nextval(&#39;courtcaseservice.hearing_outcome_id_seq&#39;::regclass)</td>
+		<td>nextval(&#39;required.hearing_outcome_id_seq&#39;::regclass)</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>outcome_type</td>
+		<td>outcome_type</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created</td>
+		<td>created</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created_by</td>
+		<td>created_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated</td>
+		<td>last_updated</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated_by</td>
+		<td>last_updated_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>outcome_date</td>
+		<td>outcome_date</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>state</td>
+		<td>state</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>assigned_to</td>
+		<td>assigned_to</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>assigned_to_uuid</td>
+		<td>assigned_to_uuid</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>uuid</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>resulted_date</td>
+		<td>resulted_date</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Constraints</td>
+		<td>Constraints</td>
+		<td>Constraints</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>hearing_outcome_pkey</td>
+		<td>hearing_outcome_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>47935</td>
+		<td>46687</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>hearing_outcome_aud</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>judicial_result</td>
+		<td>judicial_result</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>44060</td>
+		<td>46525</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Columns</td>
+		<td>Columns</td>
+		<td>Columns</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>id</td>
+		<td>id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>bigserial</td>
+		<td>serial4</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Default</td>
+		<td>nextval(&#39;courtcaseservice.judicial_result_id_seq&#39;::regclass)</td>
+		<td>nextval(&#39;required.judicial_result_id_seq&#39;::regclass)</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created</td>
+		<td>created</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created_by</td>
+		<td>created_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated</td>
+		<td>last_updated</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated_by</td>
+		<td>last_updated_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Constraints</td>
+		<td>Constraints</td>
+		<td>Constraints</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>judicial_result_pkey</td>
+		<td>judicial_result_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>48002</td>
+		<td>46536</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Foreign Keys</td>
+		<td>Foreign Keys</td>
+		<td>Foreign Keys</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Foreign Key</td>
+		<td>fk_offence</td>
+		<td>fk_offence</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>48032</td>
+		<td>46606</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>judicial_result_aud</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>offence</td>
+		<td>offence</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43812</td>
+		<td>46276</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Row Count Estimate</td>
+		<td>9</td>
+		<td>0</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Columns</td>
+		<td>Columns</td>
+		<td>Columns</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>id</td>
+		<td>id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>bigserial</td>
+		<td>serial4</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Default</td>
+		<td>nextval(&#39;courtcaseservice.offence_id_seq&#39;::regclass)</td>
+		<td>nextval(&#39;required.offence_id_seq&#39;::regclass)</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>title</td>
+		<td>title</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>act</td>
+		<td>act</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created</td>
+		<td>created</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created_by</td>
+		<td>created_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated</td>
+		<td>last_updated</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated_by</td>
+		<td>last_updated_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>offence_code</td>
+		<td>offence_code</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>plea_id</td>
+		<td>plea_id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>int8</td>
+		<td>int4</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>verdict_id</td>
+		<td>verdict_id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>int8</td>
+		<td>int4</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Constraints</td>
+		<td>Constraints</td>
+		<td>Constraints</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>offence_pkey</td>
+		<td>offence_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>48031</td>
+		<td>46285</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Foreign Keys</td>
+		<td>Foreign Keys</td>
+		<td>Foreign Keys</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Foreign Key</td>
+		<td>fk_offence_hearing_defendant</td>
+		<td>fk_offence_hearing_defendant</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>47841</td>
+		<td>46500</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Foreign Key</td>
+		<td>fk_plea</td>
+		<td>fk_plea</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>48261</td>
+		<td>46693</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Foreign Key</td>
+		<td>fk_verdict</td>
+		<td>fk_verdict</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>48305</td>
+		<td>46699</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Indexes</td>
+		<td>Indexes</td>
+		<td>Indexes</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>offence_hearing_defendant_id_idx</td>
+		<td>offence_hearing_defendant_id_idx</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>offence_pkey</td>
+		<td>offence_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>offence_plea_fk_idx</td>
+		<td>offence_plea_fk_idx</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>offence_verdict_fk_idx</td>
+		<td>offence_verdict_fk_idx</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>offence_aud</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>offender</td>
+		<td>offender</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43900</td>
+		<td>46365</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Row Count Estimate</td>
+		<td>2</td>
+		<td>0</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Columns</td>
+		<td>Columns</td>
+		<td>Columns</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>id</td>
+		<td>id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>bigserial</td>
+		<td>serial4</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Default</td>
+		<td>nextval(&#39;courtcaseservice.offender_id_seq&#39;::regclass)</td>
+		<td>nextval(&#39;required.offender_id_seq&#39;::regclass)</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>crn</td>
+		<td>crn</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>probation_status</td>
+		<td>probation_status</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created</td>
+		<td>created</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created_by</td>
+		<td>created_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated</td>
+		<td>last_updated</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated_by</td>
+		<td>last_updated_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>pnc</td>
+		<td>pnc</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>cro</td>
+		<td>cro</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Constraints</td>
+		<td>Constraints</td>
+		<td>Constraints</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>offender_crn_key</td>
+		<td>offender_crn_key</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>48164</td>
+		<td>46381</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>offender_pkey</td>
+		<td>offender_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>48132</td>
+		<td>46379</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Indexes</td>
+		<td>Indexes</td>
+		<td>Indexes</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>offender_crn_key</td>
+		<td>offender_crn_key</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>offender_pkey</td>
+		<td>offender_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Rel Size</td>
+		<td>16K</td>
+		<td>8K</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>offender_match</td>
+		<td>offender_match</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43691</td>
+		<td>46155</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Columns</td>
+		<td>Columns</td>
+		<td>Columns</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created</td>
+		<td>created</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated</td>
+		<td>last_updated</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created_by</td>
+		<td>created_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated_by</td>
+		<td>last_updated_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Constraints</td>
+		<td>Constraints</td>
+		<td>Constraints</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>offender_match_pkey</td>
+		<td>offender_match_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>43698</td>
+		<td>46162</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>uq_group_id_crn</td>
+		<td>uq_group_id_crn</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>44326</td>
+		<td>46714</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Foreign Keys</td>
+		<td>Foreign Keys</td>
+		<td>Foreign Keys</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Foreign Key</td>
+		<td>fk_offender_match_group</td>
+		<td>fk_offender_match_group</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>44320</td>
+		<td>46708</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>offender_match_group</td>
+		<td>offender_match_group</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43701</td>
+		<td>46165</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Columns</td>
+		<td>Columns</td>
+		<td>Columns</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created</td>
+		<td>created</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated</td>
+		<td>last_updated</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created_by</td>
+		<td>created_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated_by</td>
+		<td>last_updated_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>case_id</td>
+		<td>case_id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>defendant_id</td>
+		<td>defendant_id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Constraints</td>
+		<td>Constraints</td>
+		<td>Constraints</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>offender_match_group_pkey</td>
+		<td>offender_match_group_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>43708</td>
+		<td>46172</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>offender_match_group_uq1</td>
+		<td>offender_match_group_uq1</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>48247</td>
+		<td>46359</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Indexes</td>
+		<td>Indexes</td>
+		<td>Indexes</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Index</td>
+		<td>offender_match_group_uq1</td>
+		<td>offender_match_group_uq1</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Num Scans</td>
+		<td>0</td>
+		<td>1</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>pic_2128_court_case_bk</td>
+		<td>pic_2128_court_case_bk</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43996</td>
+		<td>46461</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>pic_2128_hearing_day_bk</td>
+		<td>pic_2128_hearing_day_bk</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>44002</td>
+		<td>46467</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>pic_2128_hearing_defendant_bk</td>
+		<td>pic_2128_hearing_defendant_bk</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>44008</td>
+		<td>46473</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>pic_2128_offence_bk</td>
+		<td>pic_2128_offence_bk</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>44014</td>
+		<td>46479</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>plea</td>
+		<td>plea</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>44163</td>
+		<td>46628</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Columns</td>
+		<td>Columns</td>
+		<td>Columns</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>id</td>
+		<td>id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>bigserial</td>
+		<td>serial4</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Default</td>
+		<td>nextval(&#39;courtcaseservice.plea_id_seq&#39;::regclass)</td>
+		<td>nextval(&#39;required.plea_id_seq&#39;::regclass)</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>value</td>
+		<td>value</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created</td>
+		<td>created</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created_by</td>
+		<td>created_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated</td>
+		<td>last_updated</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated_by</td>
+		<td>last_updated_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>date</td>
+		<td>date</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>date</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Constraints</td>
+		<td>Constraints</td>
+		<td>Constraints</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>plea_pkey</td>
+		<td>plea_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>48260</td>
+		<td>46639</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>plea_aud</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>revinfo</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>verdict</td>
+		<td>verdict</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>44178</td>
+		<td>46643</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Columns</td>
+		<td>Columns</td>
+		<td>Columns</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>id</td>
+		<td>id</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>bigserial</td>
+		<td>serial4</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Default</td>
+		<td>nextval(&#39;courtcaseservice.verdict_id_seq&#39;::regclass)</td>
+		<td>nextval(&#39;required.verdict_id_seq&#39;::regclass)</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>type_description</td>
+		<td>type_description</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>date</td>
+		<td>date</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>date</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created</td>
+		<td>created</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>created_by</td>
+		<td>created_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated</td>
+		<td>last_updated</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>timestamp(6)</td>
+		<td>timestamp</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Column</td>
+		<td>last_updated_by</td>
+		<td>last_updated_by</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Data type</td>
+		<td>varchar(255)</td>
+		<td>text</td>
+	</tr>
+	<tr class="object level4" valign="top">
+		<td>Constraints</td>
+		<td>Constraints</td>
+		<td>Constraints</td>
+	</tr>
+	<tr class="object level5" valign="top">
+		<td>Constraint</td>
+		<td>verdict_pkey</td>
+		<td>verdict_pkey</td>
+	</tr>
+	<tr class="property level6 differs" valign="top">
+		<td>Object ID</td>
+		<td>48304</td>
+		<td>46654</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Table</td>
+		<td>verdict_aud</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level2" valign="top">
+		<td>Functions</td>
+		<td>Functions</td>
+		<td>Functions</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>gin_extract_query_trgm(text, internal, int2, internal, internal, internal, internal)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>gin_extract_value_trgm(text, internal)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>gin_trgm_consistent(internal, int2, text, int4, internal, internal, internal, internal)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>gin_trgm_triconsistent(internal, int2, text, int4, internal, internal, internal)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>gtrgm_compress(internal)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>gtrgm_consistent(internal, text, int2, oid, internal)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>gtrgm_decompress(internal)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>gtrgm_distance(internal, text, int2, oid, internal)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>gtrgm_in(cstring)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>gtrgm_out(courtcaseservice.gtrgm)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>gtrgm_penalty(internal, internal, internal)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>gtrgm_picksplit(internal, internal)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>gtrgm_same(courtcaseservice.gtrgm, courtcaseservice.gtrgm, internal)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>gtrgm_union(internal, internal)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>set_limit(float4)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>show_limit()</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>show_trgm(text)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>similarity(text, text)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>similarity_dist(text, text)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>similarity_op(text, text)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>strict_word_similarity(text, text)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>strict_word_similarity_commutator_op(text, text)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>strict_word_similarity_dist_commutator_op(text, text)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>strict_word_similarity_dist_op(text, text)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>strict_word_similarity_op(text, text)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>word_similarity(text, text)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>word_similarity_commutator_op(text, text)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>word_similarity_dist_commutator_op(text, text)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>word_similarity_dist_op(text, text)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td>word_similarity_op(text, text)</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td class="missing">N/A</td>
+		<td>uuid_generate_v1()</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td class="missing">N/A</td>
+		<td>uuid_generate_v1mc()</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td class="missing">N/A</td>
+		<td>uuid_generate_v3(uuid, text)</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td class="missing">N/A</td>
+		<td>uuid_generate_v4()</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td class="missing">N/A</td>
+		<td>uuid_generate_v5(uuid, text)</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td class="missing">N/A</td>
+		<td>uuid_nil()</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td class="missing">N/A</td>
+		<td>uuid_ns_dns()</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td class="missing">N/A</td>
+		<td>uuid_ns_oid()</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td class="missing">N/A</td>
+		<td>uuid_ns_url()</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Function</td>
+		<td class="missing">N/A</td>
+		<td>uuid_ns_x500()</td>
+	</tr>
+	<tr class="object level2" valign="top">
+		<td>Sequences</td>
+		<td>Sequences</td>
+		<td>Sequences</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Sequence</td>
+		<td>case_comments_id_seq</td>
+		<td>case_comments_id_seq</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>44042</td>
+		<td>46507</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Sequence</td>
+		<td>case_marker_id_seq</td>
+		<td>case_marker_id_seq</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>44190</td>
+		<td>46655</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Sequence</td>
+		<td>court_case_id_seq</td>
+		<td>court_case_id_seq</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43947</td>
+		<td>46412</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Sequence</td>
+		<td>court_case_new_id_seq</td>
+		<td>court_case_new_id_seq</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>44102</td>
+		<td>46567</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Max Value</td>
+		<td>9223372036854775807</td>
+		<td>2147483647</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Sequence</td>
+		<td>court_id_seq</td>
+		<td>court_id_seq</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43624</td>
+		<td>46088</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Last Value</td>
+		<td>255</td>
+		<td>250</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Sequence</td>
+		<td>defendant_id_seq</td>
+		<td>defendant_id_seq</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43990</td>
+		<td>46455</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Sequence</td>
+		<td>hearing_day_id_seq</td>
+		<td>hearing_day_id_seq</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43775</td>
+		<td>46239</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Sequence</td>
+		<td>hearing_defendant_id_seq</td>
+		<td>hearing_defendant_id_seq</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43792</td>
+		<td>46256</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Sequence</td>
+		<td>hearing_id_seq</td>
+		<td>hearing_id_seq</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43637</td>
+		<td>46101</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Sequence</td>
+		<td>hearing_notes_id_seq</td>
+		<td>hearing_notes_id_seq</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>44077</td>
+		<td>46542</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Sequence</td>
+		<td>hearing_outcome_id_seq</td>
+		<td>hearing_outcome_id_seq</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>44286</td>
+		<td>46674</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Sequence</td>
+		<td>judicial_result_id_seq</td>
+		<td>judicial_result_id_seq</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>44058</td>
+		<td>46523</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Sequence</td>
+		<td>offence_id_seq</td>
+		<td>offence_id_seq</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43810</td>
+		<td>46274</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Sequence</td>
+		<td>offender_id_seq</td>
+		<td>offender_id_seq</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43898</td>
+		<td>46363</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Sequence</td>
+		<td>offender_match_group_id_seq</td>
+		<td>offender_match_group_id_seq</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43699</td>
+		<td>46163</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Sequence</td>
+		<td>offender_match_id_seq</td>
+		<td>offender_match_id_seq</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>43689</td>
+		<td>46153</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Sequence</td>
+		<td>plea_id_seq</td>
+		<td>plea_id_seq</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>44161</td>
+		<td>46626</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Sequence</td>
+		<td>revinfo_seq</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Sequence</td>
+		<td>verdict_id_seq</td>
+		<td>verdict_id_seq</td>
+	</tr>
+	<tr class="property level4 differs" valign="top">
+		<td>Object ID</td>
+		<td>44176</td>
+		<td>46641</td>
+	</tr>
+	<tr class="object level2" valign="top">
+		<td>Data types</td>
+		<td>Data types</td>
+		<td>Data types</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Data type</td>
+		<td>gtrgm</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object level3" valign="top">
+		<td>Data type</td>
+		<td>_gtrgm</td>
+		<td class="missing">N/A</td>
+	</tr>
+	<tr class="object">
+		<td colspan="3">732 objects compared</td>
+	</tr>
+</table>
+</body>
+</html>
