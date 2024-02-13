@@ -48,7 +48,7 @@ NEW_CASE_NO_PREFIX=$(date +"%y%m%d%M%s")
 i=0
 for f in $FILES
 do
-  ((i++))
+  i=$((i++))
   NEW_CASE_ID=$((1 + $RANDOM % 999999))
   # If there are specified files then only send those, otherwise send everything
   if [[ "$files" == *"$f"* || $files == "" ]]; then

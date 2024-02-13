@@ -1,7 +1,7 @@
 #!/bin/bash
 namespace=court-probation-dev
-debug_pod_name=hmpps-probation-in-court-utils
 
+hostname=$(hostname)
 # Read any named params
 while [ $# -gt 0 ]; do
 
@@ -27,7 +27,11 @@ exit_on_error() {
     fi
 }
 
-if [ $local = "true" ]
+debug_pod_name=hmpps-probation-in-court-utils-$namespace
+echo "service pod name: $debug_pod_name"
+service_pod_exists="$(kubectl get pods $debug_pod_name || echo 'NotFound')"
+
+if [ "$local" = "true" ]
 then
   echo "🏠 Running against localstack"
   MATCHER_TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-case-events-topic"
@@ -35,6 +39,11 @@ then
   AWS_ACCESS_KEY_ID=
   AWS_ACCESS_KEY_ID=
 else
+    if [[ ! $service_pod_exists =~ 'NotFound' ]]; then
+      echo "$debug_pod_name exists signing into shell"
+      kubectl exec -it -n $namespace $debug_pod_name -- sh
+      exit 0
+    fi
   # Get credentials and queue details from namespace secret
   echo "🔑 Getting matcher topic arn from secrets..."
   secret_json=$(cloud-platform decode-secret -s court-case-events-topic -n $namespace --skip-version-check)

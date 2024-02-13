@@ -4,7 +4,7 @@
       "id": "9b583616-049b-30f9-a14f-028a53b7cfe8",
       "roomId": "7cb09222-49e1-3622-a5a6-ad253d2b3c39",
       "roomName": "Crown Court 3-1",
-      "code": "%court_code%00"
+      "code": "%court_code%"
     },
     "hearingDays": [
       {
@@ -98,7 +98,12 @@
             "prosecutionCaseId": "%new_case_id%"
           }
         ],
-        "id": "ef0f33f9-3e60-420d-ad10-8c863c372bee"
+        "prosecutionCaseIdentifier": {
+          "prosecutionAuthorityCode": "CPS",
+          "prosecutionAuthorityId": "52b27284-0686-4894-b1c7-7d4b634cacdb",
+          "caseURN": "25GD34377721"
+        },
+        "id": "%new_case_id%"
       }
     ]
   }

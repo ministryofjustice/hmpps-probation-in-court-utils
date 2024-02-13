@@ -4,7 +4,7 @@
       "id": "9b583616-049b-30f9-a14f-028a53b7cfe8",
       "roomId": "7cb09222-49e1-3622-a5a6-ad253d2b3c39",
       "roomName": "01",
-      "code": "B33HU00"
+      "code": "%court_code%"
     },
     "hearingDays": [
       {
@@ -13,7 +13,7 @@
         "sittingDay": "%hearing_date%T09:00:00.000Z"
       }
     ],
-    "id": "1379cf3d-84db-4bbb-8778-581109c10d43",
+    "id": "%new_hearing_id%",
     "jurisdictionType": "MAGISTRATES",
     "prosecutionCases": [
       {
@@ -48,6 +48,11 @@
             "prosecutionCaseId": "%new_case_id%"
           }
         ],
+        "prosecutionCaseIdentifier": {
+          "prosecutionAuthorityCode": "CPS",
+          "prosecutionAuthorityId": "52b27284-0686-4894-b1c7-7d4b634cacdb",
+          "caseURN": "25GD34377012"
+        },
         "id": "%new_case_id%"
       }
     ]
