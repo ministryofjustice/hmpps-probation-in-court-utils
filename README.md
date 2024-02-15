@@ -53,7 +53,7 @@ echo "✨ Creating a shiny new thing!"
 
 Run `./subscribe-to-topic.bash --email <your@email.address>` to subscribe to events from the `court-case-events-topic` SNS topic
 
-Run `./populate-cpg-sqs.bash` to push case lists to the `crime-portal-gateway-queue`
+Run `./populate-cpg-sqs.bash` to push case lists to the `crime-portal-gateway-queue` (To push message to probation-in-court-team-development-crime-portal-gateway-queue)
 
 Run `./populate-matcher-sns.bash` to push some cases to the `court-case-events-topic` SNS topic
 
@@ -74,6 +74,10 @@ Example
 ./populate-matcher-sns-cp.bash --generate_ids "false" --cases_path "sit/CONFIRM_UPDATE/B01DU00/"
 ```
 
+
+## Push messages to crime-portal-gateway SOAP endpoint in dev
+
+curl -v -X POST -H "Content-Type: application/soap+xml" http://crime-portal-gateway/crime-portal-gateway/ws/ -d "@crime-portal-gateway/test-data/case-list-success-soap.xml"
 
 ## Reference Data
 
