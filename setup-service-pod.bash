@@ -69,6 +69,11 @@ else
   secret_json=$(cloud-platform decode-secret -s crime-portal-gateway-queue-credentials -n $namespace --skip-version-check)
   export CRIME_PORTAL_GATEWAY_QUEUE_URL=$(echo "$secret_json" | jq -r .data.sqs_id)
 
+  echo "🔑 Getting redis arameters..."
+  secret_json=$(cloud-platform decode-secret -s pac-elasticache-redis -n $namespace --skip-version-check)
+  export REDIS_HOST=$(echo "$secret_json" | jq -r .data.primary_endpoint_address)
+  export REDIS_AUTH_TOKEN=$(echo "$secret_json" | jq -r .data.auth_token)
+
   kubectl --namespace=$namespace --request-timeout='120s' run \
       --env "namespace=$namespace" \
       --env "MATCHER_TOPIC_ARN=$MATCHER_TOPIC_ARN" \
@@ -77,6 +82,8 @@ else
       --env "RDS_INSTANCE_IDENTIFIER=$RDS_INSTANCE_IDENTIFIER" \
       --env "CRIME_PORTAL_GATEWAY_BUCKET_NAME=$CRIME_PORTAL_GATEWAY_BUCKET_NAME" \
       --env "CRIME_PORTAL_GATEWAY_QUEUE_URL=$CRIME_PORTAL_GATEWAY_QUEUE_URL" \
+      --env "REDIS_HOST=$REDIS_HOST" \
+      --env "REDIS_AUTH_TOKEN=$RREDIS_AUTH_TOKEN" \
     -it --rm $debug_pod_name --image=quay.io/hmpps/hmpps-probation-in-court-utils:latest \
      --restart=Never --overrides='{ "spec": { "serviceAccount": "court-case-service" } }'
 fi
