@@ -2,6 +2,7 @@ FROM ghcr.io/ministryofjustice/hmpps-devops-tools:latest
 
 USER root
 RUN apt-get install uuid-runtime
+RUN apt-get install redis-tools -y
 MAINTAINER MoJ Digital, Probation in Court <probation-in-court-team@digital.justice.gov.uk>
 
 ARG BUILD_NUMBER
