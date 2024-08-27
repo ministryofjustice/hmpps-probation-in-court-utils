@@ -30,21 +30,53 @@
             "offences": [
               {
                 "id": "a63d9020-aa6b-4997-92fd-72a692b036de",
-                "offenceLegislation": "Contrary to section 20 of the Offences Against the    Person Act 1861.",
-                "offenceTitle": "Wound / inflict grievous bodily harm without intent (co-defendant)",
-                "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, John Smith",
+                "offenceLegislation": "Contrary to section 47 of the Offences Against the Person Act 1861.",
+                "offenceTitle": "Assault a person thereby occasioning them actual bodily harm",
+                "wording": "On 25/11/2023 at Oxford,  you assaulted John Smith, thereby occasioning him, actual bodily harm",
                 "listingNumber": 1,
-                "offenceDefinitionId": "1136fd5e-d9d3-4df6-a6a6-a79c8530379f",
-                "offenceCode": "CJO3523"
+                "offenceDefinitionId": "a86115ce-b611-38e3-8300-1d3d653f5b3a",
+                "offenceCode": "OF61102",
+                "plea": {
+                  "pleaValue": "not guilty"
+                },
+                "verdict": {
+                  "verdictType": {
+                    "description": "verdict"
+                  }
+                },
+                "judicialResults": [
+                  {
+                    "label": "label",
+                    "resultText": "resultText",
+                    "isConvictedResult": false,
+                    "judicialResultTypeId": "id"
+                  }
+                ]
               },
               {
                 "id": "ea1c2cf1-f155-483b-a908-81158a9b2f9b",
-                "offenceLegislation": "Contrary to section 20 of the Offences Against the    Person Act 1861.",
-                "offenceTitle": "Wound / inflict grievous bodily harm without intent (co-defendant)",
-                "wording": "on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, Jane Smith",
+                "offenceLegislation": "Contrary to section 47 of the Offences Against the Person Act 1861.",
+                "offenceTitle": "Assault a person thereby occasioning them actual bodily harm",
+                "wording": "On 25/11/2023 at Oxford,  you assaulted John Smith, thereby occasioning him, actual bodily harm",
                 "listingNumber": 2,
-                "offenceDefinitionId": "1136fd5e-d9d3-4df6-a6a6-a79c8530379f",
-                "offenceCode": "CJO3523"
+                "offenceDefinitionId": "a86115ce-b611-38e3-8300-1d3d653f5b3a",
+                "offenceCode": "OF61102",
+                "plea": {
+                  "pleaValue": "not guilty"
+                },
+                "verdict": {
+                  "verdictType": {
+                    "description": "verdict"
+                  }
+                },
+                "judicialResults": [
+                  {
+                    "label": "label",
+                    "resultText": "resultText",
+                    "isConvictedResult": false,
+                    "judicialResultTypeId": "id"
+                  }
+                ]
               }
             ],
             "personDefendant": {
