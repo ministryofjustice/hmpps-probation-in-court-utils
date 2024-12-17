@@ -16,7 +16,7 @@ aws --endpoint-url=http://localhost:4566 sqs set-queue-attributes --queue-url "h
 aws --endpoint-url=http://localhost:4566 sqs set-queue-attributes --queue-url "http://localhost:4566/queue/court-case-matcher-queue" --attributes '{"RedrivePolicy":"{\"maxReceiveCount\":\"1\", \"deadLetterTargetArn\":\"arn:aws:sqs:eu-west-2:000000000000:court-case-matcher-dlq\"}"}'
 
 # Create SNS topic
-TOPIC_ARN=$(aws --endpoint-url http://localhost:4566 sns create-topic --output text --name court-case-events-topic --output text)
+TOPIC_ARN=$(aws --endpoint-url http://localhost:4566 sns create-topic --output text --name court-cases-topic --output text)
 aws --endpoint-url http://localhost:4566 sns subscribe --topic-arn "$TOPIC_ARN" --protocol sqs --notification-endpoint "$QUEUE_ARN" --output text
 
 echo "SQS and SNS Configured"

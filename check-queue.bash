@@ -28,7 +28,7 @@ exit_on_error() {
 if [[ $local == "true" ]]
 then
   echo "🏠 Running against localstack"
-  TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-case-events-topic"
+  TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-cases-topic"
   OPTIONS="--endpoint-url http://localhost:4566"
   QUEUE_URL="http://localhost:4566/000000000000/test-queue"
   AWS_ACCESS_KEY_ID=foobar

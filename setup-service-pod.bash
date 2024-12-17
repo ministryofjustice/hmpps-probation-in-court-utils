@@ -34,7 +34,7 @@ service_pod_exists="$(kubectl get pods $debug_pod_name || echo 'NotFound')"
 if [ "$local" = "true" ]
 then
   echo "🏠 Running against localstack"
-  MATCHER_TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-case-events-topic"
+  MATCHER_TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-cases-topic"
   OPTIONS="--endpoint-url http://localhost:4566"
   AWS_ACCESS_KEY_ID=
   AWS_ACCESS_KEY_ID=
@@ -46,7 +46,7 @@ else
     fi
   # Get credentials and queue details from namespace secret
   echo "🔑 Getting matcher topic arn from secrets..."
-  secret_json=$(cloud-platform decode-secret -s court-case-events-topic -n $namespace --skip-version-check)
+  secret_json=$(cloud-platform decode-secret -s court-cases-topic -n $namespace --skip-version-check)
   export MATCHER_TOPIC_ARN=$(echo "$secret_json" | jq -r .data.topic_arn)
 
   echo "🔑 Getting matcher dlq arn from secrets..."

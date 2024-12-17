@@ -26,7 +26,7 @@ fi
 if [ $local = "true" ]
 then
   echo "🏠 Running against localstack"
-  MATCHER_TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-case-events-topic"
+  MATCHER_TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-cases-topic"
   OPTIONS="--endpoint-url http://localhost:4566"
   AWS_ACCESS_KEY_ID=
   AWS_ACCESS_KEY_ID=

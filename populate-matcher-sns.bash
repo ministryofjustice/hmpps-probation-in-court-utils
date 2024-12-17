@@ -1,6 +1,6 @@
 #!/bin/bash
 namespace=${$namespace:-court-probation-dev}
-topic_secret=court-case-events-topic
+topic_secret=court-cases-topic
 local=false
 files=
 message_type=LIBRA_COURT_CASE
@@ -35,7 +35,7 @@ exit_on_error() {
 if [ "$local" = "true" ]
 then
   echo "🏠 Running against localstack"
-  TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-case-events-topic"
+  TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-cases-topic"
   OPTIONS="--endpoint-url http://localhost:4566"
   AWS_ACCESS_KEY_ID=
   AWS_ACCESS_KEY_ID=
