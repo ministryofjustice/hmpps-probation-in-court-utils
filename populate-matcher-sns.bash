@@ -1,5 +1,9 @@
 #!/bin/bash
-namespace=${$namespace:-court-probation-dev}
+if [ -z "${namespace}" ]; then
+  namespace="court-probation-dev"
+else
+  namespace="$namespace"
+fi
 topic_secret=court-cases-topic
 local=false
 files=
@@ -35,7 +39,7 @@ exit_on_error() {
 if [ "$local" = "true" ]
 then
   echo "🏠 Running against localstack"
-  TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-cases-topic"
+  TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-cases-topic.fifo"
   OPTIONS="--endpoint-url http://localhost:4566"
   AWS_ACCESS_KEY_ID=
   AWS_ACCESS_KEY_ID=
@@ -54,6 +58,7 @@ echo "📂 Checking for cases in $CASES_PATH"
 FILES=$(ls $CASES_PATH)
 HEARING_DATE=$(date +"%Y\-%m\-%d")
 NEW_CASE_NO_PREFIX=$(date +"%y%m%d%M%s")
+MSG_GROUP_ID="CRIME_PORTAL_GATEWAY"
 
 i=0
 for f in $FILES
@@ -72,7 +77,7 @@ do
     PAYLOAD=$(echo $PAYLOAD | sed s/%new_case_id%/$NEW_CASE_ID/g)
     PAYLOAD=$(echo $PAYLOAD | sed s/%court_code%/$court_code/g)
     echo "${PAYLOAD}"
-    aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD" --message-attributes "{\"messageType\" : { \"DataType\":\"String\", \"StringValue\":\"$message_type\"}}" $OPTIONS
+    aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD" --message-attributes "{\"messageType\" : { \"DataType\":\"String\", \"StringValue\":\"$message_type\"}}" --message-group-id "$MSG_GROUP_ID" $OPTIONS
    #exit_on_error $? !!
   fi
 done
