@@ -85,6 +85,6 @@ else
       --env "REDIS_HOST=$REDIS_HOST" \
       --env "REDIS_AUTH_TOKEN=$RREDIS_AUTH_TOKEN" \
     -it --rm $debug_pod_name --image=quay.io/hmpps/hmpps-probation-in-court-utils:latest \
-     --restart=Never --overrides='{ "spec": { "serviceAccount": "court-case-service" } }'
+     --restart=Never --overrides='{ "spec": { "serviceAccount": "court-facing-api" } }'
 fi
 
