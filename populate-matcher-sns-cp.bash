@@ -1,6 +1,10 @@
 #!/bin/bash
-namespace=${$namespace:-court-probation-dev}
-topic_secret=court-case-events-topic
+if [ -z "${namespace}" ]; then
+  namespace="court-probation-dev"
+else
+  namespace="$namespace"
+fi
+topic_secret=court-cases-topic
 local=false
 files=
 message_type=COMMON_PLATFORM_HEARING
@@ -42,18 +46,17 @@ exit_on_error() {
 if [[ $local = "true" ]]
 then
   echo "🏠 Running against localstack"
-  MATCHER_TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-case-events-topic"
+  MATCHER_TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-cases-topic.fifo"
   OPTIONS="--endpoint-url http://localhost:4566"
   AWS_ACCESS_KEY_ID=
   AWS_ACCESS_KEY_ID=
-else
-  export TOPIC_ARN=$MATCHER_TOPIC_ARN
 fi
+
+export TOPIC_ARN=$MATCHER_TOPIC_ARN
 
 # Check the topic is accessible
 echo "📡 Checking connection to SNS..."
 aws sns get-topic-attributes --topic-arn "$TOPIC_ARN" $OPTIONS > /dev/null
-#exit_on_error $? !!
 
 if [[ -n "${cases_path}" ]]
 then
@@ -62,8 +65,9 @@ fi
 CASES_PATH="${cp_base_path}${cases_path}"
 FILES=$(find $CASES_PATH -maxdepth $recurse_max_depth -type f)
 echo "📂 Checking for cases in ${CASES_PATH}"
-HEARING_DATE=$(date +"%Y-%m-%d")
-TOMORROW_DATE=$(date -d "+1 days" +"%Y-%m-%d")
+HEARING_DATE=$(gdate +"%Y-%m-%d")
+TOMORROW_DATE=$(gdate -d "+1 days" +"%Y-%m-%d")
+MSG_GROUP_ID="COURT_HEARING_EVENT_RECEIVER"
 
 i=0
 echo "The files are ... $FILES"
@@ -110,10 +114,8 @@ do
     fi
     
     MSG_ATTRIBS="{\"messageType\" : { \"DataType\":\"String\", \"StringValue\":\"$message_type\"}, \"hearingEventType\" : { \"DataType\":\"String\", \"StringValue\":\"${event_type}\"}}"
-
     echo "${PAYLOAD}"
-    aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD" --message-attributes "$MSG_ATTRIBS" $OPTIONS
-    #exit_on_error $? !!
+    aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD" --message-group "$MSG_GROUP_ID" --message-attributes "$MSG_ATTRIBS" $OPTIONS
   fi
 done
 

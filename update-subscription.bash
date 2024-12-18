@@ -1,6 +1,6 @@
 #!/bin/bash
 namespace=court-probation-dev
-topic_secret=court-case-events-topic
+topic_secret=court-cases-topic
 local=false
 email=
 
@@ -21,7 +21,7 @@ set -e
 if [ $local = "true" ]
 then
   echo "🏠 Running against localstack"
-  TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-case-events-topic"
+  TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-cases-topic.fifo"
   OPTIONS="--endpoint-url http://localhost:4566"
   AWS_ACCESS_KEY_ID=
   AWS_ACCESS_KEY_ID=

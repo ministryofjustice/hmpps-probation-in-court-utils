@@ -19,13 +19,13 @@ set -e
 if [ $local = "true" ]
 then
   echo "🏠 Running against localstack"
-  MATCHER_TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-case-events-topic"
+  MATCHER_TOPIC_ARN="arn:aws:sns:eu-west-2:000000000000:court-cases-topic.fifo"
   OPTIONS="--endpoint-url http://localhost:4566"
   AWS_ACCESS_KEY_ID=foobar
   AWS_ACCESS_KEY_ID=foobar
-else
-  export TOPIC_ARN=$MATCHER_TOPIC_ARN
 fi
+
+export TOPIC_ARN=$MATCHER_TOPIC_ARN
 
 # Check the topic is accessible
 echo "📡 Getting subscriptions to SNS..."
