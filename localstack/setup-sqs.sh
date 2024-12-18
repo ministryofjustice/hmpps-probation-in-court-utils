@@ -6,7 +6,6 @@ export AWS_SECRET_ACCESS_KEY=foobar
 export AWS_DEFAULT_REGION=eu-west-2
 export PAGER=
 
-CPG_DLQ_ARN=$(aws --endpoint-url=http://localhost:4566 sqs create-queue --queue-name crime-portal-gateway-dlq.fifo --attributes "FifoQueue=true" --output text)
 aws --endpoint-url http://localhost:4566 sqs create-queue --queue-name crime-portal-gateway-queue.fifo --attributes "FifoQueue=true"
 CCM_DLQ_ARN=$(aws --endpoint-url http://localhost:4566 sqs create-queue --queue-name court-case-matcher-dlq.fifo --attributes "FifoQueue=true" --output text)
 QUEUE_URL=$(aws --endpoint-url http://localhost:4566 sqs create-queue --queue-name court-case-matcher-queue.fifo --attributes "FifoQueue=true" --output text)

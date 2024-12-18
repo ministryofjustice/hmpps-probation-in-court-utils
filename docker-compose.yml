@@ -7,7 +7,6 @@ services:
       - hmpps
     ports:
       - "127.0.0.1:4566:4566"
-      - "127.0.0.1:4510-4559:4510-4559"
     environment:
       - SERVICES=sqs,sns
       - PORT_WEB_UI=9080
