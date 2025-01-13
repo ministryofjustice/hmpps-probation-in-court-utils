@@ -49,10 +49,6 @@ else
   secret_json=$(cloud-platform decode-secret -s court-cases-topic -n $namespace --skip-version-check)
   export MATCHER_TOPIC_ARN=$(echo "$secret_json" | jq -r .data.topic_arn)
 
-  echo "🔑 Getting matcher dlq arn from secrets..."
-  secret_json=$(cloud-platform decode-secret -s court-case-matcher-queue-dead-letter-queue-credentials -n $namespace --skip-version-check)
-  export MATCHER_DLQ_QUEUE_URL=$(echo "$secret_json" | jq -r .data.sqs_id)
-
   echo "🔑 Getting RDS instance from secrets ..."
   secret_json=$(cloud-platform decode-secret -s court-case-service-rds-instance-output -n $namespace --skip-version-check)
   export RDS_INSTANCE_IDENTIFIER=$(echo "$secret_json" | jq -r .data.rds_instance_address | sed s/[.].*//)
@@ -61,9 +57,6 @@ else
   secret_json=$(cloud-platform decode-secret -s crime-portal-gateway-s3-credentials -n $namespace  --skip-version-check)
   export CRIME_PORTAL_GATEWAY_BUCKET_NAME=$(echo "$secret_json" | jq -r .data.bucket_name)
 
-  echo "🔑 Getting court case matcher queue url from secrets..."
-  secret_json=$(cloud-platform decode-secret -s court-case-matcher-queue-credentials -n $namespace --skip-version-check)
-  export MATCHER_QUEUE_URL=$(echo "$secret_json" | jq -r .data.sqs_id)
 
   echo "🔑 Getting crime portal gateway queue url for $namespace..."
   secret_json=$(cloud-platform decode-secret -s crime-portal-gateway-queue-credentials -n $namespace --skip-version-check)

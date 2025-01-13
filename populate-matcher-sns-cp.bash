@@ -67,13 +67,8 @@ CASES_PATH="${cp_base_path}${cases_path}"
 FILES=$(find $CASES_PATH -maxdepth $recurse_max_depth -type f)
 echo "📂 Checking for cases in ${CASES_PATH}"
 
-if [ -x "$(command -v gdate)" ]; then
-  HEARING_DATE=$(gdate +"%Y-%m-%d")
-  TOMORROW_DATE=$(gdate -d "+1 days" +"%Y-%m-%d")
-else
-  HEARING_DATE=$(date +"%Y-%m-%d")
-  TOMORROW_DATE=$(date -d "+1 days" +"%Y-%m-%d")
-fi
+HEARING_DATE=$(date +"%Y-%m-%d")
+TOMORROW_DATE=$(date -d "+1 days" +"%Y-%m-%d")
 
 MSG_GROUP_ID="COURT_HEARING_EVENT_RECEIVER"
 
