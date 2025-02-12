@@ -121,7 +121,7 @@ do
       PAYLOAD=$(echo $PAYLOAD | sed s/%court_code%/$court_code/g)
     fi
     
-    MSG_ATTRIBS="{\"messageType\" : { \"DataType\":\"String\", \"StringValue\":\"$message_type\"}, \"hearingEventType\" : { \"DataType\":\"String\", \"StringValue\":\"${hearingEventType}\"}}, \"eventType\" : { \"DataType\":\"String\", \"StringValue\":\"${event_type}\"}}"
+    MSG_ATTRIBS="{\"messageType\" : { \"DataType\":\"String\", \"StringValue\":\"$message_type\"}, \"hearingEventType\" : { \"DataType\":\"String\", \"StringValue\":\"${hearingEventType}\"}, \"eventType\" : { \"DataType\":\"String\", \"StringValue\":\"${event_type}\"}}"
     echo "${PAYLOAD}"
     aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD" --message-group "$MSG_GROUP_ID" --message-attributes "$MSG_ATTRIBS" $OPTIONS
   fi
