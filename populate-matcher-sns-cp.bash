@@ -4,6 +4,11 @@ if [ -z "${namespace}" ]; then
 else
   namespace="$namespace"
 fi
+if [ -z "${court_code}" ]; then
+  court_code=B14LO
+else
+  court_code="$court_code"
+fi
 topic_secret=court-cases-topic
 local=false
 files=
@@ -11,8 +16,8 @@ message_type=COMMON_PLATFORM_HEARING
 cases_path=""
 generate_ids=true
 recurse_max_depth=1
-court_code=B14LO
-event_type=Unknown
+hearingEventType=Unknown
+event_type=commonplatform
 
 export AWS_REGION=eu-west-2
 
@@ -116,7 +121,7 @@ do
       PAYLOAD=$(echo $PAYLOAD | sed s/%court_code%/$court_code/g)
     fi
     
-    MSG_ATTRIBS="{\"messageType\" : { \"DataType\":\"String\", \"StringValue\":\"$message_type\"}, \"hearingEventType\" : { \"DataType\":\"String\", \"StringValue\":\"${event_type}\"}}"
+    MSG_ATTRIBS="{\"messageType\" : { \"DataType\":\"String\", \"StringValue\":\"$message_type\"}, \"hearingEventType\" : { \"DataType\":\"String\", \"StringValue\":\"${hearingEventType}\"}}, \"eventType\" : { \"DataType\":\"String\", \"StringValue\":\"${event_type}\"}}"
     echo "${PAYLOAD}"
     aws sns publish --topic-arn "$TOPIC_ARN" --message "$PAYLOAD" --message-group "$MSG_GROUP_ID" --message-attributes "$MSG_ATTRIBS" $OPTIONS
   fi
