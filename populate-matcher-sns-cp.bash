@@ -9,6 +9,11 @@ if [ -z "${court_code}" ]; then
 else
   court_code="$court_code"
 fi
+if [ -z "${hearing_date}" ]; then
+  hearing_date=$(date +"%Y-%m-%d")
+else
+  hearing_date="$hearing_date"
+fi
 topic_secret=court-cases-topic
 local=false
 files=
@@ -72,7 +77,6 @@ CASES_PATH="${cp_base_path}${cases_path}"
 FILES=$(find $CASES_PATH -maxdepth $recurse_max_depth -type f)
 echo "📂 Checking for cases in ${CASES_PATH}"
 
-HEARING_DATE=$(date +"%Y-%m-%d")
 TOMORROW_DATE=$(date -d "+1 days" +"%Y-%m-%d")
 
 MSG_GROUP_ID="COURT_HEARING_EVENT_RECEIVER"
