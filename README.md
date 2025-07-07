@@ -1,6 +1,20 @@
 # court-case-source
 ### A tool for testing the prepare-a-case stack, plus utility scripts for managing it.
 
+
+## If your script doesn't work
+
+Toolkit may be broken. The permissions on the `court-case-service` account has been changed. We have removed the SNS resource permissions from it and placed into a new service account called `court-facing-api`, which this repo doesn't use currently.
+
+If you want to add court cases via court-hearing-event-receiver do this:
+
+1. Authenticate and get a Bearer token
+   - [Example of how to get a Bearer token](https://github.com/ministryofjustice/hmpps-probation-in-court-utils/blob/3603fb418cbcecff4a98a8b29673903e33a7d4c7/populate-cher.bash#L45-L52)
+
+2. Use Swagger in court-hearing-event-receiver to make authenticated requests -
+[swagger dev link](https://court-hearing-event-receiver-dev.hmpps.service.justice.gov.uk/swagger-ui/index.html)
+. Make sure to provide the Bearer token in the 'Authorize' section.
+
 ## Prerequisites
 
 These scripts assume that you have a number of common developer tools installed, most notably `kubectl` and `keytool`. The scripts will use your kubectl credentials for accessing protected resources so these must be set up for the scripts to work.
